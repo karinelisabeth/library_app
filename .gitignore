@@ -1,1 +1,3 @@
 NOTES.md
+ignore_config/puma.rb
+ignore_Procfile
