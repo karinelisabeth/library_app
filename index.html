@@ -1,0 +1,3345 @@
+<!DOCTYPE html>
+<head>
+  <title>Library app</title>
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  
+ 
+  </script>
+    
+    <!--3. bootstrap & jquery-->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+  
+  <button type="button" class="btn btn-primary">Primary</button>
+    
+  <!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"ad9513338b","applicationID":"2495197,2495041","transactionName":"MVBbNkcACBADUU1QWggaewNbBjYCBVd6VlsSR1YOWQQUTCFdV01QCEF9B0EADw8RHFFNWA==","queueTime":0,"applicationTime":1075,"ttGuid":"546A944C798F3BFA","agent":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VwIAVVRbGwEEXVRTDgY="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(){}function r(t){function e(t){return t&&t instanceof n?t:t?a(t,i,o):o()}function s(n,r,o){t&&t(n,r,o);for(var i=e(o),a=f(n),s=a.length,c=0;s>c;c++)a[c].apply(i,r);return i}function c(t,e){d[t]=f(t).concat(e)}function f(t){return d[t]||[]}function u(){return r(s)}var d={};return{on:c,emit:s,create:u,listeners:f,context:e,_events:d}}function o(){return new n}var i="nr@context",a=t("gos");e.exports=r()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:21,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,a){try{f?f-=1:r("err",[a||new UncaughtException(t,e,n)])}catch(c){try{r("ierr",[c,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof s?s.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=t("loader"),s=window.onerror,c=!1,f=0;a.features.err=!0,t(3),window.onerror=e;try{throw new Error}catch(u){"stack"in u&&(t(4),t(5),"addEventListener"in window&&t(1),a.xhrWrappable&&t(2),c=!0)}i.on("fn-start",function(){c&&(f+=1)}),i.on("fn-err",function(t,e,r){c&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){c&&!this.thrown&&f>0&&(f-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:5,2:8,3:3,4:7,5:6,6:22,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t,e){function n(t){for(var e=t;e&&!e.hasOwnProperty("addEventListener");)e=Object.getPrototypeOf(e);e&&r(e)}function r(t){a.inPlace(t,["addEventListener","removeEventListener"],"-",o)}function o(t){return t[1]}var i=t("ee").create(),a=t(1)(i),s=t("gos");e.exports=i,r(window),"getPrototypeOf"in Object?(n(document),n(XMLHttpRequest.prototype)):XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&r(XMLHttpRequest.prototype),i.on("addEventListener-start",function(t){if(t[1]){var e=t[1];if("function"==typeof e){var n=s(e,"nr@wrapped",function(){return a(e,"fn-",null,e.name||"anonymous")});this.wrapped=t[1]=n}else"function"==typeof e.handleEvent&&a.inPlace(e,["handleEvent"],"fn-")}}),i.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:23,ee:"QJf3ax",gos:"7eSDFh"}],6:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:23,ee:"QJf3ax"}],7:[function(t,e){function n(t,e,n){t[0]=i(t[0],"fn-",null,n)}function r(t,e,n){this.method=n,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=i(t[0],"fn-",this,n)}var o=t("ee").create(),i=t(1)(o);e.exports=o,i.inPlace(window,["setTimeout","setImmediate"],"setTimer-"),i.inPlace(window,["setInterval"],"setInterval-"),i.inPlace(window,["clearTimeout","clearImmediate"],"clearTimeout-"),o.on("setInterval-start",n),o.on("setTimer-start",r)},{1:23,ee:"QJf3ax"}],8:[function(t,e){function n(){f.inPlace(this,l,"fn-",o)}function r(t,e){f.inPlace(e,["onreadystatechange"],"fn-",o)}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),f=c(a),u=c(s),d=window.XMLHttpRequest,l=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[e],e),e.hasOwnProperty("addEventListener")&&u.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,f.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:5,2:23,ee:"QJf3ax"}],9:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var o=0;u>o;o++)t.removeEventListener(f[o],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var i=this.lastSize||n(t);if(i&&(r.rxSize=i),this.sameOrigin){var s=t.getResponseHeader("X-NewRelic-App-Data");s&&(e.cat=s.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,c.emit("xhr-done",[t],t),a("xhr",[e,r,this.startTime])}}}function n(t){var e=t.responseType,n="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return r(n)}function r(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function o(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var i=t("loader");if(i.xhrWrappable){var a=t("handle"),s=t(2),c=t("ee"),f=["load","error","abort","timeout"],u=f.length,d=t(1),l=t(3),p=window.XMLHttpRequest;i.features.xhr=!0,t(5),t(4),c.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=e,n.ended=!1,n.xhrGuids={},n.lastSize=0,l&&(l>34||10>l)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),c.on("open-xhr-start",function(t){this.params={method:t[0]},o(this,t[1]),this.metrics={}}),c.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),c.on("send-xhr-start",function(t,e){var n=this.metrics,o=t[0],i=this;if(n&&o){var a=r(o);a&&(n.txSize=a)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{c.emit("internal-error",[n])}catch(r){}}};for(var s=0;u>s;s++)e.addEventListener(f[s],this.listener,!1)}),c.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),c.on("xhr-load-added",function(t,e){var n=""+d(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),c.on("xhr-load-removed",function(t,e){var n=""+d(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),c.on("addEventListener-end",function(t,e){e instanceof p&&"load"===t[0]&&c.emit("xhr-load-added",[t[1],t[2]],e)}),c.on("removeEventListener-end",function(t,e){e instanceof p&&"load"===t[0]&&c.emit("xhr-load-removed",[t[1],t[2]],e)}),c.on("fn-start",function(t,e,n){e instanceof p&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),c.on("fn-end",function(t,e){this.xhrCbStart&&c.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:10,3:12,4:8,5:5,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],10:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],11:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:21,2:22,handle:"D5DuLP"}],12:[function(t,e){var n=0,r=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);r&&(n=+r[1]),e.exports=n},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):void(r.q&&(r.q[t]||(r.q[t]=[]),r.q[t].push(e)))}var r=t("ee").create();e.exports=n,n.ee=r,r.q={}},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],G9z0Bl:[function(t,e){function n(){if(!h++){var t=p.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(d,function(e,n){t[e]||(t[e]=n)});var n="https"===u.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=window,f=c.document;t(2);var u=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-852.min.js"},l=window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent),p=e.exports={offset:i(),origin:u,features:{},xhrWrappable:l};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()]);var h=0},{1:21,2:11,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],21:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],22:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],23:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@original",a=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,c;try{i=this,n=o(arguments),s="function"==typeof r?r(n,i):r||{}}catch(u){d([u,"",[n,i,a],s])}f(e+"start",[n,i,a],s);try{return c=t.apply(i,n)}catch(l){throw f(e+"err",[n,i,l],s),l}finally{f(e+"end",[n,i,c],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=t,u(t,nrWrapper),nrWrapper)}function c(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s))}function f(e,n,r){if(!s){s=!0;try{t.emit(e,n,r)}catch(o){d([o,e,n,r])}s=!1}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){d([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function d(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=c,e.flag=i,e}},{1:22,ee:"QJf3ax"}]},{},["G9z0Bl",4,9]);</script>
+<!-- Set the viewport width to device width for mobile --> 
+<script type="text/javascript">
+var nua = navigator.userAgent;
+var is_android = ((nua.indexOf('Mozilla/5.0') > -1 && (nua.indexOf('Android 2') > -1 || nua.indexOf('EBRD1101') > -1 || nua.indexOf('EBRD1201') > -1 || nua.indexOf('EBRD1301') > -1))) && !(nua.indexOf('Chrome') > -1);
+if(is_android == true){
+  document.write("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no\" />");
+}else{
+  document.write("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes\" />");
+};
+//sponsored variables
+var szListTitles1 = new Array();
+var szListTitles2 = new Array();
+var szListTitles3 = new Array();
+var szListTitles4 = new Array();
+var szListTitles5 = new Array();
+var szListTitles6 = new Array();
+var szListTitles7 = new Array();
+var szListTitles8 = new Array();
+var szListTitles9 = new Array();
+var szListTitles10 = new Array();
+
+//webtrends	
+var szCriteria = "";
+var coverVars = "";
+var szCaption = "";
+var CoversShown = "9";
+var cache = [];
+var affiliateNameDisplay = new Array();
+var szRefURL = "";
+var szQsearch = "";
+var browsePage = "0";
+</script>
+<noscript><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes"></noscript>
+<title>The Grownup - London Libraries Consortium eLibrary</title>
+<meta name="title" content="The Grownup - London Libraries Consortium eLibrary">
+<meta name="description" content="Gillian Flynn's Edgar Award-winning homage to the classic ghost story, published for the first time as a standalone.A canny young woman is struggling to survive by perpetrating various levels of mostly...">
+<!-- <meta name="DCSext.titledetails" content="365E31DF-D292-44D6-98B6-20ACD2542A28" />  -->
+<link rel="image_src" href="http://images.contentreserve.com/ImageType-150/0111-1/365/E31/DF/%7B365E31DF-D292-44D6-98B6-20ACD2542A28%7DImg150.jpg">
+<script type="text/javascript">
+var szReserveID = "365E31DF-D292-44D6-98B6-20ACD2542A28";
+</script><!-- <meta name="DCSext.lang" content="en" /> -->
+<meta name="description" content="London Libraries Consortium eLibrary">
+<meta name="keywords" content="London Libraries Consortium eLibrary, eAudiobooks, library services, libraries, catalogue, renewals, reservations, my account, loan items, eBooks, eAudio, audiobooks, audio books, digital, books, digital content, download, OPAC, online, eMedia, audio book, audiobook, eAudiobook, eAudio, e-audio, digital, library, eLibrary, download, downloadable, ebook, e-book, book, books, read, reader, eMusic, music, video, eVideo, flicks, eFlicks, Movies, eMovies, best seller, virtual, catalog, catalogue, DRM, OverDrive, DLR, SDL, School Download Library, electronic, resources, collection, Adobe, OverDrive Media Console, software, free, online, MP3, WMA, WMV, PDF, listen, read, reader">
+<meta name="apple-itunes-app" content="app-id=366869252, app-argument=myURL">
+<script type="text/javascript">
+var KindleCheck = "false";
+var ODListenCheck = "false";
+var NookCheck = "false";
+if("610" == "420"){
+var KindleCheck = "true";
+}
+else if("610" == "625"){
+var ODListenCheck = "true";
+}
+else if("610" == "304"){
+var NookCheck = "true";
+}
+if("410" == "420"){
+var KindleCheck = "true";
+}
+else if("410" == "625"){
+var ODListenCheck = "true";
+}
+else if("410" == "304"){
+var NookCheck = "true";
+}
+if("810" == "420"){
+var KindleCheck = "true";
+}
+else if("810" == "625"){
+var ODListenCheck = "true";
+}
+else if("810" == "304"){
+var NookCheck = "true";
+}
+if("50" == "420"){
+var KindleCheck = "true";
+}
+else if("50" == "625"){
+var ODListenCheck = "true";
+}
+else if("50" == "304"){
+var NookCheck = "true";
+}
+if("450" == "420"){
+var KindleCheck = "true";
+}
+else if("450" == "625"){
+var ODListenCheck = "true";
+}
+else if("450" == "304"){
+var NookCheck = "true";
+}
+if("625" == "420"){
+var KindleCheck = "true";
+}
+else if("625" == "625"){
+var ODListenCheck = "true";
+}
+else if("625" == "304"){
+var NookCheck = "true";
+}
+if("425" == "420"){
+var KindleCheck = "true";
+}
+else if("425" == "625"){
+var ODListenCheck = "true";
+}
+else if("425" == "304"){
+var NookCheck = "true";
+}
+</script>
+	<!-- Included CSS Files -->
+	<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet" type="text/css">
+	<link href="//fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+	<link href="//fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+	
+	<link rel="stylesheet" type="text/css" href="//libraryreserve.cdn.overdrive.com/418/50/1.41/dlr-complete-min.css">
+	<!--[if IE]><link rel="stylesheet" type="text/css" href="//libraryreserve.cdn.overdrive.com/418/50/1.41/ie.css" /><![endif]-->
+	<!--[if IE 8]><link rel="stylesheet" type="text/css" href="//libraryreserve.cdn.overdrive.com/418/50/1.41/ie8.css" /><![endif]-->
+	<!--[if IE 7]><link rel="stylesheet" type="text/css" href="//libraryreserve.cdn.overdrive.com/418/50/1.41/ie7.css" /><![endif]-->
+	<link rel="stylesheet" type="text/css" href="//libraryreserve.cdn.overdrive.com/418/50/1.41/site-custom.css">
+	<!--[if lt IE 9]><link rel="stylesheet" href="//libraryreserve.cdn.overdrive.com/418/50/1.41/ie.css"><![endif]-->
+
+	<script src="//images.contentreserve.com/java/jquery.min.js"></script>
+	<script src="//images.contentreserve.com/java/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="//libraryreserve.cdn.overdrive.com/418/50/1.41/penultimate-min.js"></script>
+
+	<script language="JavaScript">
+	var szCurrentURLenc = "ContentDetails.htm%3fid%3d365E31DF-D292-44D6-98B6-20ACD2542A28";
+	</script>
+	<script language="JavaScript">
+	function showhide(id, visibility) {
+		document.getElementById(id).style.display = visibility;
+	}
+	</script>
+
+	<script>
+	if (typeof jQuery == 'undefined') {
+   		document.write(unescape("%3Cscript src='jquery-backup.min.js' type='text/javascript'%3E%3C/script%3E"));
+	}
+	</script>
+
+
+	<!-- IE Fix for HTML5 Tags -->
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('img.lrgImg').error(function () {
+				this.src = '//libraryreserve.cdn.overdrive.com/418/50/1.41/MissingCoverImage.jpg';
+			});
+
+			/*Skip navigation*/
+			$('#skip-nav').addClass('js'); // adds class to body tag when JavaScript is enabled
+			skipNavigation('skip-nav'); // send container id
+		});
+	</script>
+
+<style>
+@media only screen and (max-width: 900px) and (min-width: 768px){
+    .special-status-nar a {padding: 6px 7px; font-size: .9em}
+}
+</style>
+<script>
+var hazAdv = false;
+var advLibs = new Array("zzz");
+
+if(advLibs.length > 1){
+hazAdv = true;
+}
+</script><script>
+var szDevice = "-1";
+var szWebsiteID = "418";
+var szLoginStatus = "0";
+var hazRecommend = "1";
+</script>
+<style>
+.WMA-FormatLink1{display:none;}
+.Music-FormatLink1{display:none;}
+.Video-FormatLink1{display:none;}
+.PDF-FormatLink1{display:none;}
+.Disney-FormatLink1{display:none;}
+.EPUB-FormatLink1{display:none;}
+.Kindle-FormatLink1{display:none;}
+.MP3-FormatLink1{display:none;}
+.OPDF-FormatLink1{display:none;}
+.ODREAD-FormatLink1{display:none;}
+.OEPUB-FormatLink1{display:none;}
+.skip 
+{
+	width: 0;
+	height: 0;
+	position: absolute;
+	overflow: hidden;
+}
+</style>
+<script>var srURL = "";var srODTarURL = "";var deviceID = "-1";</script>
+</head>
+<body>
+
+<div id="skip-nav" style="display: block; height: 1px;">  
+<div>
+<ul> 
+<li>
+<strong>Skip To:</strong> </li>
+
+<li><a title="Skip to Main Navigation" href="#mainNavSkipLink" class="">Site Navigation</a></li>
+<li><a title="Skip to Subject Navigation" href="#subjectNavSkipLink" class="">Subject Navigation</a></li>
+<li><a title="Skip to Main Content" href="#mainContentSkipLink" class="">Page Content</a></li> 
+<li><a title="Skip to Digital Media Search" href="#searchSkipLink" class="">Digital Media Search</a></li>
+<li><a title="Skip to footer" href="#footer" class="">Footer</a></li> 
+</ul> 
+</div>
+</div>
+<div id="cookieControl">	
+<a href="#" id="closeCookie"><img src="//libraryreserve.cdn.overdrive.com/418/50/1.41/spacer.gif" width="15" height="15" alt="Close cookie details" style="cursor:pointer; display:block; width:15px; height:15px;"></a>
+	<p id="cookieToggle">This site uses cookies. <a href="#">Learn more about cookies.</a></p>
+	<div id="cookieMessage">
+		
+		<p>OverDrive would like to use cookies to store information on your computer to improve your user experience at our Website. One of the cookies we use is critical for certain aspects of the site to operate and has already been set. You may delete and block all cookies from this site, but this could affect certain features or services of the site. To find out more about the cookies we use and how to delete them, <a href="http://company.overdrive.com/privacy-policy/" target="_blank">click here to see our Privacy Policy.</a></p>
+		<p style="font-weight: bold;">If you do not wish to continue, <a href="libraries.htm" target="_blank">please click here to exit this site.</a></p>
+	</div>
+<!-- /cookieMessage -->
+</div>
+<!-- /cookieControl -->
+<div id="nextGenTour">
+	<a href="#" id="closeTopTour"><img src="//libraryreserve.cdn.overdrive.com/418/50/1.41/spacer.gif" width="15" height="15" alt="Hide notification"></a>
+	<p id="tourToggle"></p>
+</div>
+<!-- /nextGenTour -->
+
+<script type="text/javascript">
+var szWhatURL = window.location.pathname;
+var agent = navigator.userAgent.toLowerCase();
+var szCardURL = "#";
+var szCustomMsg = "0";
+var szMntMsg = "Having trouble with the latest iOS (iPhone/iPad/iPod touch) app update? <a href=\"http://help.overdrive.com/customer/portal/articles/2323453\" target=\"_blank\">Visit this help page for more information</a>.";
+
+	//Cookie Control Toggle
+	  if (!$.cookie('hide') && 1 == 1) {
+		$('#cookieControl').slideDown();
+	  }
+
+ 
+	  $('#closeCookie').click(function() {
+		$('#cookieControl').slideUp();
+		$.cookie('hide', true, { expires: 365, path: '/'});
+		return false;
+	  });
+ 
+ 
+	
+
+//Next Gen Tour Check
+if(window.name!="0"){
+	if(szMntMsg.length > 1){
+		$("#tourToggle").html(szMntMsg);
+		$('#nextGenTour').css('background','url(//libraryreserve.cdn.overdrive.com/418/50/1.41/TopLineBackground_red.jpg)').css('display','block');
+	}
+	else if(szCustomMsg.length > 1){
+		$("#tourToggle").html(szCustomMsg);
+		$('#nextGenTour').css('display','block');
+	}		
+
+
+
+
+//remove generic notice bars on mobile sign in pages
+else if ((400 == -1 || 400 == 800 || 400 == 103) || (szWhatURL.toLowerCase().indexOf("signin") == -1)){
+ 
+			if (!$.cookie('hideNotices') && NookCheck == 'true'){
+			$("#tourToggle").html("We've got periodicals!  <a href=\"http://help.overdrive.com/customer/portal/articles/1758808?Sup=http://llc.lib.overdrive.com/Support.htm&nextgen=true\" target=\"_blank\">Learn more here.</a>");
+			$('#nextGenTour').css('display','block');
+			} 
+			/*else if(!$.cookie('hideNotices') && hazAdv == true && szLoginStatus == 0){
+			$("#tourToggle").html("<a href=\"BANGAuthenticate.dll?Action=AuthCheck&URL=Default.htm&ForceLoginFlag=0\">Sign in before you browse and search to see all titles available to you!</a>");
+			$('#nextGenTour').css('display','block');
+			}*/
+			else if(!$.cookie('hideNotices') && (szCardURL.length > 1 && szLoginStatus == 0)){
+			$("#tourToggle").html("Need a library card?  <a href=\"#\" target=\"_blank\" title=\"Learn how to get a library card\">Click here for more information.</a>");
+			$('#nextGenTour').css('display','block');
+			}
+			else if(!$.cookie('hideNotices') && (ODListenCheck == 'true' && agent.indexOf('overdrive media console') == -1)){
+			$("#tourToggle").html("Listen to audiobooks instantly in your browser. <a href=\"http://help.overdrive.com/customer/portal/articles/1909467?Sup=http://llc.lib.overdrive.com/Support.htm&nextgen=true\" target=\"_blank\" title=\"Listen to audiobooks instantly in your browser\">Learn more here.</a>");
+			$('#nextGenTour').css('display','block');
+			}
+			else if(!$.cookie('hideNotices') && (1 == 1 && agent.indexOf('overdrive media console') == -1)){
+			$("#tourToggle").html("<a href=\"Read.htm\">Start reading instantly in your browser with OverDrive Read</a>");
+			$('#nextGenTour').css('display','block');
+			}	
+        }
+}
+//Cookie Control Toggle
+$('#cookieToggle').click(function(){
+	$('#cookieMessage').slideDown('250', function(){
+		$('#cookieToggle').slideUp();
+		//$('#closeCookie').fadeIn();
+	});
+});
+$('#cookieMessage').click(function(){
+	$('#cookieMessage').slideUp('250', function(){
+		$('#cookieToggle').slideDown();
+		//$('#closeCookie').fadeOut();
+	});
+});
+
+//Top bar Toggle
+$('#closeTopTour').click(function(){ 
+window.name="0";
+$.cookie('hideNotices', true, { expires: 60, path: '/'}); 
+$('#nextGenTour').slideUp();
+});
+</script><div id="topRowLinks"><div class="row"><div class="twelve four-mobile columns">
+<div class="top-links">
+<a href="https://arena.yourlondonlibrary.net/web/home/" class="home-link-top" target="_self"><img src="//libraryreserve.cdn.overdrive.com/418/50/1.41/spacer.gif" alt="Home" id="homePageIcon"><span>« Member Libraries</span></a>
+
+<a href="BANGAuthenticate.dll?Action=AuthCheck&amp;URL=ContentDetails.htm%3fid%3d365E31DF-D292-44D6-98B6-20ACD2542A28&amp;ForceLoginFlag=0" class="sign-in-link-top">Sign In</a>
+<label for="switchLanguage" class="skip">Switch to another language:</label>
+      <select name="Language" id="switchLanguage" size="1" style="display: none !important;">
+        
+
+<option value="en" selected>English</option>
+<option value="fc">Français</option>
+<option value="zh">简体中文</option>
+<option value="es">Español</option>
+<option value="ja">日本</option>
+<option value="tc">繁體中文</option>
+<option value="ru">русский</option>
+<option value="ms">Bahasa Melayu</option>
+<option value="sv">Svenska</option>
+<option value="fi">Suomi</option>
+<option value="it">Italiano</option>
+<option value="de">Deutsch</option>
+<option value="da">Dansk</option>
+<option value="iw">עברית</option>
+<option value="mi">Māori</option>
+<option value="ar">العربية</option>
+
+      </select>
+
+
+  
+<script>
+$('#switchLanguage').change(function(){
+    var languageCode = $(this).val();
+	window.location = "../" + languageCode + "/ContentDetails.htm?id=365E31DF-D292-44D6-98B6-20ACD2542A28" ;
+});
+</script> 
+
+</div>
+</div></div></div>
+<header id="mainHead" class="">
+<section class="">
+
+<div class="row" id="fullHeader">
+
+
+<div class="six columns" id="headerLogo">
+
+  <a href="https://arena.yourlondonlibrary.net/web/home/" aria-label="London Libraries Consortium eLibrary" title="London Libraries Consortium eLibrary" class="logo-link" target="_self"><h1 id="logoHeading">
+<img class="logo-img" src="//libraryreserve.cdn.overdrive.com/418/50/1.41/spacer.gif" alt="London Libraries Consortium eLibrary"><span class="i-hide">London Libraries Consortium eLibrary</span>
+</h1></a>
+</div>
+
+<div class="six columns" id="headerNav">
+<div class="row">
+  <div class="twelve columns" id="navRow">
+  <div class="nav-container">
+<a name="mainNavSkipLink" id="mainNavSkipLink" tabindex="-1"></a><div class="skip">Main Navigation</div>
+    <div class="two mobile-one columns push-two" id="navMenu"><a name="mainNavA" class="navMenu" href="javascript:void(0);"><img src="//libraryreserve.cdn.overdrive.com/418/50/1.41/spacer.gif" alt="Navigation"><span>Menu</span></a></div>
+<div class="two mobile-one columns push-two" id="navProfile">
+<a href="BANGAuthenticate.dll?Action=AuthCheck&amp;URL=MyAccount.htm?PerPage=40&amp;ForceLoginFlag=0" class="navProfile"><img src="//libraryreserve.cdn.overdrive.com/418/50/1.41/spacer.gif" alt="Navigation - Account"><span>Account</span></a>
+</div>
+<div class="two mobile-one columns push-two help-link-small"><a href="Help.htm" class="navHelp"><img src="//libraryreserve.cdn.overdrive.com/418/50/1.41/spacer.gif" alt="Navigation - Help"><span>Help</span></a></div>
+<div class="four mobile-one columns push-two" id="headSearch1">
+<script language="JavaScript"><!--
+	function searchFormValidate(f)
+	{
+		if (f.FullTextCriteria.value == "" || f.FullTextCriteria.value == "Search")
+		{
+			alert("Please enter a search term!");
+			f.FullTextCriteria.focus();
+			return false;
+		}
+		else return true;
+	}
+	function searchFormTextCheck(t, dirn)
+	{
+		if (dirn == 1 && t.value == "Search") t.value= "";
+		if (dirn == 0 && t.value == "") t.value= "Search";
+	}
+// -->
+</script>
+<a name="searchSkipLink" id="searchSkipLink" tabindex="-1">Search</a><div class="skip">Digital Media Search</div>
+      <form style="padding: 0px;" method="post" onsubmit="return searchFormValidate(this);" action="BANGSearch.dll?Type=FullText&amp;PerPage=24" id="headerSearch1" class="secondary" alt="This search box is for large screen resolutions">
+<input type="hidden" value="SortBy=Relevancy" name="Sort"><input type="hidden" value="All" name="FullTextField"><label for="searchText1" class="skip" alt="This search box is for large screen resolutions">Search</label><input tabindex="0" type="text" name="FullTextCriteria" id="searchText1" class="input-text" placeholder="Search..."><input type="image" class="quickbutton1" src="//libraryreserve.cdn.overdrive.com/418/50/1.41/spacer.gif" alt="Submit search" title="Submit search"><img alt="Submit search" class="quickbutton2" src="//libraryreserve.cdn.overdrive.com/418/50/1.41/spacer.gif"><img alt="image" class="quickbuttonClose" src="//libraryreserve.cdn.overdrive.com/418/50/1.41/spacer.gif"><a href="AdvancedSearch.htm">Advanced Search</a>
+</form>
+</div>
+<div class="four mobile-four columns" id="headSearch2" style="display:none;">
+      <form style="padding: 0px;" method="post" onsubmit="return searchFormValidate(this);" action="BANGSearch.dll?Type=FullText&amp;PerPage=24" id="headerSearch2" class="secondary" alt="This search box is for smaller screen resolutions">
+<input type="hidden" value="SortBy=Relevancy" name="Sort"><input type="hidden" value="All" name="FullTextField"><label for="searchText2" class="skip" alt="This search box is for smaller screen resolutions">Search</label><input tabindex="0" type="text" name="FullTextCriteria" id="searchText2" class="input-text" placeholder="Search..."><input type="image" class="quickbutton3" src="//libraryreserve.cdn.overdrive.com/418/50/1.41/searchMobile.png" alt="Submit search" title="Submit search"><a href="AdvancedSearch.htm">Advanced Search</a>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</header>
+<!-- #mainHead --><div id="mainContainer" class="container">
+<style>
+#mainNav{position: absolute; top: -9999px; left: -9999px;}
+.menu-column-full {visibility:hidden;}
+</style>
+<a id="menuAnchor"> </a>
+<a href="#mainNavA" style="display:none;">Main Nav</a>
+<nav id="mainNav" class="container not-home">
+<a name="subjectNavSkipLink" id="subjectNavSkipLink" tabindex="-1"></a><div class="skip">Subject Navigation</div>
+<section class="row">
+<div class="two mobile-four columns menu-column-full" id="homeSub06" style="display:block; float:left;">
+<h6>Featured Collections</h6>
+<div id="homeSub06arrows" style="display:none;"><img src="//libraryreserve.cdn.overdrive.com/418/50/1.41/spacer.gif" alt=""></div>
+<ul>
+<li id="ProfessionalReading">
+<a href="ProfessionalReading.htm">Professional Reading</a>
+</li>
+
+<li id="CSAF_Collection">
+<a href="CSAFReadingList.htm">CSAF Reading List</a>
+</li>
+
+<li>
+<a href="BANGSearch.dll?Type=ContentList&amp;ID=185631&amp;PerPage=24&amp;IsCuratedList=1" data-curated="1" data-track="curated" data-action="view curated list" data-label="Books On Film">Books On Film</a>
+</li>
+<li>
+<a href="BANGSearch.dll?Type=ContentList&amp;ID=185632&amp;PerPage=24&amp;IsCuratedList=1" data-curated="1" data-track="curated" data-action="view curated list" data-label="Read-Along">Read-Along</a>
+</li>
+<li>
+<a href="BANGSearch.dll?Type=ContentList&amp;ID=185633&amp;PerPage=24&amp;IsCuratedList=1" data-curated="1" data-track="curated" data-action="view curated list" data-label="LGBT Teen">LGBT Teen</a>
+</li>
+<li>
+<a href="BANGSearch.dll?Type=ContentList&amp;ID=185577&amp;PerPage=24&amp;IsCuratedList=0" data-curated="0" data-track="curated" data-action="view curated list" data-label="Suggested eBooks">Suggested eBooks</a>
+</li>
+<!--
+<li><a href="BrowseChildren.htm">Children Collections</a></li>
+<li><a href="HiddenGems.htm">Hidden Gems</a></li>
+--><li id="featAllLink">
+<a href="BrowseCollections.htm">All Collections...</a>
+</li>
+
+</ul>
+</div>
+<div class="two mobile-four columns menu-column-full" id="homeSub01" style="display:block;">
+    <h6>eBook Fiction</h6>
+    <div id="homeSub01arrows" style="display:none;"><img src="//libraryreserve.cdn.overdrive.com/418/50/1.41/spacer.gif" alt=""></div>
+    <ul class="menu-collection">        <li>
+            <a href="BANGSearch.dll?Type=SubjectList&amp;ID=9886&amp;PerPage=24&amp;SortBy=CollDate">All Fiction</a>
+        </li>        <li>
+            <a href="BANGSearch.dll?Type=SubjectList&amp;ID=9572&amp;PerPage=24&amp;SortBy=CollDate">Comics &amp; Graphic Novels</a>
+        </li>        <li>
+            <a href="BANGSearch.dll?Type=SubjectList&amp;ID=14227&amp;PerPage=24&amp;SortBy=CollDate">Drama</a>
+        </li>        <li>
+            <a href="BANGSearch.dll?Type=SubjectList&amp;ID=9878&amp;PerPage=24&amp;SortBy=CollDate">Historical Fiction</a>
+        </li>        <li>
+            <a href="BANGSearch.dll?Type=SubjectList&amp;ID=9879&amp;PerPage=24&amp;SortBy=CollDate">Humour</a>
+        </li>        <li>
+            <a href="BANGSearch.dll?Type=SubjectList&amp;ID=9880&amp;PerPage=24&amp;SortBy=CollDate">Juvenile Fiction</a>
+        </li>        <li>
+            <a href="BANGSearch.dll?Type=SubjectList&amp;ID=9881&amp;PerPage=24&amp;SortBy=CollDate">Literature</a>
+        </li>        <li>
+            <a href="BANGSearch.dll?Type=SubjectList&amp;ID=9882&amp;PerPage=24&amp;SortBy=CollDate">Mystery &amp; Suspense</a>
+        </li>        <li>
+            <a href="BANGSearch.dll?Type=SubjectList&amp;ID=9883&amp;PerPage=24&amp;SortBy=CollDate">Romance</a>
+        </li>        <li>
+            <a href="BANGSearch.dll?Type=SubjectList&amp;ID=9884&amp;PerPage=24&amp;SortBy=CollDate">Science Fiction &amp; Fantasy</a>
+        </li>        <li class="view-more-subjects">
+            <a href="Subjects01.htm" aria-label="View more... eBook Fiction">View more...</a>
+        </li>
+    </ul>
+</div>
+<div class="two mobile-four columns menu-column-full" id="homeSub02" style="display:block;">
+    <h6>eBook Nonfiction</h6>
+    <div id="homeSub02arrows" style="display:none;"><img src="//libraryreserve.cdn.overdrive.com/418/50/1.41/spacer.gif" alt=""></div>
+    <ul class="menu-collection">        <li>
+            <a href="BANGSearch.dll?Type=SubjectList&amp;ID=9895&amp;PerPage=24&amp;SortBy=CollDate">All Nonfiction</a>
+        </li>        <li>
+            <a href="BANGSearch.dll?Type=SubjectList&amp;ID=9573&amp;PerPage=24&amp;SortBy=CollDate">Biography &amp; Autobiography</a>
+        </li>        <li>
+            <a href="BANGSearch.dll?Type=SubjectList&amp;ID=9887&amp;PerPage=24&amp;SortBy=CollDate">Business &amp; Careers</a>
+        </li>        <li>
+            <a href="BANGSearch.dll?Type=SubjectList&amp;ID=14226&amp;PerPage=24&amp;SortBy=CollDate">Computer Technology</a>
+        </li>        <li>
+            <a href="BANGSearch.dll?Type=SubjectList&amp;ID=9888&amp;PerPage=24&amp;SortBy=CollDate">Cooking &amp; Food</a>
+        </li>        <li>
+            <a href="BANGSearch.dll?Type=SubjectList&amp;ID=9889&amp;PerPage=24&amp;SortBy=CollDate">Family &amp; Relationships</a>
+        </li>        <li>
+            <a href="BANGSearch.dll?Type=SubjectList&amp;ID=9891&amp;PerPage=24&amp;SortBy=CollDate">Health &amp; Fitness</a>
+        </li>        <li>
+            <a href="BANGSearch.dll?Type=SubjectList&amp;ID=9892&amp;PerPage=24&amp;SortBy=CollDate">History</a>
+        </li>        <li>
+            <a href="BANGSearch.dll?Type=SubjectList&amp;ID=14225&amp;PerPage=24&amp;SortBy=CollDate">Humour</a>
+        </li>        <li>
+            <a href="BANGSearch.dll?Type=SubjectList&amp;ID=9890&amp;PerPage=24&amp;SortBy=CollDate">Language Learning</a>
+        </li>        <li class="view-more-subjects">
+            <a href="Subjects02.htm" aria-label="View more... eBook Nonfiction">View more...</a>
+        </li>
+    </ul>
+</div>
+<div class="two mobile-four columns menu-column-full" id="homeSub03" style="display:block;">
+    <h6>Audiobook Fiction</h6>
+    <div id="homeSub03arrows" style="display:none;"><img src="//libraryreserve.cdn.overdrive.com/418/50/1.41/spacer.gif" alt=""></div>
+    <ul class="menu-collection">        <li>
+            <a href="BANGSearch.dll?Type=SubjectList&amp;ID=9871&amp;PerPage=24&amp;SortBy=CollDate">All Fiction</a>
+        </li>        <li>
+            <a href="BANGSearch.dll?Type=SubjectList&amp;ID=9522&amp;PerPage=24&amp;SortBy=CollDate">Drama</a>
+        </li>        <li>
+            <a href="BANGSearch.dll?Type=SubjectList&amp;ID=9523&amp;PerPage=24&amp;SortBy=CollDate">Historical Fiction</a>
+        </li>        <li>
+            <a href="BANGSearch.dll?Type=SubjectList&amp;ID=9524&amp;PerPage=24&amp;SortBy=CollDate">Horror</a>
+        </li>        <li>
+            <a href="BANGSearch.dll?Type=SubjectList&amp;ID=9525&amp;PerPage=24&amp;SortBy=CollDate">Humour</a>
+        </li>        <li>
+            <a href="BANGSearch.dll?Type=SubjectList&amp;ID=9865&amp;PerPage=24&amp;SortBy=CollDate">Juvenile Fiction</a>
+        </li>        <li>
+            <a href="BANGSearch.dll?Type=SubjectList&amp;ID=9866&amp;PerPage=24&amp;SortBy=CollDate">Literature</a>
+        </li>        <li>
+            <a href="BANGSearch.dll?Type=SubjectList&amp;ID=9867&amp;PerPage=24&amp;SortBy=CollDate">Mystery &amp; Suspense</a>
+        </li>        <li>
+            <a href="BANGSearch.dll?Type=SubjectList&amp;ID=9868&amp;PerPage=24&amp;SortBy=CollDate">Romance</a>
+        </li>        <li>
+            <a href="BANGSearch.dll?Type=SubjectList&amp;ID=9869&amp;PerPage=24&amp;SortBy=CollDate">Science Fiction &amp; Fantasy</a>
+        </li>        <li class="view-more-subjects">
+            <a href="Subjects03.htm" aria-label="View more... Audiobook Fiction">View more...</a>
+        </li>
+    </ul>
+</div>
+<div class="two mobile-four columns menu-column-full" id="homeSub04" style="display:block;">
+    <h6>Audiobook Nonfiction</h6>
+    <div id="homeSub04arrows" style="display:none;"><img src="//libraryreserve.cdn.overdrive.com/418/50/1.41/spacer.gif" alt=""></div>
+    <ul class="menu-collection">        <li>
+            <a href="BANGSearch.dll?Type=SubjectList&amp;ID=9877&amp;PerPage=24&amp;SortBy=CollDate">All Nonfiction</a>
+        </li>        <li>
+            <a href="BANGSearch.dll?Type=SubjectList&amp;ID=9526&amp;PerPage=24&amp;SortBy=CollDate">Biography &amp; Autobiography</a>
+        </li>        <li>
+            <a href="BANGSearch.dll?Type=SubjectList&amp;ID=9527&amp;PerPage=24&amp;SortBy=CollDate">Business &amp; Careers</a>
+        </li>        <li>
+            <a href="BANGSearch.dll?Type=SubjectList&amp;ID=9528&amp;PerPage=24&amp;SortBy=CollDate">Current Events &amp; Politics</a>
+        </li>        <li>
+            <a href="BANGSearch.dll?Type=SubjectList&amp;ID=9529&amp;PerPage=24&amp;SortBy=CollDate">Language Learning</a>
+        </li>        <li>
+            <a href="BANGSearch.dll?Type=SubjectList&amp;ID=9872&amp;PerPage=24&amp;SortBy=CollDate">Health &amp; Fitness</a>
+        </li>        <li>
+            <a href="BANGSearch.dll?Type=SubjectList&amp;ID=9873&amp;PerPage=24&amp;SortBy=CollDate">History</a>
+        </li>        <li>
+            <a href="BANGSearch.dll?Type=SubjectList&amp;ID=9874&amp;PerPage=24&amp;SortBy=CollDate">Humour</a>
+        </li>        <li>
+            <a href="BANGSearch.dll?Type=SubjectList&amp;ID=9875&amp;PerPage=24&amp;SortBy=CollDate">Religion &amp; Spirituality</a>
+        </li>        <li>
+            <a href="BANGSearch.dll?Type=SubjectList&amp;ID=9876&amp;PerPage=24&amp;SortBy=CollDate">Self-Improvement</a>
+        </li>        <li class="view-more-subjects">
+            <a href="Subjects04.htm" aria-label="View more... Audiobook Nonfiction">View more...</a>
+        </li>
+    </ul>
+</div>
+<div class="two mobile-four columns menu-column-full" id="homeSub05" style="display:block;">
+    <h6>Juvenile &amp; Young Adult</h6>
+    <div id="homeSub05arrows" style="display:none;"><img src="//libraryreserve.cdn.overdrive.com/418/50/1.41/spacer.gif" alt=""></div>
+    <ul class="menu-collection">        <li>
+            <a href="BANGSearch.dll?Type=SubjectList&amp;ID=17660&amp;PerPage=24&amp;SortBy=CollDate">All Juvenile Fiction</a>
+        </li>        <li>
+            <a href="BANGSearch.dll?Type=SubjectList&amp;ID=17661&amp;PerPage=24&amp;SortBy=CollDate">All Juvenile Nonfiction</a>
+        </li>        <li>
+            <a href="BANGSearch.dll?Type=SubjectList&amp;ID=17662&amp;PerPage=24&amp;SortBy=CollDate">All Young Adult Fiction</a>
+        </li>        <li>
+            <a href="BANGSearch.dll?Type=SubjectList&amp;ID=17663&amp;PerPage=24&amp;SortBy=CollDate">All Young Adult Nonfiction</a>
+        </li>        <li class="view-more-subjects">
+            <a href="Subjects05.htm" aria-label="View more... Juvenile &amp; Young Adult">View more...</a>
+        </li>
+    </ul>
+</div>
+<span style="display:none;"></span><span style="display:none;"></span>
+
+<script>
+$('.lang-li').each(function(){
+  var thisLang = $(this).find('a').html();
+  if(thisLang == 'Spanish'){
+    $(this).find('a').html('Español');
+  }else if(thisLang == 'Russian'){
+    $(this).find('a').html('русский');
+  }else if(thisLang == 'Chinese'){
+    $(this).find('a').html('中文');
+  };
+});
+</script>
+
+</section>
+</nav>
+<!-- #mainNav -->
+<script>
+    var fcList = $("#homeSub06 ul li:visible").length;
+    var fcListTotal = fcList - 2;
+    $("#homeSub01 ul li:gt(" + fcListTotal + ")").not('.view-more-subjects').remove();
+    $("#homeSub02 ul li:gt(" + fcListTotal + ")").not('.view-more-subjects').remove();
+    $("#homeSub03 ul li:gt(" + fcListTotal + ")").not('.view-more-subjects').remove();
+    $("#homeSub04 ul li:gt(" + fcListTotal + ")").not('.view-more-subjects').remove();
+    $("#homeSub05 ul li:gt(" + fcListTotal + ")").not('.view-more-subjects').remove();
+$(document).ready(function(){
+    $("#mainNav.not-home").css({
+                    "position" : "relative",
+                    "top" : "0",
+                    "left" : "0",
+                    "display" : "none",
+                });
+    $(".menu-column-full").css("visibility","visible");
+});
+</script>
+<div class="container" id="pageContentContainer">
+
+<div id="contentContainer" class="row">
+<section id="mainContent" class="twelve columns">
+<noscript><p class="wishlist-js-off" style="width:100%; text-align:center; padding:0; margin:0;" aria-live="polite" role="contentinfo">The Wish List function is disabled with javascript off.</p></noscript>
+<a name="mainContentSkipLink" id="mainContentSkipLink" tabindex="-1"></a><div class="skip">Main Content</div>
+
+<div class="row">
+<div id="detailsTitleMobile" class="twelve columns">
+<h3>The Grownup</h3>
+</div>
+</div>
+<div class="row" id="allTheDetails">
+<script language="JavaScript" type="text/javascript">
+    var szFirstWMAExcerpt = null;
+    var szFirstMP3Excerpt = null;
+    var szFirstWMMExcerpt = null;
+    var szFirstWMVExcerpt = null;
+    var szFirst50Excerpt = null;
+    var szFirst410Excerpt = null;
+    var szFirst810Excerpt = null;
+    var szFirst450Excerpt = null;
+    var szFirst302Excerpt = null;
+    var szFirst900Excerpt = null;
+    var DrmInfo420 = null;
+    var szLibOwned = 1;
+    var nIsRecommended = 0;
+    var nIsRecLimit = 0;
+    var g_bFutureOnSaleDate = "0";
+   	
+</script>
+<div class="four mobile-two columns" style="float:left;" id="coverContain">
+<div class="row">
+<noscript><style>#coverFrame{height:100% !important;}</style></noscript>
+<div class="twelve mobile-four columns" id="coverFrame" data-contentstatus="0" data-isownedbylib="1">
+<span class="tcc-icon-span" data-iconformat="eBook"><i class="icon-eBook avail-0"></i></span>
+<a href="ContentDetails-Cover.htm?ID=365E31DF-D292-44D6-98B6-20ACD2542A28" title="Click here for a full size cover image of The Grownup" target="_blank"><img class="wtil-cover" src="//images.contentreserve.com/ImageType-400/0111-1/365/E31/DF/%7B365E31DF-D292-44D6-98B6-20ACD2542A28%7DImg400.jpg" alt="Cover of The Grownup" style="border:solid 1px #ddd;"></a>
+<noscript><img class="wtil-cover" src="//images.contentreserve.com/ImageType-400/0111-1/365/E31/DF/%7B365E31DF-D292-44D6-98B6-20ACD2542A28%7DImg400.jpg" alt="Cover of The Grownup" title="Click here for a full size cover image of The Grownup" style="border:solid 1px #ddd;"></noscript>
+</div>
+
+
+<div class="special-status-enh" style="display:none;">
+    <div>
+        <a href="#" class="enhanced-link enh-nar" data-enhresid="365E31DF-D292-44D6-98B6-20ACD2542A28">Enhanced</a>
+    </div>
+</div>
+<div class="special-status-nar" style="display:none;">
+    <div>
+        <a href="#" class="enh-nar" data-reveal-id="narratedEbook" data-enhresid="365E31DF-D292-44D6-98B6-20ACD2542A28">Read-along  <img class="embed-audio-img" src="//libraryreserve.cdn.overdrive.com/418/50/1.41/spacer.gif"></a>
+    </div>
+</div>
+<script language="JavaScript" type="text/javascript"><!--
+var szAdvInPrivate = "0";
+var szAdvInShared = "1";
+var szAdvMyPrivate = "-1";
+if(szLoginStatus == 0 && szAdvInPrivate == 1)
+	document.write("<a href=\"BANGAuthenticate.dll?Action=AuthCheck&ForceLoginFlag=0&URL=ContentDetails.htm%3fid%3d365E31DF-D292-44D6-98B6-20ACD2542A28#\"><img class=\"png supernote_hover_advsignin details-advantage-cover\" src=\"//libraryreserve.cdn.overdrive.com/418/50/1.41/advProgIconLRG.png\" border=\"0\" alt=\"Sign in to check availability\"></a>");
+else if(szLoginStatus == 1 && szAdvInPrivate != 1)
+	document.write("");
+
+else if(szLoginStatus == 0 && szAdvInPrivate != 1)
+	document.write("");
+//--></script><script language="JavaScript" type="text/javascript"><!--
+var szAdvInPrivate = "0";
+var szAdvInShared = "1";
+var szAdvMyPrivate = "-1";
+if(szLoginStatus == 0 && szAdvInPrivate == 1)
+	document.write("<a href=\"BANGAuthenticate.dll?Action=AuthCheck&ForceLoginFlag=0&URL=ContentDetails.htm%3fid%3d365E31DF-D292-44D6-98B6-20ACD2542A28#\"><img class=\"png supernote_hover_advsignin details-advantage-cover\" src=\"//libraryreserve.cdn.overdrive.com/418/50/1.41/advProgIconLRG.png\" border=\"0\" alt=\"Sign in to check availability\"></a>");
+else if(szLoginStatus == 1 && szAdvInPrivate != 1)
+	document.write("");
+
+else if(szLoginStatus == 0 && szAdvInPrivate != 1)
+	document.write("");
+//--></script>
+</div>
+<div class="row">
+<div class="eight mobile-four columns centered"><a href="http://samples.overdrive.com/?crid=365e31df-d292-44d6-98b6-20acd2542a28&amp;.epub-sample.overdrive.com&amp;retailerid=londonlibraries" data-track="sample" data-label="365E31DF-D292-44D6-98B6-20ACD2542A28" alt="Sample this title" title="Click here for a(n) eBook sample of The Grownup" target="_blank" class="radius dtls-sample-button">Sample</a></div>
+</div>
+<div><a href="_ContentDetails_onestep.htm?id=365E31DF-D292-44D6-98B6-20ACD2542A28" style="display:none;">╩</a></div>
+</div>
+
+<script type="text/javascript">
+var hazSampleHref = $(".dtls-sample-button").attr("href");
+if (hazSampleHref == "") {
+  $("#wlDtlsMobile").css("bottom","-48px");
+  $(".dtls-sample-button").remove();
+};
+var rtlWishList = $("#wlDtlsMobile").attr("data-rtlwl");
+if(rtlWishList == 0){
+  $("#wlDtlsMobile").remove();
+};
+
+
+var n = 0;
+    e = 0;
+	if (n == 1 && e == 0)
+	{
+	    $(".special-status-nar").show();
+	}
+	else if (n == 1 && e == 1)
+	{
+	    $(".special-status-nar").show();
+	}
+	else if (n == 0 && e == 1)
+	{
+	    $(".special-status-enh").show();
+	};
+</script>
+<div class="five mobile-two columns" style="float:left;" id="titleInfo">
+<div class="row">
+<div id="detailsTitle" class="twelve columns">
+<h3>The Grownup</h3>
+</div>
+</div>
+<div class="row">
+<div id="subtitleDetails" class="twelve columns">
+<div>A Story by the Author of Gone Girl</div>
+</div>
+</div>
+<div class="row" id="seriesRow" style="display:none;">
+<!--<div class="twelve columns">
+<div class="twelve mobile-four columns">
+<div id="seriesExpand" class="details-expand">
+<h6>Series<span class="series-plus-minus tog-plus-minus details-plus-minus-exp" style="float:right; margin-right:5px; cursor:pointer; font-weight:bold;" tabindex="0" title="Open/Close Series">-</span></h6>
+<ul class="series-expand tog-close details-ul-exp" style="display:block;">
+
+<li>-->
+<script language="JavaScript" type="text/javascript">
+var szSeries = "";
+	if(szSeries.length > 0 && szLibOwned == 1)
+	  document.write("<h6>Series: <a href=\"BANGSearch.dll?Type=Series&amp;ID={365E31DF-D292-44D6-98B6-20ACD2542A28}&amp;SortBy=CollDate&amp;PerPage=24\" class=\"seriesColbox\">" + szSeries + "</a></h6>\n");
+	if(szSeries.length > 0 && szLibOwned == 0)
+	  document.write("<div class=\"seriesColbox\">Series: " + szSeries + "</div>\n");
+</script>
+<!--</li>
+
+</ul>
+</div>
+</div>-->
+</div>
+
+<script type="text/javascript">
+var szSeries = "";
+  if(szSeries.length > 0){
+    $("#seriesRow").css("display","block");
+  };
+</script><div class="row">			
+<div id="creatorDetails" class="twelve columns">
+<h6>by <a href="BANGSearch.dll?Type=Creator&amp;ID=388087&amp;PerPage=24&amp;SortBy=CollDate" title="Search for other content by Gillian Flynn">Gillian Flynn</a>
+</h6>
+</div>
+</div>
+
+
+<script type="text/javascript">
+var hazCreator = $("div#creatorDetails a").html();
+if(hazCreator == ""){
+  $("div#creatorDetails").html("<h6><a title=\"Search for other content from Crown/Archetype\" href=\"BANGSearch.dll?Type=Publisher&amp;ID=98099&amp;PerPage=24&amp;SortBy=CollDate\">Crown/Archetype</a></h6>");
+};
+</script>
+
+
+<div class="row">			
+<div id="creatorSubDetails" class="twelve columns">
+<ul><li><h6 class="sub-creator"><a href="BANGSearch.dll?Type=Creator&amp;ID=388087&amp;PerPage=24&amp;SortBy=CollDate" title="Search for other content by Gillian Flynn">Gillian Flynn</a></h6></li></ul>
+<a href="javascript:void(0);" alt="Show more Creators" title="Show more Creators" class="show-creators">More creators...</a>
+</div>
+</div>
+
+<script type="text/javascript">
+$("div#creatorSubDetails ul li h6:first").remove();
+var hazSubCreator = $("div#creatorSubDetails").html();
+if(hazSubCreator == ""){
+  $("div#creatorSubDetails").css("margin","0px").css("display","none")
+};
+var subCrtrLsts = $("div#creatorSubDetails ul li").size();
+if(subCrtrLsts <= 4){
+  $(".show-creators").remove();
+};
+$("div#creatorSubDetails ul li:gt(3)").hide();
+$(".show-creators").click(function() {
+  var showOrHide = $(this).html();
+  if(showOrHide == "More creators..."){
+  $("div#creatorSubDetails ul li:gt(3)").show();
+  $("a.show-creators").attr("alt", "Show less creators");
+  $("a.show-creators").attr("title", "Show less creators");
+  $(this).html($(this).html() == "More creators..." ? "Show less..." : "More creators...");
+  }else if(showOrHide == "Show less..."){
+  $("div#creatorSubDetails ul li:gt(3)").hide();
+  $("a.show-creators").attr("alt", "Show more creators");
+  $("a.show-creators").attr("title", "Show more creators");
+  $(this).html($(this).html() == "More creators..." ? "Show less..." : "More creators...");
+  $('html, body').animate({
+    scrollTop: $("#topRowLinks").offset().top
+	}, 0);
+  };
+});
+
+</script><script type="text/javascript">var detailsFmt610 = "610";
+var detailsFmt410 = "410";
+//var hazODRead2 = detailsFmt610 == "610";
+</script><script type="text/javascript">
+var szReserveID = "365E31DF-D292-44D6-98B6-20ACD2542A28";
+var szReserveIDlc = szReserveID.toLowerCase();
+var szFirstExcerptURL = "http://samples.overdrive.com/?crid=365e31df-d292-44d6-98b6-20acd2542a28&.epub-sample.overdrive.com&retailerid=londonlibraries";
+var szFormatClassID = "1";
+var szHoldsDisabled = "0";
+var szTitle = "The Grownup";
+var szThumbImageHref = "//images.contentreserve.com/ImageType-150/0111-1/365/E31/DF/%7B365E31DF-D292-44D6-98B6-20ACD2542A28%7DImg150.jpg";
+var szAdvInPrivate = 0;
+var szAdvInShared = 1;
+var szAdvMyPrivate = -1;
+var szCopiesAvail = "0";
+var szHoldsDisabled = 0;
+var CPCFormatClassID = 1;
+
+
+if (szFormatClassID == 6) {
+	document.write("<div class=\"row\" style=\"margin-bottom:10px;\"><div class=\"twelve columns\" id=\"BNnote\"><strong>Read with <nobr>NOOK&reg;</nobr> by Barnes &amp; Noble</strong></div></div>");
+}
+
+var szAgeRating = "";
+if(szAgeRating != ""){
+document.write("<div class=\"row\" id=\"vidRating\"><div class=\"twelve columns\">Rating: <span id=\"ageRating\"></span></div></div>");
+}
+</script>
+<style>
+#readButtonDetails a {display:none;}
+div#borrowingPeriod a{display:none;}
+</style>
+
+<div class="row">
+<div class="four mobile-four columns push-eight">
+</div>
+<div class="eight mobile-four columns pull-four" id="readButtonDetails">
+<script language="JavaScript" type="text/javascript"><!--
+var szLibOwned = 1;
+var nIsRecommended = 0;
+var nIsRecLimit = 0;
+var nLendingPeriod = 14;
+var szAdvInPrivate = 0;
+var szAdvInShared = 1;
+var szAdvMyPrivate = -1;
+
+if(szLibOwned == 0 || (szLoginStatus == 1 && szLibOwned == 1 && szAdvInPrivate == 1 && szAdvInShared == 0 && szAdvMyPrivate == 0)){
+$(".details-title-button").css("display","none");
+document.write("<div style=\"float:left\"><!-- <strong>eBook</strong> --></div>");
+	
+document.write("<div><div class=\"recommend-holder\">");
+
+if(hazRecommend == "0") {
+		document.write("<a href=\"#\" class=\"radius large button details-title-button\" data-checkedout=\"0\">No Longer Available</a>");
+}
+else {
+	if((szLoginStatus == 1 && szLibOwned == 0 && CPCFormatClassID != 4) || (szLoginStatus == 1 && szLibOwned == 1 && szAdvInPrivate == 1 && szAdvInShared == 0 && szAdvMyPrivate == 0 && CPCFormatClassID != 4)){
+		if(nIsRecommended == 0){
+		if(nIsRecLimit == 0){
+			document.write("<a href=\"BANGAuthenticate.dll?Action=AuthCheck&URL=MoreRecommend.htm?ID=365E31DF-D292-44D6-98B6-20ACD2542A28&ForceLoginFlag=0\" class=\"recommendBtn large button radius details-title-button\" data-track=\"recommend\"><span class=\"recommendIcon\" data-checkedout=\"0\">Recommend</span></a>");
+			}
+			else {
+			document.write("<a class=\"recommendLimitBtn large button radius details-title-button\" data-reveal-id=\"recommendLimitReached\" data-checkedout=\"0\"><span class=\"recommendIcon\">Limit Reached</span></a>");
+			}
+		}
+		else{
+		//console.log("szLibOwned = " + szLibOwned + ", szAdvMyPrivate = " + szAdvMyPrivate + ", szAdvInPrivate = " + szAdvInPrivate + ", szAdvInShared = " + szAdvInShared);
+		document.write("<div class=\"recommendedBtn large button radius details-title-button\" data-checkedout=\"0\"><span class=\"recommendedIconCheck\">Recommended</span></div>");
+		}
+		
+	}
+
+	if(szLoginStatus == 0 && szLibOwned == 0 && CPCFormatClassID != 4){
+		
+		document.write("<a href=\"BANGAuthenticate.dll?Action=AuthCheck&amp;ForceLoginFlag=0&URL=MoreRecommend.htm?ID=365E31DF-D292-44D6-98B6-20ACD2542A28\" class=\"recommendSignBtn large button radius details-title-button\"  data-checkedout=\"0\" data-track=\"recommend\"><span class=\"recommendIcon\">Recommend</span></a>");
+
+	}
+}
+
+if (CPCFormatClassID == 4 && szLibOwned == 0) {
+	document.write("<a href=\"javascript:void(0);\" class=\"radius large button details-title-button\" data-checkedout=\"0\">Not Available</a>");
+}
+
+document.write("</div></div>");
+
+}else if(szLoginStatus == 0 && szAdvInPrivate == 1){
+	
+	document.write("<a href=\"BANGAuthenticate.dll?Action=AuthCheck&amp;URL=ContentDetails.htm%3fid%3d365E31DF-D292-44D6-98B6-20ACD2542A28&amp;ForceLoginFlag=0\" class=\"radius large button details-title-button\" data-checkedout=\"0\">Sign in for Availability</a>");
+
+}else if(szLoginStatus == 1 && szAdvInPrivate == 1 && szAdvMyPrivate == 0 && szAdvInShared == 0){
+	
+	document.write("<a href=\"javascript:void(0);\" class=\"radius large button details-title-button\" data-checkedout=\"0\">Not Available</a>");
+
+}else{
+	
+	if(0 == 1){
+	document.write("<a href=\"BANGAuthenticate.dll?Action=AuthCheck&URL=MyAccount.htm?PerPage=40%23myAccount2&ForceLoginFlag=0\" class=\"radius large button details-title-button\" data-checkedout=\"0\" data-contentstatus=\"0\">Go to Holds</a>");
+	}
+	else if (szHoldsDisabled == 1) {
+	document.write("<a href=\"#\" class=\"radius large button details-title-button\" data-checkedout=\"0\" data-contentstatus=\"0\" alt=\"Not Available\" title=\"Not Available\">Not Available</a>");    
+    }
+	else {
+	document.write("<a href=\"BANGAuthenticate.dll?Action=AuthCheck&amp;ForceLoginFlag=0&amp;URL=WaitingListForm.htm%3FID=365E31DF-D292-44D6-98B6-20ACD2542A28%26Format=610\" class=\"radius large button details-title-button\" data-checkedout=\"0\" data-contentstatus=\"0\" data-track=\"hold\">Place a Hold</a>");
+	}
+
+}
+//--></script>
+<noscript class="noscript-borrow-button"><a href="BANGAuthenticate.dll?Action=AuthCheck&amp;ForceLoginFlag=0&amp;URL=WaitingListForm.htm%3FID=365E31DF-D292-44D6-98B6-20ACD2542A28%26Format=610" class="radius large button details-title-button" data-checkedout="0" data-contentstatus="0" data-track="hold">Place a Hold</a></noscript>
+<script language="JavaScript" type="text/javascript"><!--
+var szLibOwned = 1;
+var nIsRecommended = 0;
+var nIsRecLimit = 0;
+var nLendingPeriod = 14;
+var szAdvInPrivate = 0;
+var szAdvInShared = 1;
+var szAdvMyPrivate = -1;
+
+if(szLibOwned == 0 || (szLoginStatus == 1 && szLibOwned == 1 && szAdvInPrivate == 1 && szAdvInShared == 0 && szAdvMyPrivate == 0)){
+$(".details-title-button").css("display","none");
+document.write("<div style=\"float:left\"><!-- <strong>eBook</strong> --></div>");
+	
+document.write("<div><div class=\"recommend-holder\">");
+
+if(hazRecommend == "0") {
+		document.write("<a href=\"#\" class=\"radius large button details-title-button\" data-checkedout=\"0\">No Longer Available</a>");
+}
+else {
+	if((szLoginStatus == 1 && szLibOwned == 0 && CPCFormatClassID != 4) || (szLoginStatus == 1 && szLibOwned == 1 && szAdvInPrivate == 1 && szAdvInShared == 0 && szAdvMyPrivate == 0 && CPCFormatClassID != 4)){
+		if(nIsRecommended == 0){
+		if(nIsRecLimit == 0){
+			document.write("<a href=\"BANGAuthenticate.dll?Action=AuthCheck&URL=MoreRecommend.htm?ID=365E31DF-D292-44D6-98B6-20ACD2542A28&ForceLoginFlag=0\" class=\"recommendBtn large button radius details-title-button\" data-track=\"recommend\"><span class=\"recommendIcon\" data-checkedout=\"0\">Recommend</span></a>");
+			}
+			else {
+			document.write("<a class=\"recommendLimitBtn large button radius details-title-button\" data-reveal-id=\"recommendLimitReached\" data-checkedout=\"0\"><span class=\"recommendIcon\">Limit Reached</span></a>");
+			}
+		}
+		else{
+		//console.log("szLibOwned = " + szLibOwned + ", szAdvMyPrivate = " + szAdvMyPrivate + ", szAdvInPrivate = " + szAdvInPrivate + ", szAdvInShared = " + szAdvInShared);
+		document.write("<div class=\"recommendedBtn large button radius details-title-button\" data-checkedout=\"0\"><span class=\"recommendedIconCheck\">Recommended</span></div>");
+		}
+		
+	}
+
+	if(szLoginStatus == 0 && szLibOwned == 0 && CPCFormatClassID != 4){
+		
+		document.write("<a href=\"BANGAuthenticate.dll?Action=AuthCheck&amp;ForceLoginFlag=0&URL=MoreRecommend.htm?ID=365E31DF-D292-44D6-98B6-20ACD2542A28\" class=\"recommendSignBtn large button radius details-title-button\"  data-checkedout=\"0\" data-track=\"recommend\"><span class=\"recommendIcon\">Recommend</span></a>");
+
+	}
+}
+
+if (CPCFormatClassID == 4 && szLibOwned == 0) {
+	document.write("<a href=\"javascript:void(0);\" class=\"radius large button details-title-button\" data-checkedout=\"0\">Not Available</a>");
+}
+
+document.write("</div></div>");
+
+}else if(szLoginStatus == 0 && szAdvInPrivate == 1){
+	
+	document.write("<a href=\"BANGAuthenticate.dll?Action=AuthCheck&amp;URL=ContentDetails.htm%3fid%3d365E31DF-D292-44D6-98B6-20ACD2542A28&amp;ForceLoginFlag=0\" class=\"radius large button details-title-button\" data-checkedout=\"0\">Sign in for Availability</a>");
+
+}else if(szLoginStatus == 1 && szAdvInPrivate == 1 && szAdvMyPrivate == 0 && szAdvInShared == 0){
+	
+	document.write("<a href=\"javascript:void(0);\" class=\"radius large button details-title-button\" data-checkedout=\"0\">Not Available</a>");
+
+}else{
+	
+	if(0 == 1){
+	document.write("<a href=\"BANGAuthenticate.dll?Action=AuthCheck&URL=MyAccount.htm?PerPage=40%23myAccount2&ForceLoginFlag=0\" class=\"radius large button details-title-button\" data-checkedout=\"0\" data-contentstatus=\"0\">Go to Holds</a>");
+	}
+	else if (szHoldsDisabled == 1) {
+	document.write("<a href=\"#\" class=\"radius large button details-title-button\" data-checkedout=\"0\" data-contentstatus=\"0\" alt=\"Not Available\" title=\"Not Available\">Not Available</a>");    
+    }
+	else {
+	document.write("<a href=\"BANGAuthenticate.dll?Action=AuthCheck&amp;ForceLoginFlag=0&amp;URL=WaitingListForm.htm%3FID=365E31DF-D292-44D6-98B6-20ACD2542A28%26Format=410\" class=\"radius large button details-title-button\" data-checkedout=\"0\" data-contentstatus=\"0\" data-track=\"hold\">Place a Hold</a>");
+	}
+
+}
+//--></script>
+<noscript class="noscript-borrow-button"><a href="BANGAuthenticate.dll?Action=AuthCheck&amp;ForceLoginFlag=0&amp;URL=WaitingListForm.htm%3FID=365E31DF-D292-44D6-98B6-20ACD2542A28%26Format=410" class="radius large button details-title-button" data-checkedout="0" data-contentstatus="0" data-track="hold">Place a Hold</a></noscript>
+</div>
+</div>
+
+
+<script type="text/javascript">
+$(document).ready(function () {
+$("div#readButtonDetails div:first").css("display","block");
+$("div#readButtonDetails img:first").css("display","block");
+$("div#readButtonDetails a.details-title-button:first").css("display","block");
+$("div#borrowingPeriod div:first").css("display","block");
+$("div#borrowingPeriod a:first").css("display","inline-block");
+});
+
+if(g_bFutureOnSaleDate == "1")
+	document.write("<div><span style=\"color:red;\">*</span>&nbsp;<a href=\"#\" class=\"prerelease-link\" data-prereleaseid=\"365E31DF-D292-44D6-98B6-20ACD2542A28\">Pre-Release Title</a></div>\n");
+</script><script type="text/javascript">
+		var isTitleRestricted = 0;
+		var contentStatusFlag = "0";
+if ($('#coverFrame').attr("data-isownedbylib") == 1){
+			if(contentStatusFlag){
+				if(0 == 1){
+					if(((contentStatusFlag & 1) == 1) && ((contentStatusFlag & 2) == 2)){
+						document.write("<div class=\"titleStatusFlag\">This title is not available - juvenile & young adult</div>");
+					}
+					if(((contentStatusFlag & 1) == 1) && ((contentStatusFlag & 2) != 2)){
+						document.write("<div class=\"titleStatusFlag\">This title is not available - juvenile only.</div>");
+					}
+					if(((contentStatusFlag & 1) != 1) && ((contentStatusFlag & 2) == 2)){
+						document.write("<div class=\"titleStatusFlag\">This title is not available - young adults only.</div>");
+					}
+					if((contentStatusFlag & 32771) == 0){
+						document.write("<div class=\"titleStatusFlag\">This title is not available - adults.</div>");
+					}
+				}
+			}else if(isTitleRestricted == 1){
+				document.write("<div class=\"titleStatusFlag\">This title is not available for your age level.</div>");
+			}
+		}
+		</script>
+<div class="row" id="detailsWishBtn">
+
+
+<div class="rsltsListWish eight columns"><div class="wishlist-blr"><a href="#" class="wishlist-link wl-blr button" style="margin-left:0px;" value="365E31DF-D292-44D6-98B6-20ACD2542A28" title="" alt="" data-thistitle="The Grownup"><i id="365E31DF-D292-44D6-98B6-20ACD2542A28" class="icon-bookmark s-link-wishlist" alt="Wish List Ribbon" title="'The Grownup'" data-wishlist="0"><span class="i-hide"></span></i> <span class="wl-span-list" data-blrwlspan="0"></span></a></div></div>
+
+
+<script>
+$(document).ready(function(){
+	if("418" == "146"){
+		var thePublisher = "Crown/Archetype";
+		if((thePublisher.indexOf('Penguin') != -1)||(thePublisher.indexOf('Brilliance Audio') != -1)){$("#indyDetailsMessage").show();}
+	}
+
+$('.wishlist-link').each(function(){
+	    var WLStatus = $(this).find(".wl-span-list").attr("data-blrwlspan");
+		if (WLStatus == 1) {
+			$(".wl-span-list").html("Remove from Wish List");
+		} else if (WLStatus != 1) {
+			$(".wl-span-list").html("Add to Wish List");
+		};
+	});
+
+ });
+
+$(".wishlist-blr").on("click touchbegin", function () {
+		var blrWishlistStatus = $(this).find(".wl-span-list").attr("data-blrwlspan");
+		if (blrWishlistStatus == 0) {
+			$(this).find(".wl-span-list").attr("data-blrwlspan","1").html("Remove from Wish List");
+		} else if (blrWishlistStatus == 1) {
+			$(this).find(".wl-span-list").attr("data-blrwlspan","0").html("Add to Wish List");
+		}
+	});
+
+if(1 == 1 && 0 != 1) {
+$(".rsltsListWish").css('display','block');
+}
+//console.log("szLibOwned = " + szLibOwned + ", szAdvMyPrivate = " + szAdvMyPrivate + ", szAdvInPrivate = " + szAdvInPrivate + ", szAdvInShared = " + szAdvInShared);
+if (szLibOwned == 1 && szAdvInPrivate == 1 && szAdvInShared == 0 && szAdvMyPrivate != 1) {
+	$(".rsltsListWish").css('display','none');
+	$("#coverContain .supernote_hover_noavail.details-advantage-cover").css('display','none');
+}
+
+</script>
+<div class="four mobile-four columns buy-it-now-holder">
+<script language="JavaScript" type="text/javascript">
+if(0 == 1) {
+document.write("<a href=\"javascript:void(0)\" class=\"buyNowBtn radius small button\" data-reveal-id=\"winAffiliateModal\" alt=\"Buy It Now\" title=\"Buy It Now\">Buy It Now</a></div><div style=\"clear:both\">");
+}
+</script>
+</div>
+
+
+</div>
+<div class="row">
+<div class="twelve mobile-four columns">
+<div id="star-ratings-odread" style="float:left;">
+<script language="JavaScript"><!--
+
+var szNumRatings = "0";
+
+var szAltRank = "-1";
+	if(szAltRank == "-1")
+		szAltRank = "unrated";
+	else if(szNumRatings == "1")
+		szAltRank = "-1 of 5 stars (0 rating)";
+
+	else 
+		szAltRank = "-1 of 5 stars (0 ratings)";
+
+var szNoUserRank = "-1";
+
+var szUserRank = "-1";
+	if(szUserRank == "-1")
+		szUserRank = "no";
+	if(szUserRank == "0")
+		szUserRank = "no";
+	else if(szUserRank == "1")
+		szUserRank = "one";
+	else if(szUserRank == "1.1")
+		szUserRank = "oneone";
+	else if(szUserRank == "1.2")
+		szUserRank = "onetwo";
+	else if(szUserRank == "1.3")
+		szUserRank = "onethree";
+	else if(szUserRank == "1.4")
+		szUserRank = "onefour";
+	else if(szUserRank == "1.5")
+		szUserRank = "onefive";
+	else if(szUserRank == "1.6")
+		szUserRank = "onesix";
+	else if(szUserRank == "1.7")
+		szUserRank = "oneseven";
+	else if(szUserRank == "1.8")
+		szUserRank = "oneeight";
+	else if(szUserRank == "1.9")
+		szUserRank = "onenine";
+	else if(szUserRank == "2")
+		szUserRank = "two";
+	else if(szUserRank == "2.1")
+		szUserRank = "twoone";
+	else if(szUserRank == "2.2")
+		szUserRank = "twotwo";
+	else if(szUserRank == "2.3")
+		szUserRank = "twothree";
+	else if(szUserRank == "24")
+		szUserRank = "twofour";
+	else if(szUserRank == "2.5")
+		szUserRank = "twofive";
+	else if(szUserRank == "2.6")
+		szUserRank = "twosix";
+	else if(szUserRank == "2.7")
+		szUserRank = "twoseven";
+	else if(szUserRank == "2.8")
+		szUserRank = "twoeight";
+	else if(szUserRank == "2.9")
+		szUserRank = "twonine";
+	else if(szUserRank == "3")
+		szUserRank = "three";
+	else if(szUserRank == "3.1")
+		szUserRank = "threeone";
+	else if(szUserRank == "3.2")
+		szUserRank = "threetwo";
+	else if(szUserRank == "3.3")
+		szUserRank = "threethree";
+	else if(szUserRank == "3.4")
+		szUserRank = "threefour";
+	else if(szUserRank == "3.5")
+		szUserRank = "threefive";
+	else if(szUserRank == "3.6")
+		szUserRank = "threesix";
+	else if(szUserRank == "3.7")
+		szUserRank = "threeseven";
+	else if(szUserRank == "3.8")
+		szUserRank = "threeeight";
+	else if(szUserRank == "3.9")
+		szUserRank = "threenine";
+	else if(szUserRank == "4")
+		szUserRank = "four";
+	else if(szUserRank == "4.1")
+		szUserRank = "fourone";
+	else if(szUserRank == "4.2")
+		szUserRank = "fourtwo";
+	else if(szUserRank == "4.3")
+		szUserRank = "fourthree";
+	else if(szUserRank == "4.4")
+		szUserRank = "fourfour";
+	else if(szUserRank == "4.5")
+		szUserRank = "fourfive";
+	else if(szUserRank == "4.6")
+		szUserRank = "foursix";
+	else if(szUserRank == "4.7")
+		szUserRank = "fourseven";
+	else if(szUserRank == "4.8")
+		szUserRank = "foureight";
+	else if(szUserRank == "4.9")
+		szUserRank = "fournine";
+	else if(szUserRank == "5")
+		szUserRank = "five";
+
+	document.write("<div align=\"center\" class=\"ratings-average\"><label class=\"skip\">Star Ratings</label><a href=\"BANGAuthenticate.dll?Action=AuthCheck&ForceLoginFlag=0&URL=ContentDetails.htm?ID=365E31DF-D292-44D6-98B6-20ACD2542A28\" class=\"signinrank FULLrating FULL" + szUserRank + "star\" alt=\"-1 of 5 stars (0 ratings)\" title=\"-1 of 5 stars (0 ratings)\"></a><br /><a href=\"BANGAuthenticate.dll?Action=AuthCheck&ForceLoginFlag=0&URL=ContentDetails.htm?ID=365E31DF-D292-44D6-98B6-20ACD2542A28\" class=\"signinrank\" style=\"clear:both; float:left;\">Sign in & rate this title.</a></div>");
+
+	if(-1 == -1 && 0 == 0){
+	  $('.signinrank').attr('alt','No ratings').attr('title','No ratings');
+	}
+	
+//--></script>
+
+</div>
+
+
+
+</div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+	//if($('#coverFrame').attr("data-contentstatus") == 1){
+	if($('#coverFrame').attr("data-contentstatus") == 1 && 1 == 1){
+		$('.details-title-button').html('Not Available');
+	  
+		//Remove Wishlist, Sample Button, Borrowing info, Rating, & Recommended Titles
+		$('#wishListButton,#borrowingPeriod,#crossMarketing,#star-ratings-odread,#readButtonDetails,#wlDtlsMobile,.dtls-sample-button,#excerptsExpand').remove();
+	  
+		//Remove sample
+		if ($('#coverFrame, #coverOverlay').find('img').parent('a').length > 0){
+			$('#coverFrame, #coverOverlay').find('img').unwrap();
+		}
+		
+		//Make title appear unavailable
+		var coverImage = $('#coverOverlay img');
+		
+		if(coverImage.hasClass('avl1-fmt1') || coverImage.hasClass('avl-1-fmt1') || coverImage.hasClass('avl0-fmt1')){
+			$('#coverOverlay img').removeClass().addClass('avl0-fmt1 no-sample-img').attr("alt","This title is restricted");
+		} else if(coverImage.hasClass('avl1-fmt2') || coverImage.hasClass('avl-1-fmt2') || coverImage.hasClass('avl0-fmt2')){
+			$('#coverOverlay img').removeClass().addClass('avl0-fmt2 no-sample-img').attr("alt","This title is restricted");
+		} else if(coverImage.hasClass('avl1-fmt3') || coverImage.hasClass('avl-1-fmt3') || coverImage.hasClass('avl0-fmt3')){
+			$('#coverOverlay img').removeClass().addClass('avl0-fmt3 no-sample-img').attr("alt","This title is restricted");
+		} else if(coverImage.hasClass('avl1-fmt4') || coverImage.hasClass('avl-1-fmt4') || coverImage.hasClass('avl0-fmt4')){
+			$('#coverOverlay img').removeClass().addClass('avl0-fmt4 no-sample-img').attr("alt","This title is restricted");
+		} else if(coverImage.hasClass('avl1-fmt5') || coverImage.hasClass('avl-1-fmt5')){
+			$('#coverOverlay img').removeClass().addClass('avl1-fmt5 no-sample-img').attr("alt","This title is restricted");
+		}
+	};
+});
+</script>
+
+
+
+<!--Old way to hide title restrictions-->
+<!--<script type="text/javascript">
+if(0 == 1){
+  $('.details-title-button').html('Unavailable');
+};
+</script>-->
+
+<div class="row" id="spclDtlsMsg" style="display:none;">
+<div class="twelve columns">
+</div>
+</div>
+<script type="text/javascript">
+if((0 & 32771) == 0){
+  document.write("<div id=\"bcSpclMsgDtls\" style=\"display:none;\"></div>");
+};
+</script>
+<style>#bcSpclMsgDtls{display:none !important;}</style>
+<div class="row" id="truncDescContain">
+    <div class="twelve columns">
+        <span class="desc-exp-col" dir="auto">
+            <b>Gillian Flynn's Edgar Award-winning homage to the classic ghost story, published for the first time as a standalone.</b><br><br>A canny young woman is struggling to survive by perpetrating various levels of mostly harmless fraud. On a rainy April morning, she is reading auras at Spiritual Palms when Susan Burke walks in. A keen observer of human behavior, our unnamed narrator immediately diagnoses beautiful, rich Susan as an unhappy woman eager to give her lovely life a drama injection. However, when the psychic visits the eerie Victorian home that has been the source of Susan's terror and grief, she realizes she may not have to pretend to believe in ghosts anymore. Miles, Susan's teenage stepson, doesn't help matters with his disturbing manner and grisly imagination. The three are soon locked in a chilling battle to discover where the evil truly lurks and what, if anything, can be done to escape it. <br><br>"The Grownup," which originally appeared as "What Do You Do?" in George R. R. Martin's <i>Rogues</i> anthology, proves once again that Gillian Flynn is one of the world's most original and skilled voices in fiction.
+        </span>
+    </div>
+</div>
+<div class="row">
+<script type="text/javascript">var szCRID = "365E31DF-D292-44D6-98B6-20ACD2542A28"</script>
+<script>
+if ( $.inArray(szCRID, szListTitles1) > -1 ){
+// do something
+}
+</script>
+<script>
+if ( $.inArray(szCRID, szListTitles2) > -1 ){
+// do something
+}
+</script>
+<script>
+if ( $.inArray(szCRID, szListTitles3) > -1 ){
+// do something
+}
+</script>
+<script>
+if ( $.inArray(szCRID, szListTitles4) > -1 ){
+// do something
+}
+</script><script>
+if ( $.inArray(szCRID, szListTitles1) > -1 ){
+// do something
+}
+</script>
+<script>
+if ( $.inArray(szCRID, szListTitles2) > -1 ){
+// do something
+}
+</script>
+<script>
+if ( $.inArray(szCRID, szListTitles3) > -1 ){
+// do something
+}
+</script>
+<script>
+if ( $.inArray(szCRID, szListTitles4) > -1 ){
+// do something
+}
+</script>
+</div>
+</div> <!-- four columns -->
+
+
+<div class="three mobile-four columns" style="float:left;">
+<div class="row" id="truncDescContainMobile">
+    <div class="twelve columns">
+        <span class="desc-exp-col-mobile" dir="auto">
+		    <b>Gillian Flynn's Edgar Award-winning homage to the classic ghost story, published for the first time as a standalone.</b><br><br>A canny young woman is struggling to survive by perpetrating various levels of mostly harmless fraud. On a rainy April morning, she is reading auras at Spiritual Palms when Susan Burke walks in. A keen observer of human behavior, our unnamed narrator immediately diagnoses beautiful, rich Susan as an unhappy woman eager to give her lovely life a drama injection. However, when the psychic visits the eerie Victorian home that has been the source of Susan's terror and grief, she realizes she may not have to pretend to believe in ghosts anymore. Miles, Susan's teenage stepson, doesn't help matters with his disturbing manner and grisly imagination. The three are soon locked in a chilling battle to discover where the evil truly lurks and what, if anything, can be done to escape it. <br><br>"The Grownup," which originally appeared as "What Do You Do?" in George R. R. Martin's <i>Rogues</i> anthology, proves once again that Gillian Flynn is one of the world's most original and skilled voices in fiction.
+        </span>
+    </div>
+</div>
+<div class="row" id="shareFeatRow">
+<div class="twelve mobile-four columns">
+<div id="shareIcons">
+<ul>
+<li class="share-fb">
+<a href="ShareOnFacebook.htm?ID=365E31DF-D292-44D6-98B6-20ACD2542A28" target="_blank" alt="This link takes you to Facebook" title="Link to 'The Grownup' on Facebook"><i class="step icon-facebook3 size-32 s-fb"><span class="i-hide">Link to 'The Grownup' on Facebook</span></i></a>
+</li>
+<li class="share-tw">
+<a href="ShareOnTwitter.htm?ID=365E31DF-D292-44D6-98B6-20ACD2542A28" target="_blank" alt="This link takes you to Twitter" title="Tweet about 'The Grownup'"><i class="step icon-twitter3 size-32 s-tw"><span class="i-hide">Tweet about 'The Grownup'</span></i></a>
+</li>
+<li class="share-pin">
+<a href="ShareOnPinterest.htm?ID=365E31DF-D292-44D6-98B6-20ACD2542A28" target="_blank" alt="This link takes you to Pinterest" title="Pin 'The Grownup'"><i class="step icon-pinterest size-32 s-pin"><span class="i-hide">Pin 'The Grownup'</span></i></a>
+</li>
+<li class="share-em">
+<a href="BANGAuthenticate.dll?Action=AuthCheck&amp;URL=RecommendEmail.htm?ID=365E31DF-D292-44D6-98B6-20ACD2542A28&amp;ForceLoginFlag=0" alt="Email a friend about this title" title="Email a friend about 'The Grownup'" class="recommendEmail"><span class="i-hide">Email a friend about 'The Grownup'</span><i class="step icon-mail4 size-32 s-em"></i></a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<script>
+var agent = navigator.userAgent.toLowerCase();
+
+if(agent.indexOf('overdrive media console') != -1){
+$("#shareFeatRow").css("display","none");
+};
+
+</script>
+<div class="row">
+<div class="twelve mobile-four columns">
+<div id="formatsAtDownload" class="details-expand">
+<h6>Available formats<span class="format-plus-minus tog-plus-minus details-plus-minus-exp" style="float:right; margin-right:5px; cursor:pointer;" tabindex="0" title="Open/Close Available formats">-</span>
+</h6>
+<ul class="formats-at-download tog-close details-ul-exp" style="display:block;">
+<li class="details-other-formats" data-allformats="610">OverDrive Read
+    <script>
+        var DrmInfo610 = "";
+        if(610 == "420" && DrmInfo420.length > 4)
+            document.write("<br><a href=\"javascript:void(0);\" class=\"kindle-usb-only-details\" title=\"Device Restritctions for Kindle\">Device Restrictions</a>");
+        if(610 == "304")
+            document.write("<br><a href=\"javascript:void(0);\" class=\"nook-mag-supported-devices\" title=\"Supported Devices for NOOK app\">Supported Devices</a>");
+        if(610 == "610" && 0 == 1)
+            document.write("<a href=\"#\" class=\"enh-nar-format\" data-reveal-id=\"narratedEbook\" data-enhresid=\"365E31DF-D292-44D6-98B6-20ACD2542A28\">&nbsp;<img class=\"embed-audio-img-format\" src=\"//libraryreserve.cdn.overdrive.com/418/50/1.41/spacer.gif\" alt=\"Read-along\" /></a>");
+    </script>
+</li>
+<li class="details-other-formats" data-allformats="410">EPUB eBook
+    <script>
+        var DrmInfo410 = "0§0§-1|0§0§-1|0|0|0§-1§0";
+        if(410 == "420" && DrmInfo420.length > 4)
+            document.write("<br><a href=\"javascript:void(0);\" class=\"kindle-usb-only-details\" title=\"Device Restritctions for Kindle\">Device Restrictions</a>");
+        if(410 == "304")
+            document.write("<br><a href=\"javascript:void(0);\" class=\"nook-mag-supported-devices\" title=\"Supported Devices for NOOK app\">Supported Devices</a>");
+        if(410 == "610" && 0 == 1)
+            document.write("<a href=\"#\" class=\"enh-nar-format\" data-reveal-id=\"narratedEbook\" data-enhresid=\"365E31DF-D292-44D6-98B6-20ACD2542A28\">&nbsp;<img class=\"embed-audio-img-format\" src=\"//libraryreserve.cdn.overdrive.com/418/50/1.41/spacer.gif\" alt=\"Read-along\" /></a>");
+    </script>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<noscript>
+<style type="text/css">
+.formats-at-download{display:block !important;}
+.format-plus-minus{display:none !important;}
+.format-plus-plus{display:none !important;}
+</style>
+</noscript>
+
+<script>
+  $(document).ready(function() {
+    $(".kindle-usb-only-details").click(function() {
+      $("#kindlePenguinRestricted").reveal();
+    });
+$(".nook-mag-supported-devices").click(function() {
+      $("#NookSupportedDevices").reveal();
+    });
+  });
+</script><div class="row" id="editionRow" style="display:none;">
+<div class="twelve mobile-four columns">
+<div id="editionExpand" class="details-expand">
+<h6>Edition<span class="edition-plus-minus tog-plus-minus details-plus-minus-exp" style="float:right; margin-right:5px; cursor:pointer; font-weight:bold;" tabindex="0" title="Open/Close Edition">-</span>
+</h6>
+<ul class="edition-expand tog-close details-ul-exp" style="display:block;">
+
+<li>
+
+</li>
+
+</ul>
+</div>
+</div>
+</div>
+
+<script type="text/javascript">
+var szEdition = "";
+  if(szEdition.length > 0){
+    $("#editionRow").css("display","block");
+  };
+</script><div class="row">
+<div class="twelve mobile-four columns">
+<div id="subjectsExpand" class="details-expand">
+<h6>Subjects<span class="subject-plus-minus tog-plus-minus details-plus-minus-exp" style="float:right; margin-right:5px; cursor:pointer;" tabindex="0" title="Open/Close Subjects">-</span>
+</h6>
+<ul class="subjects-expand tog-close details-ul-exp" style="display:block;">
+<li>
+<a href="BANGSearch.dll?Type=Subject&amp;ID=26s&amp;SortBy=CollDate&amp;PerPage=24" title='Search for other content in "Fiction"'>Fiction</a>
+</li>
+<li>
+<a href="BANGSearch.dll?Type=Subject&amp;ID=86s&amp;SortBy=CollDate&amp;PerPage=24" title='Search for other content in "Suspense"'>Suspense</a>
+</li>
+<li>
+<a href="BANGSearch.dll?Type=Subject&amp;ID=100s&amp;SortBy=CollDate&amp;PerPage=24" title='Search for other content in "Thriller"'>Thriller</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<noscript>
+<style type="text/css">
+.subjects-expand{display:block !important;}
+.subject-plus-minus{display:none !important;}
+.subject-plus-plus{display:none !important;}
+</style>
+</noscript>
+<div class="row" id="languageOnOff">
+<div class="twelve mobile-four columns">
+<div id="languagesExpand" class="details-expand">
+<h6>Languages:<span class="languages-plus-minus tog-plus-minus details-plus-minus-exp" style="float:right; margin-right:5px; cursor:pointer;" tabindex="0" title="Open/Close Languages">-</span>
+</h6>
+<ul class="languages-expand tog-close details-ul-exp" style="display:block;"><li>
+<form action="BANGSearch.dll?Type=Advanced" method="post" style="margin:0pt;" name="Formen">
+<input type="hidden" name="Language" value="en"><input type="hidden" name="Sort" value="SortBy=CollDate"><input type="hidden" name="PerPage" value="20">
+<a class="details-language-en" href="javascript:document.Formen.submit()" title="Search for other content in English">English</a>
+</form>
+</li></ul>
+</div>
+</div>
+</div>
+
+<script type="text/javascript">
+var lanLi = $('.languages-expand li').size();
+var lanA = $('.languages-expand li form a').html();
+if(lanLi == 1 && lanA == 'English'){
+  $('#languageOnOff').remove();
+};
+/*var langOn = 1;
+if(langOn == 1){
+  $('#languageOnOff').css('display','block');
+};*/
+</script>
+<noscript>
+<style type="text/css">
+.languages-expand{display:block !important;}
+.languages-plus-minus{display:none !important;}
+.languages-plus-plus{display:none !important;}
+</style>
+</noscript>
+<div class="row" id="availCopiesDissappear" style="display:block;">
+<div class="twelve mobile-four columns">
+<div id="copiesExpand" class="details-expand">
+<h6>Copies<span class="copies-plus-minus tog-plus-minus details-plus-minus-exp" style="float:right; margin-right:5px; cursor:pointer; font-weight:bold;" tabindex="0" title="Open/Close Copies">-</span>
+</h6>
+<ul class="copies-expand tog-close details-ul-exp" style="display:block;">
+
+<li>
+<div class="row details-avail-copies">
+<div class="six mobile-two columns">Available:</div>
+<div class="six mobile-two columns" data-cpcavail="0" data-cpctitle="The Grownup" data-cpcformat="eBook" data-cpcexphrs="@@WATCH_EXPIRATION_HOURS@@" id="availableCopies">0</div>
+</div>
+</li>
+
+<li>
+<div class="row details-lib-copies">
+<div class="six mobile-two columns details-lib-copies">Library copies:</div>
+<div class="six mobile-two columns" data-cpcavail="0" data-cpctitle="The Grownup" data-cpcformat="eBook" data-cpcexphrs="@@WATCH_EXPIRATION_HOURS@@" id="libCopies">0</div>
+</div>
+</li>
+
+
+<script type="text/javascript">
+var deAvailCop = "0";
+var deNumWaiting = 12;
+var deHoldRatio = 0;
+var deAdvInPrivate = 0;
+var deAdvMyPrivate = -1;
+var deLibCopies = "0";
+var deIsOnHold = 0;
+var deHoldsPos = 0;
+
+
+//console.log("Library Copies = " + deLibCopies + ", Is Owned by Library = " + 1 + ", Hold ratio = " + 0 + ", Is on Hold list = " + deIsOnHold + ", Num Waiting = " + 12 + ", g_bFutureOnSaleDate = " + g_bFutureOnSaleDate + ", Available copies = " + deAvailCop);
+
+if(g_bFutureOnSaleDate == 1 && (deNumWaiting < deLibCopies)){
+document.write("<li class=\"details-patrons-on-holds\">");
+document.write("<div class=\"row\">");
+document.write("<div class=\"twelve mobile-four columns\">No wait list&nbsp;&nbsp;<a href=\"#\" data-holdsratioid=\"365E31DF-D292-44D6-98B6-20ACD2542A28\" data-totalholds=\"12\" data-numlibcopies=\"0\" data-holdsrat=\"0\" data-isonhold=\"0\" data-holdpos=\"0\" class=\"holds-wait-help\"><img src=\"//libraryreserve.cdn.overdrive.com/418/50/1.41/help2.png\" alt=\"Holds help\" /></a></div>");
+document.write("</div></li>");
+}
+else if (deAvailCop <= 0 && deNumWaiting != 0) {
+	if (deHoldRatio == 0 && deIsOnHold == 1 && deLibCopies > 0) {/* && deNumWaiting == 1 && szLoginStatus == 1*/
+		document.write("<li class=\"details-patrons-on-holds\">");
+		document.write("<div class=\"row\">");	
+		document.write("<div class=\"twelve mobile-four columns\">You are next in line for this title.</div>");
+		document.write("</div></li>");
+	}
+	else if (deHoldRatio > 0 || deLibCopies == 0){
+		document.write("<li class=\"details-patrons-on-holds\">");
+		document.write("<div class=\"row\">");
+		if (deHoldRatio > 0) {
+			if (deHoldRatio == 1){
+				document.write("<div class=\"twelve mobile-four columns\">0 person waiting per copy&nbsp;&nbsp;<a href=\"#\" data-holdsratioid=\"365E31DF-D292-44D6-98B6-20ACD2542A28\" data-totalholds=\"12\" data-numlibcopies=\"0\" data-holdsrat=\"0\" data-isonhold=\"0\" data-holdpos=\"0\" class=\"holds-wait-help\"><img src=\"//libraryreserve.cdn.overdrive.com/418/50/1.41/help2.png\" alt=\"Holds help\" /></a></div>");
+			}
+			else {
+				document.write("<div class=\"twelve mobile-four columns\">0 people waiting per copy&nbsp;&nbsp;<a href=\"#\" data-holdsratioid=\"365E31DF-D292-44D6-98B6-20ACD2542A28\" data-totalholds=\"12\" data-numlibcopies=\"0\" data-holdsrat=\"0\" data-isonhold=\"0\" data-holdpos=\"0\" class=\"holds-wait-help\"><img src=\"//libraryreserve.cdn.overdrive.com/418/50/1.41/help2.png\" alt=\"Holds help\" /></a></div>");
+			}
+		}
+		else if (deLibCopies == 0) {
+			if (deNumWaiting == 1){
+				document.write("<div class=\"twelve mobile-four columns\" id=\"holdsNoCopies\">" + deNumWaiting + " person waiting&nbsp;&nbsp;<a href=\"#\" data-holdsratioid=\"365E31DF-D292-44D6-98B6-20ACD2542A28\" data-totalholds=\"12\" data-numlibcopies=\"0\" data-holdsrat=\"0\" data-isonhold=\"0\" data-holdpos=\"0\" class=\"holds-wait-help\"><img src=\"//libraryreserve.cdn.overdrive.com/418/50/1.41/help2.png\" alt=\"Holds help\" /></a></div>");
+			}
+			else {
+				document.write("<div class=\"twelve mobile-four columns\" id=\"holdsNoCopies\">" + deNumWaiting + " people waiting&nbsp;&nbsp;<a href=\"#\" data-holdsratioid=\"365E31DF-D292-44D6-98B6-20ACD2542A28\" data-totalholds=\"12\" data-numlibcopies=\"0\" data-holdsrat=\"0\" data-isonhold=\"0\" data-holdpos=\"0\" class=\"holds-wait-help\"><img src=\"//libraryreserve.cdn.overdrive.com/418/50/1.41/help2.png\" alt=\"Holds help\" /></a></div>");
+			}
+		}
+		document.write("</div></li>");
+	}
+}
+</script>
+<noscript><li class="details-patrons-on-holds"><div class="row"><div class="twelve mobile-four columns">0 people waiting per copy</div></div></li></noscript>
+
+</ul>
+</div>
+</div>
+</div>
+
+<noscript>
+<style type="text/css">
+.copies-expand{display:block !important;}
+.copies-plus-minus{display:none !important;}
+.copies-plus-plus{display:none !important;}
+</style>
+</noscript>
+<script type="text/javascript">
+$(document).ready(function(){
+var hazAlways = "0";
+var nCopies = "0";
+if (hazAlways == "always available"){
+$(".details-patrons-on-holds").css("display","none");
+};
+if(szLibOwned == 0){
+  $("#availCopiesDissappear").css("display","none");
+};
+if("0" == "Limited"){
+  $('#availableCopies, #libCopies').attr('data-cpclending',nLendingPeriod).html('<a href="#" class="cpcDRM">Limited</a>');
+}
+if("0" == "Limited" && "0" == 1){
+  $('#availCopiesDissappear').css('display','none');
+}
+if(nCopies == "always available") {
+$(".details-avail-copies").html("<div class=\"twelve columns\">Always Available</div>");
+$(".details-lib-copies").parents('li').hide();
+$(".details-lib-copies div:last-child, .details-avail-copies div:last-child").css('text-align','left');
+}
+if(hazAlways == "always available") {
+$(".details-avail-copies").html("<div class=\"twelve columns\">Always Available</div>");
+$(".details-lib-copies").parents('li').hide();
+$(".details-lib-copies div:last-child, .details-avail-copies div:last-child").css('text-align','left');
+}
+});
+</script><div class="row" id="levelsRow" style="display: block">
+<div class="twelve mobile-four columns">
+<div id="readingExpand" class="details-expand">
+<h6>Levels<span class="levels-plus-minus tog-plus-minus details-plus-minus-exp" style="float:right; margin-right:5px; cursor:pointer; font-weight:bold;" tabindex="0" title="Open/Close Levels">-</span>
+</h6>
+<ul class="levels-expand tog-close details-ul-exp" style="display:block;">
+
+<li id="atosRow">
+	<div class="row">
+		<div class="seven mobile-three columns">ATOS:</div>
+		<div class="five mobile-one columns"><span style="float:right;"></span></div>
+	</div>
+</li>
+<li id="lexileRow">
+	<div class="row">
+		<div class="seven mobile-three columns">Lexile:</div>
+		<div class="five mobile-one columns"><span style="float:right;"></span></div>
+	</div>
+</li>
+<li id="interestRow">
+	<div class="row">
+		<div class="seven mobile-three columns">Interest Level:</div>
+		<div class="five mobile-one columns"><span style="float:right;"></span></div>
+	</div>
+</li>
+<li id="gradeRangeRow">
+	<div class="row">
+		<div class="seven mobile-three columns">Text Difficulty:</div>
+		<div class="five mobile-one columns"><span style="float:right;"></span></div>
+	</div>
+</li>
+
+
+</ul>
+</div>
+</div>
+</div>
+
+<script type="text/javascript">
+var szLevels = "";
+var szATOS = "";
+var szLexile = "";
+var szInterestLevel = "";
+var szGradeRange = "";
+
+//if(szLevels.length > 0){
+    //$("#levelsRow").css("display","block");
+  //};
+  
+  if(szATOS.length > 0){
+    $("#atosRow").css("display","block");
+  };
+  if(szLexile.length > 0){
+    $("#lexileRow").css("display","block");
+  };
+  if(szInterestLevel.length > 0){
+    $("#interestRow").css("display","block");
+  };
+  if(szGradeRange.length > 0){
+    $("#gradeRangeRow").css("display","block");
+  };
+
+if($('#atosRow,#lexileRow,#interestRow,#gradeRangeRow').is(":visible") == false){
+    $("#levelsRow").remove();
+}
+
+
+$(document).ready(function(){
+if ("" == "LG")
+  {
+	$("#interestRow span").text("K-3 (LG)");
+  }
+else if ("" == "MG")
+  {
+	$("#interestRow span").text("4-8 (MG)");
+  }
+else if ("" == "MG+")
+  {
+	$("#interestRow span").text("6-12(MG+)");
+  }
+else if ("" == "UG")
+  {
+	$("#interestRow span").text("9-12(UG)");
+  }
+ });
+</script>
+
+<noscript> <style type="text/css"> .levels-expand{display:block !important;} .levels-plus-minus{display:none !important;} .levels-plus-plus{display:none !important;} </style> </noscript>
+</div> <!-- four columns -->
+
+<div id="indyDetailsMessage" style="display:none; margin-bottom:20px" class="twelve mobile-four column">Due to publisher restrictions the library cannot purchase additional copies of this title, and we apologize if there is a long waiting list. Be sure to check for other copies, because there may be other editions available.</div>
+</div>
+<br><article id="recForYouDetails" class="complete-title-element">
+    <div class="row details-coll-heading">
+        <div class="ten mobile-four columns">
+            <h2>Recommended for you</h2>
+        </div>
+    </div>
+    <div class="row details-coll-full-row">
+        <div class="twelve mobile-four columns">
+            <ul class="block-grid six-up cross-marketing-collection-ul">
+<li class="mobile-two title-element-li" data-track="recommendations" data-action="Fallback" data-label="1">
+	<div class="containAll">
+		<div class="contain">
+			<div class="img-and-info-contain title-data" data-copiesavail="1" data-copiestotal="1" data-numwaiting="0" data-isowned="1" data-isrec="0" data-isreclimit="0" data-encodedurl="ContentDetails.htm%3fid%3d365E31DF-D292-44D6-98B6-20ACD2542A28">
+				<a href="#" class="tcc-adv-span" data-advinprivate="0" data-advinshared="1" data-advmyprivate="-1">
+					<img border="0" alt="" src="//libraryreserve.cdn.overdrive.com/418/50/1.41/spacer.gif" class=""><span class="i-hide">Options for Hide and Seek by Sara Shepard</span>						</a>
+				<div class="img-link">
+					<div class="where-the-img-lives">
+						<span id="tcc78F7F8BC-C437-4868-8CC9-CF432674B9B6" class="tcc-wl-span active-wl-0">
+							<i class="icon-bookmark wl-span-wishlist" title="'Hide and Seek'" data-wishlist="0"></i>
+						</span>
+						<span class="tcc-icon-span" data-iconformat="eBook"><i class="icon-eBook avail-1"></i></span>
+						<img class="wtil-cover lzld" src="//libraryreserve.cdn.overdrive.com/418/50/1.41/spacer.gif" data-original="//images.contentreserve.com/ImageType-150/0292-1/78F/7F8/BC/%7B78F7F8BC-C437-4868-8CC9-CF432674B9B6%7DImg150.jpg" alt="Hide and Seek" data-item="@@LIST_ITEM_INDEX@@" data-crid="78F7F8BC-C437-4868-8CC9-CF432674B9B6" border="0">
+						<span class="enhanced-img-span">
+							<script>var n = 0;var e = 0;if (n == 1 && e == 0){document.write("<div class=\"special-status-nar\"><div><a href=\"#\" class=\"enh-nar\" data-reveal-id=\"narratedEbook\" data-enhresid=\"78F7F8BC-C437-4868-8CC9-CF432674B9B6\">Read-along&nbsp;&nbsp;<img class=\"embed-audio-img\" src=\"//libraryreserve.cdn.overdrive.com/418/50/1.41/spacer.gif\" /></a></div></div>");}else if (n == 1 && e == 1){document.write("<div class=\"special-status-nar\"><div><a href=\"#\" class=\"enh-nar\" data-reveal-id=\"narratedEbook\" data-enhresid=\"78F7F8BC-C437-4868-8CC9-CF432674B9B6\">Read-along&nbsp;&nbsp;<img class=\"embed-audio-img\" src=\"//libraryreserve.cdn.overdrive.com/418/50/1.41/spacer.gif\" /></a></div></div>");}else if (n == 0 && e == 1){document.write("<div class=\"special-status-enh\"><div><a href=\"#\" class=\"enhanced-link enh-nar\" data-enhresid=\"78F7F8BC-C437-4868-8CC9-CF432674B9B6\">Enhanced</a></div></div>");};</script>
+						</span>
+					</div>
+				</div>
+				<div class="info-span" data-contentstatus="0" data-contentflags="0">
+					<a href="javascript:void(0);" class="borrow-button s-link button home-onestepcheckout" data-checkedout="0" data-onhold="0" data-availcopies="1" data-hasac="1" data-thisthumb="//images.contentreserve.com/ImageType-150/0292-1/78F/7F8/BC/%7B78F7F8BC-C437-4868-8CC9-CF432674B9B6%7DImg150.jpg" data-thiscrid="78F7F8BC-C437-4868-8CC9-CF432674B9B6" data-formatid="410" data-title="Hide and Seek" data-urlenc="ContentDetails.htm%3fid%3d365E31DF-D292-44D6-98B6-20ACD2542A28" data-format="eBook" title="Borrow Hide and Seek eBook">Borrow</a>
+					<a href="https://samples.overdrive.com/?crid=78F7F8BC-C437-4868-8CC9-CF432674B9B6&amp;.epub-sample.overdrive.com&amp;retailerid=londonlibraries" title="Sample Hide and Seek eBook" class="sample-button s-link" target="_blank"><i class="icon-eBook"></i>  Sample</a>
+                                    <a href="ContentDetails.htm?id=78F7F8BC-C437-4868-8CC9-CF432674B9B6" style="height:inherit; width:100%; top:0; position:absolute; z-index:100;background:url('//libraryreserve.cdn.overdrive.com/418/50/1.41/spacer.gif') no-repeat;"><span class="skip">Click here to view eBook details for Hide and Seek by Sara Shepard</span></a>
+					<div class="feature-ul-contain">
+						<ul class="feature-ul">
+							<li class="li-wishlist">
+								<a href="#" class="wishlist-link" value="78F7F8BC-C437-4868-8CC9-CF432674B9B6" title="" alt="" data-thistitle="Hide and Seek">
+									<i id="78F7F8BC-C437-4868-8CC9-CF432674B9B6" class="icon-bookmark s-link-wishlist" alt="Wish List Ribbon" title="'Hide and Seek'" data-wishlist="0"><span class="i-hide"></span></i>
+								</a>
+							</li>
+							<li class="li-share">
+								<a href="#" class="share-links" alt="Share 'Hide and Seek'" title="Share 'Hide and Seek'" data-sharepub="HarperCollins Publishers" data-sharecreator="Sara Shepard" data-sharetitle="Hide and Seek" data-sharecrid="78F7F8BC-C437-4868-8CC9-CF432674B9B6">
+									<i class="icon-share s-link-share"><span class="i-hide">Share 'Hide and Seek'</span></i>
+								</a>
+							</li>
+							<li class="li-details">
+								<a href="ContentDetails.htm?id=78F7F8BC-C437-4868-8CC9-CF432674B9B6" title="Click here to view eBook details for Hide and Seek by Sara Shepard">
+									<i class="icon-mail-forward s-link-details"><span class="i-hide">Click here to view eBook details for Hide and Seek by Sara Shepard</span></i>
+									<span class="s-link-more">More</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<span class="title-scroll">
+			<div class="title-holder">
+				<a class="tc-title" href="ContentDetails.htm?id=78F7F8BC-C437-4868-8CC9-CF432674B9B6" title="Click here to view eBook details for Hide and Seek by Sara Shepard" aria-label="Click here to view eBook details for Hide and Seek by Sara Shepard">Hide and Seek</a><div class="title-fade-out"></div>
+			</div>
+		</span>
+		<a class="tc-author" href="BANGSearch.dll?Type=Creator&amp;ID=619084&amp;PerPage=24&amp;SortBy=CollDate" title="Search for other content by Sara Shepard" aria-label="Search for other content by Sara Shepard">Sara Shepard</a>
+	</div>
+</li>
+<li class="mobile-two title-element-li" data-track="recommendations" data-action="Fallback" data-label="2">
+	<div class="containAll">
+		<div class="contain">
+			<div class="img-and-info-contain title-data" data-copiesavail="1" data-copiestotal="1" data-numwaiting="0" data-isowned="1" data-isrec="0" data-isreclimit="0" data-encodedurl="ContentDetails.htm%3fid%3d365E31DF-D292-44D6-98B6-20ACD2542A28">
+				<a href="#" class="tcc-adv-span" data-advinprivate="0" data-advinshared="1" data-advmyprivate="-1">
+					<img border="0" alt="" src="//libraryreserve.cdn.overdrive.com/418/50/1.41/spacer.gif" class=""><span class="i-hide">Options for All that Glitters by Aita Ighodaro</span>						</a>
+				<div class="img-link">
+					<div class="where-the-img-lives">
+						<span id="tccB1243B06-0DB6-4AF8-AF1E-02FE398CE87E" class="tcc-wl-span active-wl-0">
+							<i class="icon-bookmark wl-span-wishlist" title="'All that Glitters'" data-wishlist="0"></i>
+						</span>
+						<span class="tcc-icon-span" data-iconformat="eBook"><i class="icon-eBook avail-1"></i></span>
+						<img class="wtil-cover lzld" src="//libraryreserve.cdn.overdrive.com/418/50/1.41/spacer.gif" data-original="//images.contentreserve.com/ImageType-150/1486-1/B12/43B/06/%7BB1243B06-0DB6-4AF8-AF1E-02FE398CE87E%7DImg150.jpg" alt="All that Glitters" data-item="@@LIST_ITEM_INDEX@@" data-crid="B1243B06-0DB6-4AF8-AF1E-02FE398CE87E" border="0">
+						<span class="enhanced-img-span">
+							<script>var n = 0;var e = 0;if (n == 1 && e == 0){document.write("<div class=\"special-status-nar\"><div><a href=\"#\" class=\"enh-nar\" data-reveal-id=\"narratedEbook\" data-enhresid=\"B1243B06-0DB6-4AF8-AF1E-02FE398CE87E\">Read-along&nbsp;&nbsp;<img class=\"embed-audio-img\" src=\"//libraryreserve.cdn.overdrive.com/418/50/1.41/spacer.gif\" /></a></div></div>");}else if (n == 1 && e == 1){document.write("<div class=\"special-status-nar\"><div><a href=\"#\" class=\"enh-nar\" data-reveal-id=\"narratedEbook\" data-enhresid=\"B1243B06-0DB6-4AF8-AF1E-02FE398CE87E\">Read-along&nbsp;&nbsp;<img class=\"embed-audio-img\" src=\"//libraryreserve.cdn.overdrive.com/418/50/1.41/spacer.gif\" /></a></div></div>");}else if (n == 0 && e == 1){document.write("<div class=\"special-status-enh\"><div><a href=\"#\" class=\"enhanced-link enh-nar\" data-enhresid=\"B1243B06-0DB6-4AF8-AF1E-02FE398CE87E\">Enhanced</a></div></div>");};</script>
+						</span>
+					</div>
+				</div>
+				<div class="info-span" data-contentstatus="0" data-contentflags="0">
+					<a href="javascript:void(0);" class="borrow-button s-link button home-onestepcheckout" data-checkedout="0" data-onhold="0" data-availcopies="1" data-hasac="1" data-thisthumb="//images.contentreserve.com/ImageType-150/1486-1/B12/43B/06/%7BB1243B06-0DB6-4AF8-AF1E-02FE398CE87E%7DImg150.jpg" data-thiscrid="B1243B06-0DB6-4AF8-AF1E-02FE398CE87E" data-formatid="410" data-title="All that Glitters" data-urlenc="ContentDetails.htm%3fid%3d365E31DF-D292-44D6-98B6-20ACD2542A28" data-format="eBook" title="Borrow All that Glitters eBook">Borrow</a>
+					<a href="https://samples.overdrive.com/?crid=B1243B06-0DB6-4AF8-AF1E-02FE398CE87E&amp;.epub-sample.overdrive.com&amp;retailerid=londonlibraries" title="Sample All that Glitters eBook" class="sample-button s-link" target="_blank"><i class="icon-eBook"></i>  Sample</a>
+                                    <a href="ContentDetails.htm?id=B1243B06-0DB6-4AF8-AF1E-02FE398CE87E" style="height:inherit; width:100%; top:0; position:absolute; z-index:100;background:url('//libraryreserve.cdn.overdrive.com/418/50/1.41/spacer.gif') no-repeat;"><span class="skip">Click here to view eBook details for All that Glitters by Aita Ighodaro</span></a>
+					<div class="feature-ul-contain">
+						<ul class="feature-ul">
+							<li class="li-wishlist">
+								<a href="#" class="wishlist-link" value="B1243B06-0DB6-4AF8-AF1E-02FE398CE87E" title="" alt="" data-thistitle="All that Glitters">
+									<i id="B1243B06-0DB6-4AF8-AF1E-02FE398CE87E" class="icon-bookmark s-link-wishlist" alt="Wish List Ribbon" title="'All that Glitters'" data-wishlist="0"><span class="i-hide"></span></i>
+								</a>
+							</li>
+							<li class="li-share">
+								<a href="#" class="share-links" alt="Share 'All that Glitters'" title="Share 'All that Glitters'" data-sharepub="Atlantic Books Ltd" data-sharecreator="Aita Ighodaro" data-sharetitle="All that Glitters" data-sharecrid="B1243B06-0DB6-4AF8-AF1E-02FE398CE87E">
+									<i class="icon-share s-link-share"><span class="i-hide">Share 'All that Glitters'</span></i>
+								</a>
+							</li>
+							<li class="li-details">
+								<a href="ContentDetails.htm?id=B1243B06-0DB6-4AF8-AF1E-02FE398CE87E" title="Click here to view eBook details for All that Glitters by Aita Ighodaro">
+									<i class="icon-mail-forward s-link-details"><span class="i-hide">Click here to view eBook details for All that Glitters by Aita Ighodaro</span></i>
+									<span class="s-link-more">More</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<span class="title-scroll">
+			<div class="title-holder">
+				<a class="tc-title" href="ContentDetails.htm?id=B1243B06-0DB6-4AF8-AF1E-02FE398CE87E" title="Click here to view eBook details for All that Glitters by Aita Ighodaro" aria-label="Click here to view eBook details for All that Glitters by Aita Ighodaro">All that Glitters</a><div class="title-fade-out"></div>
+			</div>
+		</span>
+		<a class="tc-author" href="BANGSearch.dll?Type=Creator&amp;ID=372836&amp;PerPage=24&amp;SortBy=CollDate" title="Search for other content by Aita Ighodaro" aria-label="Search for other content by Aita Ighodaro">Aita Ighodaro</a>
+	</div>
+</li>
+<li class="mobile-two title-element-li" data-track="recommendations" data-action="Fallback" data-label="3">
+	<div class="containAll">
+		<div class="contain">
+			<div class="img-and-info-contain title-data" data-copiesavail="1" data-copiestotal="1" data-numwaiting="0" data-isowned="1" data-isrec="0" data-isreclimit="0" data-encodedurl="ContentDetails.htm%3fid%3d365E31DF-D292-44D6-98B6-20ACD2542A28">
+				<a href="#" class="tcc-adv-span" data-advinprivate="0" data-advinshared="1" data-advmyprivate="-1">
+					<img border="0" alt="" src="//libraryreserve.cdn.overdrive.com/418/50/1.41/spacer.gif" class=""><span class="i-hide">Options for Revenge of the Lawn Gnomes by R.L. Stine</span>						</a>
+				<div class="img-link">
+					<div class="where-the-img-lives">
+						<span id="tcc41CC60C3-3594-4228-AE04-21A1D8383DA2" class="tcc-wl-span active-wl-0">
+							<i class="icon-bookmark wl-span-wishlist" title="'Revenge of the Lawn Gnomes'" data-wishlist="0"></i>
+						</span>
+						<span class="tcc-icon-span" data-iconformat="eBook"><i class="icon-eBook avail-1"></i></span>
+						<img class="wtil-cover lzld" src="//libraryreserve.cdn.overdrive.com/418/50/1.41/spacer.gif" data-original="//images.contentreserve.com/ImageType-150/0305-1/41C/C60/C3/%7B41CC60C3-3594-4228-AE04-21A1D8383DA2%7DImg150.jpg" alt="Revenge of the Lawn Gnomes" data-item="@@LIST_ITEM_INDEX@@" data-crid="41CC60C3-3594-4228-AE04-21A1D8383DA2" border="0">
+						<span class="enhanced-img-span">
+							<script>var n = 0;var e = 0;if (n == 1 && e == 0){document.write("<div class=\"special-status-nar\"><div><a href=\"#\" class=\"enh-nar\" data-reveal-id=\"narratedEbook\" data-enhresid=\"41CC60C3-3594-4228-AE04-21A1D8383DA2\">Read-along&nbsp;&nbsp;<img class=\"embed-audio-img\" src=\"//libraryreserve.cdn.overdrive.com/418/50/1.41/spacer.gif\" /></a></div></div>");}else if (n == 1 && e == 1){document.write("<div class=\"special-status-nar\"><div><a href=\"#\" class=\"enh-nar\" data-reveal-id=\"narratedEbook\" data-enhresid=\"41CC60C3-3594-4228-AE04-21A1D8383DA2\">Read-along&nbsp;&nbsp;<img class=\"embed-audio-img\" src=\"//libraryreserve.cdn.overdrive.com/418/50/1.41/spacer.gif\" /></a></div></div>");}else if (n == 0 && e == 1){document.write("<div class=\"special-status-enh\"><div><a href=\"#\" class=\"enhanced-link enh-nar\" data-enhresid=\"41CC60C3-3594-4228-AE04-21A1D8383DA2\">Enhanced</a></div></div>");};</script>
+						</span>
+					</div>
+				</div>
+				<div class="info-span" data-contentstatus="0" data-contentflags="0">
+					<a href="javascript:void(0);" class="borrow-button s-link button home-onestepcheckout" data-checkedout="0" data-onhold="0" data-availcopies="1" data-hasac="1" data-thisthumb="//images.contentreserve.com/ImageType-150/0305-1/41C/C60/C3/%7B41CC60C3-3594-4228-AE04-21A1D8383DA2%7DImg150.jpg" data-thiscrid="41CC60C3-3594-4228-AE04-21A1D8383DA2" data-formatid="410" data-title="Revenge of the Lawn Gnomes" data-urlenc="ContentDetails.htm%3fid%3d365E31DF-D292-44D6-98B6-20ACD2542A28" data-format="eBook" title="Borrow Revenge of the Lawn Gnomes eBook">Borrow</a>
+					<a href="https://samples.overdrive.com/classic-goosebumps-19?.epub-sample.overdrive.com&amp;retailerid=londonlibraries" title="Sample Revenge of the Lawn Gnomes eBook" class="sample-button s-link" target="_blank"><i class="icon-eBook"></i>  Sample</a>
+                                    <a href="ContentDetails.htm?id=41CC60C3-3594-4228-AE04-21A1D8383DA2" style="height:inherit; width:100%; top:0; position:absolute; z-index:100;background:url('//libraryreserve.cdn.overdrive.com/418/50/1.41/spacer.gif') no-repeat;"><span class="skip">Click here to view eBook details for Revenge of the Lawn Gnomes by R.L. Stine</span></a>
+					<div class="feature-ul-contain">
+						<ul class="feature-ul">
+							<li class="li-wishlist">
+								<a href="#" class="wishlist-link" value="41CC60C3-3594-4228-AE04-21A1D8383DA2" title="" alt="" data-thistitle="Revenge of the Lawn Gnomes">
+									<i id="41CC60C3-3594-4228-AE04-21A1D8383DA2" class="icon-bookmark s-link-wishlist" alt="Wish List Ribbon" title="'Revenge of the Lawn Gnomes'" data-wishlist="0"><span class="i-hide"></span></i>
+								</a>
+							</li>
+							<li class="li-share">
+								<a href="#" class="share-links" alt="Share 'Revenge of the Lawn Gnomes'" title="Share 'Revenge of the Lawn Gnomes'" data-sharepub="Scholastic Inc." data-sharecreator="R.L. Stine" data-sharetitle="Revenge of the Lawn Gnomes" data-sharecrid="41CC60C3-3594-4228-AE04-21A1D8383DA2">
+									<i class="icon-share s-link-share"><span class="i-hide">Share 'Revenge of the Lawn Gnomes'</span></i>
+								</a>
+							</li>
+							<li class="li-details">
+								<a href="ContentDetails.htm?id=41CC60C3-3594-4228-AE04-21A1D8383DA2" title="Click here to view eBook details for Revenge of the Lawn Gnomes by R.L. Stine">
+									<i class="icon-mail-forward s-link-details"><span class="i-hide">Click here to view eBook details for Revenge of the Lawn Gnomes by R.L. Stine</span></i>
+									<span class="s-link-more">More</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<span class="title-scroll">
+			<div class="title-holder">
+				<a class="tc-title" href="ContentDetails.htm?id=41CC60C3-3594-4228-AE04-21A1D8383DA2" title="Click here to view eBook details for Revenge of the Lawn Gnomes by R.L. Stine" aria-label="Click here to view eBook details for Revenge of the Lawn Gnomes by R.L. Stine">Revenge of the Lawn Gnomes</a><div class="title-fade-out"></div>
+			</div>
+		</span>
+		<a class="tc-author" href="BANGSearch.dll?Type=Creator&amp;ID=500472&amp;PerPage=24&amp;SortBy=CollDate" title="Search for other content by R.L. Stine" aria-label="Search for other content by R.L. Stine">R.L. Stine</a>
+	</div>
+</li>
+<li class="mobile-two title-element-li" data-track="recommendations" data-action="Fallback" data-label="4">
+	<div class="containAll">
+		<div class="contain">
+			<div class="img-and-info-contain title-data" data-copiesavail="1" data-copiestotal="1" data-numwaiting="0" data-isowned="1" data-isrec="0" data-isreclimit="0" data-encodedurl="ContentDetails.htm%3fid%3d365E31DF-D292-44D6-98B6-20ACD2542A28">
+				<a href="#" class="tcc-adv-span" data-advinprivate="0" data-advinshared="1" data-advmyprivate="-1">
+					<img border="0" alt="" src="//libraryreserve.cdn.overdrive.com/418/50/1.41/spacer.gif" class=""><span class="i-hide">Options for Beautiful Lies by Lisa Unger</span>						</a>
+				<div class="img-link">
+					<div class="where-the-img-lives">
+						<span id="tccB5A4429B-B46F-45D1-8843-6CAA9BCACC69" class="tcc-wl-span active-wl-0">
+							<i class="icon-bookmark wl-span-wishlist" title="'Beautiful Lies'" data-wishlist="0"></i>
+						</span>
+						<span class="tcc-icon-span" data-iconformat="eBook"><i class="icon-eBook avail-1"></i></span>
+						<img class="wtil-cover lzld" src="//libraryreserve.cdn.overdrive.com/418/50/1.41/spacer.gif" data-original="//images.contentreserve.com/ImageType-150/0211-1/B5A/442/9B/%7BB5A4429B-B46F-45D1-8843-6CAA9BCACC69%7DImg150.jpg" alt="Beautiful Lies" data-item="@@LIST_ITEM_INDEX@@" data-crid="B5A4429B-B46F-45D1-8843-6CAA9BCACC69" border="0">
+						<span class="enhanced-img-span">
+							<script>var n = 0;var e = 0;if (n == 1 && e == 0){document.write("<div class=\"special-status-nar\"><div><a href=\"#\" class=\"enh-nar\" data-reveal-id=\"narratedEbook\" data-enhresid=\"B5A4429B-B46F-45D1-8843-6CAA9BCACC69\">Read-along&nbsp;&nbsp;<img class=\"embed-audio-img\" src=\"//libraryreserve.cdn.overdrive.com/418/50/1.41/spacer.gif\" /></a></div></div>");}else if (n == 1 && e == 1){document.write("<div class=\"special-status-nar\"><div><a href=\"#\" class=\"enh-nar\" data-reveal-id=\"narratedEbook\" data-enhresid=\"B5A4429B-B46F-45D1-8843-6CAA9BCACC69\">Read-along&nbsp;&nbsp;<img class=\"embed-audio-img\" src=\"//libraryreserve.cdn.overdrive.com/418/50/1.41/spacer.gif\" /></a></div></div>");}else if (n == 0 && e == 1){document.write("<div class=\"special-status-enh\"><div><a href=\"#\" class=\"enhanced-link enh-nar\" data-enhresid=\"B5A4429B-B46F-45D1-8843-6CAA9BCACC69\">Enhanced</a></div></div>");};</script>
+						</span>
+					</div>
+				</div>
+				<div class="info-span" data-contentstatus="0" data-contentflags="0">
+					<a href="javascript:void(0);" class="borrow-button s-link button home-onestepcheckout" data-checkedout="0" data-onhold="0" data-availcopies="1" data-hasac="1" data-thisthumb="//images.contentreserve.com/ImageType-150/0211-1/B5A/442/9B/%7BB5A4429B-B46F-45D1-8843-6CAA9BCACC69%7DImg150.jpg" data-thiscrid="B5A4429B-B46F-45D1-8843-6CAA9BCACC69" data-formatid="410" data-title="Beautiful Lies" data-urlenc="ContentDetails.htm%3fid%3d365E31DF-D292-44D6-98B6-20ACD2542A28" data-format="eBook" title="Borrow Beautiful Lies eBook">Borrow</a>
+					<a href="https://samples.overdrive.com/?crid=B5A4429B-B46F-45D1-8843-6CAA9BCACC69&amp;.epub-sample.overdrive.com&amp;retailerid=londonlibraries" title="Sample Beautiful Lies eBook" class="sample-button s-link" target="_blank"><i class="icon-eBook"></i>  Sample</a>
+                                    <a href="ContentDetails.htm?id=B5A4429B-B46F-45D1-8843-6CAA9BCACC69" style="height:inherit; width:100%; top:0; position:absolute; z-index:100;background:url('//libraryreserve.cdn.overdrive.com/418/50/1.41/spacer.gif') no-repeat;"><span class="skip">Click here to view eBook details for Beautiful Lies by Lisa Unger</span></a>
+					<div class="feature-ul-contain">
+						<ul class="feature-ul">
+							<li class="li-wishlist">
+								<a href="#" class="wishlist-link" value="B5A4429B-B46F-45D1-8843-6CAA9BCACC69" title="" alt="" data-thistitle="Beautiful Lies">
+									<i id="B5A4429B-B46F-45D1-8843-6CAA9BCACC69" class="icon-bookmark s-link-wishlist" alt="Wish List Ribbon" title="'Beautiful Lies'" data-wishlist="0"><span class="i-hide"></span></i>
+								</a>
+							</li>
+							<li class="li-share">
+								<a href="#" class="share-links" alt="Share 'Beautiful Lies'" title="Share 'Beautiful Lies'" data-sharepub="Random House" data-sharecreator="Lisa Unger" data-sharetitle="Beautiful Lies" data-sharecrid="B5A4429B-B46F-45D1-8843-6CAA9BCACC69">
+									<i class="icon-share s-link-share"><span class="i-hide">Share 'Beautiful Lies'</span></i>
+								</a>
+							</li>
+							<li class="li-details">
+								<a href="ContentDetails.htm?id=B5A4429B-B46F-45D1-8843-6CAA9BCACC69" title="Click here to view eBook details for Beautiful Lies by Lisa Unger">
+									<i class="icon-mail-forward s-link-details"><span class="i-hide">Click here to view eBook details for Beautiful Lies by Lisa Unger</span></i>
+									<span class="s-link-more">More</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<span class="title-scroll">
+			<div class="title-holder">
+				<a class="tc-title" href="ContentDetails.htm?id=B5A4429B-B46F-45D1-8843-6CAA9BCACC69" title="Click here to view eBook details for Beautiful Lies by Lisa Unger" aria-label="Click here to view eBook details for Beautiful Lies by Lisa Unger">Beautiful Lies</a><div class="title-fade-out"></div>
+			</div>
+		</span>
+		<a class="tc-author" href="BANGSearch.dll?Type=Creator&amp;ID=291240&amp;PerPage=24&amp;SortBy=CollDate" title="Search for other content by Lisa Unger" aria-label="Search for other content by Lisa Unger">Lisa Unger</a>
+	</div>
+</li>
+<li class="mobile-two title-element-li" data-track="recommendations" data-action="Fallback" data-label="5">
+	<div class="containAll">
+		<div class="contain">
+			<div class="img-and-info-contain title-data" data-copiesavail="1" data-copiestotal="2" data-numwaiting="0" data-isowned="1" data-isrec="0" data-isreclimit="0" data-encodedurl="ContentDetails.htm%3fid%3d365E31DF-D292-44D6-98B6-20ACD2542A28">
+				<a href="#" class="tcc-adv-span" data-advinprivate="0" data-advinshared="1" data-advmyprivate="-1">
+					<img border="0" alt="" src="//libraryreserve.cdn.overdrive.com/418/50/1.41/spacer.gif" class=""><span class="i-hide">Options for The Da Vinci Code by Dan Brown</span>						</a>
+				<div class="img-link">
+					<div class="where-the-img-lives">
+						<span id="tccBA1ED7E4-B083-4494-B336-C98326808B4C" class="tcc-wl-span active-wl-0">
+							<i class="icon-bookmark wl-span-wishlist" title="'The Da Vinci Code'" data-wishlist="0"></i>
+						</span>
+						<span class="tcc-icon-span" data-iconformat="eBook"><i class="icon-eBook avail-1"></i></span>
+						<img class="wtil-cover lzld" src="//libraryreserve.cdn.overdrive.com/418/50/1.41/spacer.gif" data-original="//images.contentreserve.com/ImageType-150/0211-1/BA1/ED7/E4/%7BBA1ED7E4-B083-4494-B336-C98326808B4C%7DImg150.jpg" alt="The Da Vinci Code" data-item="@@LIST_ITEM_INDEX@@" data-crid="BA1ED7E4-B083-4494-B336-C98326808B4C" border="0">
+						<span class="enhanced-img-span">
+							<script>var n = 0;var e = 0;if (n == 1 && e == 0){document.write("<div class=\"special-status-nar\"><div><a href=\"#\" class=\"enh-nar\" data-reveal-id=\"narratedEbook\" data-enhresid=\"BA1ED7E4-B083-4494-B336-C98326808B4C\">Read-along&nbsp;&nbsp;<img class=\"embed-audio-img\" src=\"//libraryreserve.cdn.overdrive.com/418/50/1.41/spacer.gif\" /></a></div></div>");}else if (n == 1 && e == 1){document.write("<div class=\"special-status-nar\"><div><a href=\"#\" class=\"enh-nar\" data-reveal-id=\"narratedEbook\" data-enhresid=\"BA1ED7E4-B083-4494-B336-C98326808B4C\">Read-along&nbsp;&nbsp;<img class=\"embed-audio-img\" src=\"//libraryreserve.cdn.overdrive.com/418/50/1.41/spacer.gif\" /></a></div></div>");}else if (n == 0 && e == 1){document.write("<div class=\"special-status-enh\"><div><a href=\"#\" class=\"enhanced-link enh-nar\" data-enhresid=\"BA1ED7E4-B083-4494-B336-C98326808B4C\">Enhanced</a></div></div>");};</script>
+						</span>
+					</div>
+				</div>
+				<div class="info-span" data-contentstatus="0" data-contentflags="0">
+					<a href="javascript:void(0);" class="borrow-button s-link button home-onestepcheckout" data-checkedout="0" data-onhold="0" data-availcopies="1" data-hasac="1" data-thisthumb="//images.contentreserve.com/ImageType-150/0211-1/BA1/ED7/E4/%7BBA1ED7E4-B083-4494-B336-C98326808B4C%7DImg150.jpg" data-thiscrid="BA1ED7E4-B083-4494-B336-C98326808B4C" data-formatid="410" data-title="The Da Vinci Code" data-urlenc="ContentDetails.htm%3fid%3d365E31DF-D292-44D6-98B6-20ACD2542A28" data-format="eBook" title="Borrow The Da Vinci Code eBook">Borrow</a>
+					<a href="https://samples.overdrive.com/?crid=BA1ED7E4-B083-4494-B336-C98326808B4C&amp;.epub-sample.overdrive.com&amp;retailerid=londonlibraries" title="Sample The Da Vinci Code eBook" class="sample-button s-link" target="_blank"><i class="icon-eBook"></i>  Sample</a>
+                                    <a href="ContentDetails.htm?id=BA1ED7E4-B083-4494-B336-C98326808B4C" style="height:inherit; width:100%; top:0; position:absolute; z-index:100;background:url('//libraryreserve.cdn.overdrive.com/418/50/1.41/spacer.gif') no-repeat;"><span class="skip">Click here to view eBook details for The Da Vinci Code by Dan Brown</span></a>
+					<div class="feature-ul-contain">
+						<ul class="feature-ul">
+							<li class="li-wishlist">
+								<a href="#" class="wishlist-link" value="BA1ED7E4-B083-4494-B336-C98326808B4C" title="" alt="" data-thistitle="The Da Vinci Code">
+									<i id="BA1ED7E4-B083-4494-B336-C98326808B4C" class="icon-bookmark s-link-wishlist" alt="Wish List Ribbon" title="'The Da Vinci Code'" data-wishlist="0"><span class="i-hide"></span></i>
+								</a>
+							</li>
+							<li class="li-share">
+								<a href="#" class="share-links" alt="Share 'The Da Vinci Code'" title="Share 'The Da Vinci Code'" data-sharepub="Transworld" data-sharecreator="Dan Brown" data-sharetitle="The Da Vinci Code" data-sharecrid="BA1ED7E4-B083-4494-B336-C98326808B4C">
+									<i class="icon-share s-link-share"><span class="i-hide">Share 'The Da Vinci Code'</span></i>
+								</a>
+							</li>
+							<li class="li-details">
+								<a href="ContentDetails.htm?id=BA1ED7E4-B083-4494-B336-C98326808B4C" title="Click here to view eBook details for The Da Vinci Code by Dan Brown">
+									<i class="icon-mail-forward s-link-details"><span class="i-hide">Click here to view eBook details for The Da Vinci Code by Dan Brown</span></i>
+									<span class="s-link-more">More</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<span class="title-scroll">
+			<div class="title-holder">
+				<a class="tc-title" href="ContentDetails.htm?id=BA1ED7E4-B083-4494-B336-C98326808B4C" title="Click here to view eBook details for The Da Vinci Code by Dan Brown" aria-label="Click here to view eBook details for The Da Vinci Code by Dan Brown">The Da Vinci Code</a><div class="title-fade-out"></div>
+			</div>
+		</span>
+		<a class="tc-author" href="BANGSearch.dll?Type=Creator&amp;ID=334054&amp;PerPage=24&amp;SortBy=CollDate" title="Search for other content by Dan Brown" aria-label="Search for other content by Dan Brown">Dan Brown</a>
+	</div>
+</li>
+<li class="mobile-two title-element-li" data-track="recommendations" data-action="Fallback" data-label="6">
+	<div class="containAll">
+		<div class="contain">
+			<div class="img-and-info-contain title-data" data-copiesavail="1" data-copiestotal="1" data-numwaiting="0" data-isowned="1" data-isrec="0" data-isreclimit="0" data-encodedurl="ContentDetails.htm%3fid%3d365E31DF-D292-44D6-98B6-20ACD2542A28">
+				<a href="#" class="tcc-adv-span" data-advinprivate="0" data-advinshared="1" data-advmyprivate="-1">
+					<img border="0" alt="" src="//libraryreserve.cdn.overdrive.com/418/50/1.41/spacer.gif" class=""><span class="i-hide">Options for The Violent Enemy by Jack Higgins</span>						</a>
+				<div class="img-link">
+					<div class="where-the-img-lives">
+						<span id="tcc0CE4B26B-AD95-4F9F-B810-6E5B91720937" class="tcc-wl-span active-wl-0">
+							<i class="icon-bookmark wl-span-wishlist" title="'The Violent Enemy'" data-wishlist="0"></i>
+						</span>
+						<span class="tcc-icon-span" data-iconformat="eBook"><i class="icon-eBook avail-1"></i></span>
+						<img class="wtil-cover lzld" src="//libraryreserve.cdn.overdrive.com/418/50/1.41/spacer.gif" data-original="//images.contentreserve.com/ImageType-150/0292-1/0CE/4B2/6B/%7B0CE4B26B-AD95-4F9F-B810-6E5B91720937%7DImg150.jpg" alt="The Violent Enemy" data-item="@@LIST_ITEM_INDEX@@" data-crid="0CE4B26B-AD95-4F9F-B810-6E5B91720937" border="0">
+						<span class="enhanced-img-span">
+							<script>var n = 0;var e = 0;if (n == 1 && e == 0){document.write("<div class=\"special-status-nar\"><div><a href=\"#\" class=\"enh-nar\" data-reveal-id=\"narratedEbook\" data-enhresid=\"0CE4B26B-AD95-4F9F-B810-6E5B91720937\">Read-along&nbsp;&nbsp;<img class=\"embed-audio-img\" src=\"//libraryreserve.cdn.overdrive.com/418/50/1.41/spacer.gif\" /></a></div></div>");}else if (n == 1 && e == 1){document.write("<div class=\"special-status-nar\"><div><a href=\"#\" class=\"enh-nar\" data-reveal-id=\"narratedEbook\" data-enhresid=\"0CE4B26B-AD95-4F9F-B810-6E5B91720937\">Read-along&nbsp;&nbsp;<img class=\"embed-audio-img\" src=\"//libraryreserve.cdn.overdrive.com/418/50/1.41/spacer.gif\" /></a></div></div>");}else if (n == 0 && e == 1){document.write("<div class=\"special-status-enh\"><div><a href=\"#\" class=\"enhanced-link enh-nar\" data-enhresid=\"0CE4B26B-AD95-4F9F-B810-6E5B91720937\">Enhanced</a></div></div>");};</script>
+						</span>
+					</div>
+				</div>
+				<div class="info-span" data-contentstatus="0" data-contentflags="0">
+					<a href="javascript:void(0);" class="borrow-button s-link button home-onestepcheckout" data-checkedout="0" data-onhold="0" data-availcopies="1" data-hasac="1" data-thisthumb="//images.contentreserve.com/ImageType-150/0292-1/0CE/4B2/6B/%7B0CE4B26B-AD95-4F9F-B810-6E5B91720937%7DImg150.jpg" data-thiscrid="0CE4B26B-AD95-4F9F-B810-6E5B91720937" data-formatid="410" data-title="The Violent Enemy" data-urlenc="ContentDetails.htm%3fid%3d365E31DF-D292-44D6-98B6-20ACD2542A28" data-format="eBook" title="Borrow The Violent Enemy eBook">Borrow</a>
+					<a href="https://samples.overdrive.com/?crid=0CE4B26B-AD95-4F9F-B810-6E5B91720937&amp;.epub-sample.overdrive.com&amp;retailerid=londonlibraries" title="Sample The Violent Enemy eBook" class="sample-button s-link" target="_blank"><i class="icon-eBook"></i>  Sample</a>
+                                    <a href="ContentDetails.htm?id=0CE4B26B-AD95-4F9F-B810-6E5B91720937" style="height:inherit; width:100%; top:0; position:absolute; z-index:100;background:url('//libraryreserve.cdn.overdrive.com/418/50/1.41/spacer.gif') no-repeat;"><span class="skip">Click here to view eBook details for The Violent Enemy by Jack Higgins</span></a>
+					<div class="feature-ul-contain">
+						<ul class="feature-ul">
+							<li class="li-wishlist">
+								<a href="#" class="wishlist-link" value="0CE4B26B-AD95-4F9F-B810-6E5B91720937" title="" alt="" data-thistitle="The Violent Enemy">
+									<i id="0CE4B26B-AD95-4F9F-B810-6E5B91720937" class="icon-bookmark s-link-wishlist" alt="Wish List Ribbon" title="'The Violent Enemy'" data-wishlist="0"><span class="i-hide"></span></i>
+								</a>
+							</li>
+							<li class="li-share">
+								<a href="#" class="share-links" alt="Share 'The Violent Enemy'" title="Share 'The Violent Enemy'" data-sharepub="HarperCollins Publishers" data-sharecreator="Jack Higgins" data-sharetitle="The Violent Enemy" data-sharecrid="0CE4B26B-AD95-4F9F-B810-6E5B91720937">
+									<i class="icon-share s-link-share"><span class="i-hide">Share 'The Violent Enemy'</span></i>
+								</a>
+							</li>
+							<li class="li-details">
+								<a href="ContentDetails.htm?id=0CE4B26B-AD95-4F9F-B810-6E5B91720937" title="Click here to view eBook details for The Violent Enemy by Jack Higgins">
+									<i class="icon-mail-forward s-link-details"><span class="i-hide">Click here to view eBook details for The Violent Enemy by Jack Higgins</span></i>
+									<span class="s-link-more">More</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<span class="title-scroll">
+			<div class="title-holder">
+				<a class="tc-title" href="ContentDetails.htm?id=0CE4B26B-AD95-4F9F-B810-6E5B91720937" title="Click here to view eBook details for The Violent Enemy by Jack Higgins" aria-label="Click here to view eBook details for The Violent Enemy by Jack Higgins">The Violent Enemy</a><div class="title-fade-out"></div>
+			</div>
+		</span>
+		<a class="tc-author" href="BANGSearch.dll?Type=Creator&amp;ID=362623&amp;PerPage=24&amp;SortBy=CollDate" title="Search for other content by Jack Higgins" aria-label="Search for other content by Jack Higgins">Jack Higgins</a>
+	</div>
+</li>            </ul>
+        </div>
+    </div>
+</article>
+<script>
+$(document).ready(function(){
+    $('.img-and-info-contain ').each(function(){
+        if($(this).find('.info-span').attr('data-contentstatus') == 1 && $(this).attr('data-isowned') == 1){
+            //$(this).find('.results-borrow-button-contain').remove();
+            //$(this).find('.lrgImg').parent().append('<div class=\"trialTitleResultsList\">RESTRICTED</div>');
+            //var oldSrc = $(this).find('.tcc-icon-span i').attr("src");
+            //var newSrc = oldSrc.replace("In","Out");
+            $(this).find('.tcc-icon-span i ').removeClass('avail-1').addClass('avail-0');
+            $(this).find('.tcc-icon-span i').attr("title","This title is restricted");
+            $(this).find('.tcc-adv-span').append('<span class="i-hide">This title is restricted</span>');
+            //$(this).find('.rsltsListWish,.trunc-avail-copies-list').remove();
+		}
+	});
+});
+</script>
+
+
+
+
+
+
+
+
+<div id="indyDetailsMessage" style="display:none; margin-bottom:20px" class="twelve mobile-four column">Due to publisher restrictions the library cannot purchase additional copies of this title, and we apologize if there is a long waiting list. Be sure to check for other copies, because there may be other editions available.</div>
+<br>
+<section class="row">
+<div class="eight mobile-four columns">
+<div class="row">
+<div class="twelve mobile-four columns">
+<div id="ataExpand" class="details-expand">
+<h6>About the Author<span class="ata-plus-minus tog-plus-minus details-plus-minus-exp" style="float:right; margin-right:5px; cursor:pointer;" tabindex="0" title="Open/Close About the Author">-</span>
+</h6>
+<ul class="ata-expand tog-close details-ul-exp" style="display:block;">
+<li>
+<script language="JavaScript" type="text/javascript"><!--
+	var szCreatorImageURL = "";
+	if(szCreatorImageURL.length > 0)
+	{
+		document.write("<img border=\"0\" src=\"\" align=\"left\" width=\"100\" alt=\"Gillian Flynn photo\">\n");
+	}
+//--></script>GILLIAN FLYNN is the author is the #1 <i>New York Times</i> bestseller <i>Gone Girl</i> and the <i>New York Times</i> bestsellers <i>Dark Places</i> and <i>Sharp Objects</i>. A former writer and critic for <i>Entertainment Weekly</i>, she lives in Chicago with her husband and children.
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<noscript>
+<style type="text/css">
+.ata-expand{display:block !important;}
+.ata-plus-minus{display:none !important;}
+.ata-plus-plus{display:none !important;}
+</style>
+</noscript>
+<div class="row">
+<div class="twelve mobile-four columns">
+<div id="formatInfoExpand" class="details-expand">
+<h6 id="formatInfoH6">Title Information<span class="format-info-plus-minus tog-plus-minus details-plus-minus-exp" style="float:right; margin-right:5px; cursor:pointer;" tabindex="0" title="Open/Close Title Information">+</span>
+</h6>
+<ul class="format-info-expand tog-close details-ul-exp" style="display:block;">
+
+<li>
+<div class="row">
+<div class="twelve mobile-four columns">
+<h6 style="float:left;">Publisher</h6>
+</div>
+</div>
+<div class="row bg-shift">
+<div class="twelve mobile-four columns publisher-info">Crown/Archetype</div>
+</div>
+</li>
+<li id="titleInfoFmt">
+<div class="row">
+<div class="twelve mobile-four columns">
+<h6 style="float:left;">OverDrive Read</h6>
+<script type="text/javascript">
+	var DrmInfo610 = "";
+
+	if(610 == "420" && DrmInfo420.length > 4)
+		document.write("<a href=\"javascript:void(0);\" class=\"kindle-usb-only-details\" title=\"Device Restictions for Kindle\">Device Restrictions</a>");
+	else if(610 == "304")
+		document.write("<a href=\"javascript:void(0);\" class=\"nook-mag-supported-devices\" title=\"Supported Devices for NOOK app\">Supported Devices</a>");
+</script>
+</div>
+</div>
+<div class="row bg-shift">
+<script language="Javascript" type="text/javascript">
+var szFormatType = "610";
+if(szFormatType != "302" && szFormatType != "420" && szFormatType != "610" && szFormatType != "635" && szFormatType != "304" && szFormatType != "625" && szFormatType != "303")
+document.write("<div class=\"six mobile-two columns titleInfoLeft\">File size:</div><div class=\"six mobile-two columns titleInfoRight\">1151 KB</div>");
+</script>
+<noscript>
+<div class="six mobile-two columns titleInfoLeft">File size:</div>
+<div class="six mobile-two columns titleInfoRight">1151 KB</div>
+</noscript>
+</div>
+<div class="row bg-shift">			
+<script language="JavaScript" type="text/javascript">
+if(0 > 0)
+{
+    document.write("<div class=\"six mobile-two columns titleInfoLeft\">");
+    document.write("Number of parts:</div>");
+    document.write("<div class=\"six mobile-two columns titleInfoRight\">0</div>");
+}
+</script>
+</div>
+<div class="row bg-shift">
+<script language="JavaScript" type="text/javascript">
+var szDuration = "";
+if(szDuration.length > 0)
+{
+    document.write("<div class=\"six mobile-two columns titleInfoLeft\">");
+    document.write("Duration:</div>");
+    document.write("<div class=\"six mobile-two columns titleInfoRight\">");
+ 
+    var szDurationHours = "";
+    if(szDurationHours == "1")
+        document.write("1 hour, ");
+    else if(szDurationHours != "0")
+        document.write(szDurationHours + " hours, ");
+ 
+    var szDurationMinutes = "";
+    if(szDurationMinutes == "1")
+        document.write("1 minute</td>");
+    else
+        document.write(szDurationMinutes + " minutes</td>");
+ 
+    document.write("</div>");
+}
+</script>
+</div>
+<div class="row bg-shift">
+<script language="JavaScript" type="text/javascript">
+	var szISBN = "9780804188982";
+	if(szISBN.length > 0)
+	{
+		document.write("<div class=\"six mobile-two columns titleInfoLeft\">ISBN:</div>");
+		document.write("<div class=\"six mobile-two columns titleInfoRight\">9780804188982</div>");
+	}
+</script>
+<noscript>
+	<div class="six mobile-two columns titleInfoLeft">ISBN:</div>
+	<div class="six mobile-two columns titleInfoRight">9780804188982</div>
+</noscript>
+</div>
+<div class="row bg-shift">
+<div class="six mobile-two columns titleInfoLeft">Release date:</div>
+<div class="six mobile-two columns titleInfoRight">
+<script language="JavaScript">
+var myDate = new Date ("Nov 03, 2015");
+var mN = new Array("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec");
+var myMonth = myDate.getMonth() + 1;
+
+if(1 == "1"){
+document.write (myDate.getDate() + "&nbsp;" + mN[myDate.getMonth()] + "&nbsp;" + myDate.getFullYear());
+}else{
+document.write ("Nov 03, 2015");
+}
+</script>
+<noscript>Nov 03, 2015</noscript>
+</div>
+</div>
+
+</li>
+<script>
+var szFormatType = "610";
+if(szFormatType == "304") {
+$("#titleInfoFmt").css("display","none");
+}
+</script><li id="titleInfoFmt">
+<div class="row">
+<div class="twelve mobile-four columns">
+<h6 style="float:left;">EPUB eBook</h6>
+<script type="text/javascript">
+	var DrmInfo410 = "0§0§-1|0§0§-1|0|0|0§-1§0";
+
+	if(410 == "420" && DrmInfo420.length > 4)
+		document.write("<a href=\"javascript:void(0);\" class=\"kindle-usb-only-details\" title=\"Device Restictions for Kindle\">Device Restrictions</a>");
+	else if(410 == "304")
+		document.write("<a href=\"javascript:void(0);\" class=\"nook-mag-supported-devices\" title=\"Supported Devices for NOOK app\">Supported Devices</a>");
+</script>
+</div>
+</div>
+<div class="row bg-shift">
+<script language="Javascript" type="text/javascript">
+var szFormatType = "410";
+if(szFormatType != "302" && szFormatType != "420" && szFormatType != "610" && szFormatType != "635" && szFormatType != "304" && szFormatType != "625" && szFormatType != "303")
+document.write("<div class=\"six mobile-two columns titleInfoLeft\">File size:</div><div class=\"six mobile-two columns titleInfoRight\">1151 KB</div>");
+</script>
+<noscript>
+<div class="six mobile-two columns titleInfoLeft">File size:</div>
+<div class="six mobile-two columns titleInfoRight">1151 KB</div>
+</noscript>
+</div>
+<div class="row bg-shift">			
+<script language="JavaScript" type="text/javascript">
+if(0 > 0)
+{
+    document.write("<div class=\"six mobile-two columns titleInfoLeft\">");
+    document.write("Number of parts:</div>");
+    document.write("<div class=\"six mobile-two columns titleInfoRight\">0</div>");
+}
+</script>
+</div>
+<div class="row bg-shift">
+<script language="JavaScript" type="text/javascript">
+var szDuration = "";
+if(szDuration.length > 0)
+{
+    document.write("<div class=\"six mobile-two columns titleInfoLeft\">");
+    document.write("Duration:</div>");
+    document.write("<div class=\"six mobile-two columns titleInfoRight\">");
+ 
+    var szDurationHours = "";
+    if(szDurationHours == "1")
+        document.write("1 hour, ");
+    else if(szDurationHours != "0")
+        document.write(szDurationHours + " hours, ");
+ 
+    var szDurationMinutes = "";
+    if(szDurationMinutes == "1")
+        document.write("1 minute</td>");
+    else
+        document.write(szDurationMinutes + " minutes</td>");
+ 
+    document.write("</div>");
+}
+</script>
+</div>
+<div class="row bg-shift">
+<script language="JavaScript" type="text/javascript">
+	var szISBN = "9780804188982";
+	if(szISBN.length > 0)
+	{
+		document.write("<div class=\"six mobile-two columns titleInfoLeft\">ISBN:</div>");
+		document.write("<div class=\"six mobile-two columns titleInfoRight\">9780804188982</div>");
+	}
+</script>
+<noscript>
+	<div class="six mobile-two columns titleInfoLeft">ISBN:</div>
+	<div class="six mobile-two columns titleInfoRight">9780804188982</div>
+</noscript>
+</div>
+<div class="row bg-shift">
+<div class="six mobile-two columns titleInfoLeft">Release date:</div>
+<div class="six mobile-two columns titleInfoRight">
+<script language="JavaScript">
+var myDate = new Date ("Nov 03, 2015");
+var mN = new Array("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec");
+var myMonth = myDate.getMonth() + 1;
+
+if(1 == "1"){
+document.write (myDate.getDate() + "&nbsp;" + mN[myDate.getMonth()] + "&nbsp;" + myDate.getFullYear());
+}else{
+document.write ("Nov 03, 2015");
+}
+</script>
+<noscript>Nov 03, 2015</noscript>
+</div>
+</div>
+
+</li>
+<script>
+var szFormatType = "410";
+if(szFormatType == "304") {
+$("#titleInfoFmt").css("display","none");
+}
+</script>
+</ul>
+</div>
+</div>
+</div>
+
+<script type="text/javascript">
+$('.format-info-expand li h6').each(function(){
+  var theFormatName = $(this).html();
+  if (theFormatName == 'Adobe EPUB eBook'){
+    $(this).html('EPUB eBook');
+  }else if(theFormatName == 'Adobe PDF eBook'){
+    $(this).html('PDF eBook');
+  };
+});
+</script>
+<noscript>
+<style type="text/css">
+.format-info-expand{display:block !important;}
+.format-info-plus-minus{display:none !important;}
+.format-info-plus-plus{display:none !important;}
+</style>
+</noscript>
+<div class="row">
+<div class="twelve mobile-four columns">
+<div id="drmExpand" class="details-expand">
+<h6 id="drmH6">Digital Rights Information<span class="drm-plus-minus tog-plus-minus details-plus-minus-exp" style="float:right; margin-right:5px; cursor:pointer;" tabindex="0" title="Open/Close Digital Rights Information">+</span>
+</h6>
+<ul class="drm-expand tog-close details-ul-exp" style="display:block;">
+<li id="drmInformation">
+<div>Copyright Protection (DRM) required by the Publisher may be applied to this title to limit or prohibit printing or copying.  File sharing or redistribution is prohibited.  Your rights to access this material expire at the end of the lending period. Please see <a href="http://www.overdrive.com/copyright.asp" target="_blank">Important Notice about Copyrighted Materials</a> for terms applicable to this content.</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+//Hide DRM box if empty for unsupported devices
+$(document).ready(function() {
+	$('#drmExpand').filter(function() {
+		return $(this).text().length < 10;
+	}).addClass('hide');
+});
+</script>
+
+<noscript>
+<style type="text/css">
+.drm-expand{display:block !important;}
+.drm-plus-minus{display:none !important;}
+.drm-plus-plus{display:none !important;}
+</style>
+</noscript>
+
+</div>
+<aside class="four mobile-four columns" id="toutDetails01">
+<style>
+	#adRotateDetails01 li{
+	display:none; /* hide the items at first only */
+	}
+	</style>
+	<ul id="adRotateDetails01">
+<li><div><a href="BrowseSubjects.htm" title="View all Subjects"><img src="//libraryreserve.cdn.overdrive.com/418/50/1.41/toutBrowseSubjects.png" alt="View all Subjects"></a></div></li>
+<li><div><a href="Help.htm" alt="Need help?  Click here!"><img src="//libraryreserve.cdn.overdrive.com/418/50/1.41/toutODHelp.png" alt="Need help?  Click here!"></a></div></li>
+	</ul>
+	<script type="text/javascript">
+	this.randomtipDetails01 = function(){
+		var length = $("#adRotateDetails01 li").length;
+		var ran = Math.floor(Math.random()*length) + 1;
+		$("#adRotateDetails01 li:nth-child(" + ran + ")").show();
+	};
+	$(document).ready(function(){	
+		randomtipDetails01();
+	});
+	</script>
+</aside>
+</section>
+<script>
+
+var nScreenW = $(window).width();
+if(nScreenW <= 480){
+var expKeyFormats = 0;
+var expKeyReading = 0;
+var expKeySeries = 0;
+var expKeyEdition = 0;
+var expKeySubjects = 0;
+var expKeyLanguages = 0;
+var expKeyCopies = 0;
+var expKeyDescription = 0;
+var expKeyAwards = 0;
+var expKeyExcerpts = 0;
+var expKeySynopsis = 0;
+var expKeyAbout = 0;
+var expKeyToc = 0;
+var expKeyReviews = 0;
+var expKeyInfo = 0;
+var expKeyDRM = 0;
+var expKeyAccount = 0;
+}else{
+var expKeyFormats = 1;
+var expKeyReading = 0;
+var expKeySeries = 1;
+var expKeyEdition = 1;
+var expKeySubjects = 1;
+var expKeyLanguages = 1;
+var expKeyCopies = 1;
+var expKeyDescription = 1;
+var expKeyAwards = 1;
+var expKeyExcerpts = 1;
+var expKeySynopsis = 1;
+var expKeyAbout = 1;
+var expKeyToc = 1;
+var expKeyReviews = 1;
+var expKeyInfo = 0;
+var expKeyDRM = 0;
+var expKeyAccount = 1;
+}
+
+$('#formatsAtDownload').attr('data-expand',expKeyFormats).attr('data-exphgt',$('#formatsAtDownload ul').height());
+$('#readingExpand').attr('data-expand',expKeyReading).attr('data-exphgt',$('#readingExpand ul').height());
+$('#seriesExpand').attr('data-expand',expKeySeries).attr('data-exphgt',$('#seriesExpand ul').height());
+$('#editionExpand').attr('data-expand',expKeyEdition).attr('data-exphgt',$('#editionExpand ul').height());
+$('#subjectsExpand').attr('data-expand',expKeySubjects).attr('data-exphgt',$('#subjectsExpand ul').height());
+$('#languagesExpand').attr('data-expand',expKeyLanguages).attr('data-exphgt',$('#languagesExpand ul').height());
+$('#copiesExpand').attr('data-expand',expKeyCopies).attr('data-exphgt',$('#copiesExpand ul').height());
+$('#descriptionExpand').attr('data-expand',expKeyDescription).attr('data-exphgt',$('#descriptionExpand ul').height());
+$('#awardsExpand').attr('data-expand',expKeyAwards).attr('data-exphgt',$('#awardsExpand ul').height());
+$('#excerptsExpand').attr('data-expand',expKeyExcerpts).attr('data-exphgt',$('#excerptsExpand ul').height());
+$('#synopsisExpand').attr('data-expand',expKeySynopsis).attr('data-exphgt',$('#synopsisExpand ul').height());
+$('#ataExpand').attr('data-expand',expKeyAbout).attr('data-exphgt',$('#ataExpand ul').height());
+$('#tocExpand').attr('data-expand',expKeyToc).attr('data-exphgt',$('#tocExpand ul').height());
+$('#reviewsExpand').attr('data-expand',expKeyReviews).attr('data-exphgt',$('#reviewsExpand ul').height());
+$('#formatInfoExpand').attr('data-expand',expKeyInfo).attr('data-exphgt',$('#formatInfoExpand ul').height());
+$('#drmExpand').attr('data-expand',expKeyDRM).attr('data-exphgt',$('#drmExpand ul').height());
+$('#checkoutsExpand').attr('data-expand',expKeyAccount).attr('data-exphgt',$('#checkoutsExpand ul').height());
+
+
+$('.details-expand h6,.details-expand h4').each(function(){
+  var expVcol = $(this).parent().attr('data-expand');
+  var ulHgt = $(this).parent().attr('data-exphgt');
+  if(expVcol == 0){
+    $(this).parent().addClass('dtls-contracted');
+    $(this).toggle(
+        function() {
+			if($(this).parent().attr('id') == 'copiesExpand'){
+			  ulHgt = ($(this).parent().find(".details-ul-exp li:visible").size())*34;
+			};
+            $(this).parent().find(".details-ul-exp").stop().animate({
+			  opacity: 1,
+			  height: ulHgt+'px',
+			  }, 500,
+			  'easeInOutExpo');
+			$(this).parent().find('h6 span, h4 span').html('-');
+			$(this).parent().attr('data-expand',1);
+        },
+        function() {
+            $(this).parent().find(".details-ul-exp").stop().animate({
+			  opacity: 0,
+			  height: '0px',
+			  }, 500,
+			  'easeInOutExpo' );
+			$(this).parent().find('h6 span, h4 span').html('+');
+			$(this).parent().attr('data-expand',0);
+        }
+    );
+  }else if(expVcol == 1){
+    $(this).parent().addClass('dtls-expanded');
+    $(this).toggle(
+        function() {
+            $(this).parent().find(".details-ul-exp").stop().animate({
+			  opacity: 0,
+			  height: '0px',
+			  }, 500,
+			  'easeInOutExpo' );
+			$(this).parent().find('h6 span, h4 span').html('+');
+			$(this).parent().attr('data-expand',0);
+        },
+        function() {
+			if($(this).parent().attr('id') == 'copiesExpand'){
+			  ulHgt = ($(this).parent().find(".details-ul-exp li:visible").size())*34;
+			};
+            $(this).parent().find(".details-ul-exp").stop().animate({
+			  opacity: 1,
+			  height: ulHgt+'px',
+			  }, 500,
+			  'easeInOutExpo');
+			$(this).parent().find('h6 span, h4 span').html('-');
+			$(this).parent().attr('data-expand',1);
+        }
+    );
+  };
+});
+
+$('.dtls-expanded h6 span, .dtls-expanded h4 span').each(function(){
+  $(this).html('-');
+});
+$('.dtls-contracted h6 span, .dtls-contracted h4 span').each(function(){
+  $(this).html('+');
+});
+</script>
+<!-- Add content to the popup -->
+<div id="advSignPop" class="well popup_content popup_content_visible" data-popup-initialized="true" role="dialog" aria-labelledby="open_65493724" tabindex="-1">
+<!--<a class="active_bg_close" onclick="setCookie()" style="float:right;">×</a>-->
+<a class="active_bg_close" onclick="setCookie()" id="closeTour"><img width="15" height="15" alt="Hide notification" src="//libraryreserve.cdn.overdrive.com/418/50/1.41/spacer.gif"></a>
+				<h4>Sign In</h4>
+				<p class="adDescription">More titles may be available to you. <a href="BANGAuthenticate.dll?Action=AuthCheck&amp;URL=ContentDetails.htm%3fid%3d365E31DF-D292-44D6-98B6-20ACD2542A28&amp;ForceLoginFlag=0" id="advSignLink"> Sign in now to see your library's full collection.</a></p>
+		
+</div>
+<!-- Status bar : logs cookie status-->
+ <p style="visibility: hidden !important;">Status bar:<span id="statusBar"></span></p>
+
+<div id="thunderPop" class="well popup_content popup_content_visible" data-popup-initialized="true" role="dialog" aria-labelledby="open_65493725" tabindex="-1">
+<!--<a class="active_bg_close" onclick="setThunderCookie()" style="float:right;">×</a>-->
+<a class="active_bg_close" onclick="setThunderCookie()" id="closeTour"><img width="15" height="15" alt="Hide notification" src="//libraryreserve.cdn.overdrive.com/418/50/1.41/spacer.gif"></a>
+				<h4><a href="">The new OverDrive is coming! Click here to try it now.</a></h4>	
+</div>
+
+<script>
+function log(status) {
+	var span = document.getElementById('statusBar');
+	while(span.firstChild)
+		span.removeChild( span.firstChild );
+		span.appendChild(document.createTextNode(status));
+}
+			
+// Name of the cookie on which all the actions will be performed.
+var cookieName = 'adv_signIn_popup';
+function setCookie() {
+	// value to set in the cookie
+	var cookieValue = 'dismiss adv signIn popup';
+	
+	// sets the cookie & closes ad
+	$.cookie(cookieName, cookieValue);
+	$.cookie('adv_signIn_popup', 'dismiss adv signIn popup', {expires: 1});
+	log('Cookie ' + cookieName + ' has been set.');
+	$('#advSignPop').remove();
+}	
+function setThunderCookie() {
+	$.cookie('thunderPopup', 'dismiss thunder popup', {expires: 30});
+	$('#thunderPop').remove();
+}
+				
+// On page load Checks if cookie is set or not
+if (1 == 1 && hazAdv == true) {
+	$(window).load(function(){
+		if (cookieValue = $.cookie(cookieName)) {
+			log(cookieName + ' = \'' + cookieValue + '\'');
+			$('#advSignPop').remove();
+			//console.log("Ad removed via set cookie data")
+		} else {
+			var h = $("#advSignPop").height();
+			$("#advSignPop").css("bottom","-" + h + "px");
+			//Make ad visible
+			//setTimeout(function(){$("#advSignPop").reveal();$("#advSignLink").focus();}, 30000);
+			setTimeout(function(){
+				//$('#advSignPop').show( "fast" );
+				//$('#advSignPop').fadeIn( "fast" );
+				$('#advSignPop').stop(true).animate({ 'bottom': 0 }, 1200, 'easeInOutQuint');
+				//console.log("Ad visible via unset cookie")
+			}, 15000);						
+		}				
+	});
+}
+if (0 == 1) {
+	var thunderCookie = $.cookie('thunderPopup');
+	if (thunderCookie == "dismiss thunder popup") {
+		$('#thunderPop').remove();				
+	} else {
+		$("#nextGenTour").remove();
+		$(window).load(function(){
+			var h = $("#thunderPop").height();
+			$("#thunderPop").css("bottom","-" + h + "px");
+			//Make ad visible
+			setTimeout(function(){
+				$('#thunderPop').stop(true).animate({ 'bottom': 0 }, 1200, 'easeInOutQuint');						
+			}, 2000);						
+		});		
+	}				
+}
+</script></section>
+<!-- #mainContent -->
+
+<script>
+eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('q=[b,b,u,u,t,r,t,r,B,x],8=v,3=0;$(n).z(k(e){g=e.A;6(!8){6(g==b){8=w}}6(8){6(q[3]==g){3++}p{9()}6(3==y){D:(k(){I s=n.L(\'K\');s.J=\'@-5-h 4 { i% { -5-f: c(a); } } @-o-h 4 { i% { -o-f: c(a); } } @-7-h 4 { i% { -7-f: c(a); } } C{ -5-2-d: 4; -5-2-j: l; -5-2-m-3: 1; -o-2-d: 4; -o-2-j: l; -o-2-m-3: 1; -7-2-d: 4; -7-2-j: l; -7-2-m-3: 1; }\';n.E(\'F\')[0].G(s)}());9()}}p{9()}});k 9(){8=v;3=0;H}',48,48,'||animation|count|roll|moz|if|webkit|started|reset|360deg|38|rotate|name||transform|key|keyframes|100|duration|function|4s|iteration|document||else|theKeys|39||37|40|false|true|65|10|keydown|keyCode|66|body|javascript|getElementsByTagName|head|appendChild|return|var|innerHTML|style|createElement'.split('|'),0,{}))
+</script>
+</div>
+<!-- #contentContainer -->
+</div>
+<!--[if IE 8]><style>#dynamic-to-top{display:none !important;}</style><![endif]-->
+
+<a href="#" id="dynamic-to-top" style="display: none;"><span> </span></a>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+var mv_dynamic_to_top = {"text":"To Top","version":"0","min":"300","speed":"500","easing":"easeInExpo","margin":"20"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="//libraryreserve.cdn.overdrive.com/418/50/1.41/dynamic.to.top.min.js"></script>
+
+
+<footer id="footer" tabindex="-1"><a href="#" class="skip"><h3>Footer</h3></a>
+<div class="row">
+<div class="six mobile-four columns">
+<ul id="footerLinksList">
+<li class="footer-link-li"><a href="Help.htm">Help</a></li>
+<li class="footer-link-li" id="footerSoftware"><a href="Software.htm" alt="Download your eBook software here.">Applications</a></li>
+<li>
+     <label for="switchLanguageFooter" class="skip">Switch to another language:</label>
+      <select name="Language" id="switchLanguageFooter" size="1" style="display: none !important;; float: none;">
+<option value="en" selected>English</option>
+<option value="fc">Français</option>
+<option value="zh">简体中文</option>
+<option value="es">Español</option>
+<option value="ja">日本</option>
+<option value="tc">繁體中文</option>
+<option value="ru">русский</option>
+<option value="ms">Bahasa Melayu</option>
+<option value="sv">Svenska</option>
+<option value="fi">Suomi</option>
+<option value="it">Italiano</option>
+<option value="de">Deutsch</option>
+<option value="da">Dansk</option>
+<option value="iw">עברית</option>
+<option value="mi">Māori</option>
+<option value="ar">العربية</option>
+</select>
+<script>
+$('#switchLanguageFooter').change(function(){
+    var languageCode = $(this).val();
+	window.location = "../" + languageCode + "/ContentDetails.htm?id=365E31DF-D292-44D6-98B6-20ACD2542A28" ;
+});
+</script> 
+</li>
+<li style="display:none;">
+<li style="display:none;">
+<li style="display:none;">
+<li style="display:none;">
+<li style="display:none;">
+<li class="footer-privacy-policy"><a href="http://company.overdrive.com/privacy-policy" target="_blank">Privacy Policy</a></li>
+<li class="footer-copyright-li">© 2016 OverDrive®, Inc.</li>
+<li class="footer-link-li"><a href="http://company.overdrive.com/copyright/" target="_blank">Important notice about copyrighted materials</a></li>
+</ul>
+</div>
+<div class="six mobile-four columns">
+<div class="powered-by-overdrive"><a href="http://company.overdrive.com/libraries/" target="_blank"><img src="//libraryreserve.cdn.overdrive.com/418/50/1.41/spacer.gif" alt="powered by OverDrive"></a></div>
+</div>
+</div>
+<div id="footerBottomDiv"></div>
+</footer>
+<script>
+$('#adRotateDefault').append('<li><div id="globalTout"><a id="omcToutLink" href="http://app.overdrive.com" target="_blank"><img src="//libraryreserve.cdn.overdrive.com/418/50/1.41/toutOMC.jpg" alt="OverDrive - Get the App" /></a></div></li>');
+$('#adRotateDetails01').append('<li><div id="globalTout"><a id="omcToutLink" href="http://app.overdrive.com" target="_blank"><img src="//libraryreserve.cdn.overdrive.com/418/50/1.41/toutOMC.jpg" alt="OverDrive - Get the App" /></a></div></li>');
+$('#adRotateMyAccount01').append('<li><div id="globalTout"><a id="omcToutLink" href="http://app.overdrive.com" target="_blank"><img src="//libraryreserve.cdn.overdrive.com/418/50/1.41/toutOMC.jpg" alt="OverDrive - Get the App" /></a></div></li>');
+$('#adRotateResults01').append('<li><div id="globalTout"><a id="omcToutLink" href="http://app.overdrive.com" target="_blank"><img src="//libraryreserve.cdn.overdrive.com/418/50/1.41/toutOMC.jpg" alt="OverDrive - Get the App" /></a></div></li>');
+</script>
+</div>
+<!-- #mainContainer -->
+
+<!-- Included JS Files -->
+<script type="text/javascript" src="//libraryreserve.cdn.overdrive.com/418/50/1.41/foundation.js"></script>
+<script type="text/javascript" src="//libraryreserve.cdn.overdrive.com/418/50/1.41/app.js"></script>
+<script type="text/javascript" src="//libraryreserve.cdn.overdrive.com/418/50/1.41/ultimate.js"></script>
+
+
+<script type="text/javascript" src="//libraryreserve.cdn.overdrive.com/418/50/1.41/jquery.lazyload.js"></script>
+<script type="text/javascript">
+$("img.lzld").lazyload();
+$(document).ready(function(){
+if(418 != 39){ //if not microsoft
+
+var checkNav1 = 0;
+var checkNav2 = 0;
+var checkNav3 = 0;
+var checkNav4 = 0;
+var checkNav5 = 0;
+var checkNav6 = 0;
+
+var checkNav1 = "display:block;"; if(checkNav1.indexOf('none') == -1){checkNav1 = 1}else{checkNav1 = 0}
+var checkNav2 = "display:block;"; if(checkNav2.indexOf('none') == -1){checkNav2 = 1}else{checkNav2 = 0}
+var checkNav3 = "display:block;"; if(checkNav3.indexOf('none') == -1){checkNav3 = 1}else{checkNav3 = 0}
+var checkNav4 = "display:block;"; if(checkNav4.indexOf('none') == -1){checkNav4 = 1}else{checkNav4 = 0}
+var checkNav5 = "display:block;"; if(checkNav5.indexOf('none') == -1){checkNav5 = 1}else{checkNav5 = 0}
+var checkNav6 = "display:block; float:left;"; if(checkNav6.indexOf('none') == -1){checkNav6 = 1}else{checkNav6 = 0}
+
+var finalCheckNav = checkNav1+checkNav2+checkNav3+checkNav4+checkNav5+checkNav6;
+var realDivCount = $("#mainNav section div").length / 2;
+
+if(realDivCount<finalCheckNav){
+var navWidth = (100/realDivCount);
+$("#homeSub01,#homeSub02,#homeSub03,#homeSub04,#homeSub05,#homeSub06").css("width",navWidth+"%");
+}else{
+var navWidth = (100/finalCheckNav);
+$("#homeSub01,#homeSub02,#homeSub03,#homeSub04,#homeSub05,#homeSub06").css("width",navWidth+"%");
+}
+}else{
+$("#homeSub06").removeAttr("class");
+}
+
+});
+
+$(".info-span").each(function () {
+    var isRestricted = $(this).attr("data-contentstatus");
+    var contentStatusFlag = $(this).attr("data-contentflags");
+
+    if (isRestricted == 1) {
+        $(this).find(".borrow-button").remove();
+        $(this).find(".sample-button").remove();
+        $(this).find(".wishlist-link").remove();
+        if(contentStatusFlag){
+	if(((contentStatusFlag & 1) == 1) && ((contentStatusFlag & 2) == 2)){
+		$(this).prepend("<div class=\"title-element-restricted\">This title is not available - juvenile & young adult</div>");
+	}
+	if(((contentStatusFlag & 1) == 1) && ((contentStatusFlag & 2) != 2)){
+		$(this).prepend("<div class=\"title-element-restricted\">This title is not available - juvenile only.</div>");
+	}
+	if(((contentStatusFlag & 1) != 1) && ((contentStatusFlag & 2) == 2)){
+		$(this).prepend("<div class=\"title-element-restricted\">This title is not available - young adults only.</div>");
+	}
+	if((contentStatusFlag & 32771) == 0){
+		$(this).prepend("<div class=\"title-element-restricted\">This title is not available - adults.</div>");
+	}
+        }
+        else {       
+	$(this).prepend("<div class=\"title-element-restricted\">This title is not available for your age level.</div>");
+        }
+    }
+});
+
+//REMOVE CHANGING LENDING PERIOD LINK FOR SIMPLE LOGIN
+if($("#borrowingPeriod:contains('minutes')").length) {
+	$('#borrowingPeriod a').remove();
+}
+
+// ADD TO WISHLIST SCRIPT
+    $(".wishlist-link i").each(function(){
+        var onWishNau = $(this).attr('data-wishlist');
+        if (onWishNau == 1){
+            $(this).addClass('active-wl');
+	    $(this).find('span').html('Remove from Wish List');
+        } else {
+            $(this).addClass('inactive-wl');
+	    $(this).find('span').html('Add to Wish List');
+        }
+    });
+$(".wishlist-link").click(function (e){
+        e.preventDefault();
+        var CRID = $(this).attr("value");
+        var title = $(this).attr("data-thistitle");
+        var hazSome = $(this).find("i").attr("data-wishlist");
+        // get currently focused item
+        var focusedElementBeforeModal = $(':focus');
+        if (hazSome == 0 && szLoginStatus == 1){
+            $(".wishlist-link").find("#"+CRID).removeClass("inactive-wl").addClass("active-wl").attr("alt","Click here to remove '"+title+"' from your Wish List").attr("title","Click here to remove '"+title+"' from your Wish List").attr("data-wishlist","1");
+            $("#tcc"+CRID).addClass("active-wl-1");
+            $(this).find('span.i-hide').html('Remove from Wish List');
+            $.ajax({
+                url: "BANGCart.dll?Action=WishListAdd&ID="+CRID,            // adds title to wishlist
+                context: document.body
+            }).done(function() { 
+                // Notification code
+                var notice = '<div class="notice-wl-contain">'
+                + '<div class="notice-wl">'
+                + '<div class="notice-body-wl" tabindex="0" aria-describedby="wishlistDesc">'
+                + '<div id="wishlistDesc" class="skip">You have added '+title+' to your Wish List. Focus will be returned to the previous link.</div>'
+                + '<h3>'+title+'</h3>'
+                + '<p>This title has been added to your <a href="BANGAuthenticate.dll?Action=AuthCheck&amp;ForceLoginFlag=0&URL=MyCompleteWishList.htm?PerPage=20&StartRecord=1">Wish List</a>.</p>'
+                + '</div>'
+                + '<div class="notice-bottom-wl">'
+                + '</div>'
+                + '</div>'
+                + '</div>';
+                $( notice ).purr(
+                {
+                    usingTransparentPNG: true,
+                    isSticky: false,
+                    removeTimer: 5000,
+                    fadeOutSpeed: 300
+                });
+                $(".notice-body-wl").focus();
+                    setTimeout(function(){
+                        focusedElementBeforeModal.focus();
+                }, 5000);
+                return false;
+            });
+        }
+        else if (hazSome != 0 && szLoginStatus == 1){
+            $(".wishlist-link").find("#"+CRID).removeClass("active-wl").addClass("inactive-wl").attr("alt","Click here to add '"+title+"' to your Wish List").attr("title","Click here to add '"+title+"' to your Wish List").attr("data-wishlist","0");
+            $("#tcc"+CRID).removeClass("active-wl-1");
+            $(this).find('span.i-hide').html('Add to Wish List');
+            $.ajax({
+                url: "BANGCart.dll?Action=WishListRemove&ID="+CRID,			// removes title from wishlist
+                context: document.body
+            }).done(function() { 
+                $(".wishlist-link").find("."+CRID).attr("data-wishlist","0");
+            });
+        }
+        else if (szLoginStatus == 0){
+            // windows phone 7 - set url and click itself
+            if(-1 == 200){
+                $(this).attr("href","BANGAuthenticate.dll?Action=AuthCheck&ForceLoginFlag=0&URL=BANGCart.dll%3FAction%3DWishListAdd%26ID%3D"+CRID);
+                $(this).click();
+            }
+            // end win phone 7
+			//SetCookie('wishCookie',CRID);
+			$.cookie('wishCookie', CRID, { expires: 1, path: '/' });
+			//SetCookie('wishTitle',title);
+			$.cookie('wishTitle', title, { expires: 1, path: '/' });
+            var lastSlash = window.location.href.lastIndexOf("/");
+            var pathName = window.location.href;
+            var pathName = pathName.substr(lastSlash+1);
+            pathName = encodeURIComponent(pathName);
+            window.location.assign("BANGAuthenticate.dll?Action=AuthCheck&URL="+pathName+"&ForceLoginFlag=0");			
+        }
+
+    });
+
+    $(document).ready(function(){
+        var lastSlash = window.location.href.lastIndexOf("/");
+        var pathName = window.location.href;
+        var pathName = pathName.substr(lastSlash+1);
+        if((szLoginStatus == 0) && (pathName.indexOf('SignIn'))){
+//SetCookie('wishTitle',null);
+$.removeCookie('wishTitle', { path: '/' });
+//SetCookie('wishCookie',null);
+$.removeCookie('wishCookie', { path: '/' });
+}
+
+
+        function scrollToAnchor(aid){
+
+            if(aid != null){
+                var aTag = $("a[name='"+ aid +"']");
+                if(aTag.offset() != null){
+                    $('html,body').animate({scrollTop: aTag.offset().top},750);
+                }
+            }
+        }
+
+
+	//var wishTitle = GetCookie("wishTitle");
+	var wishTitle = $.cookie('wishTitle');
+	//var wishCookie = GetCookie("wishCookie");
+	var wishCookie = $.cookie('wishCookie');
+
+        if((wishCookie != null) && (szLoginStatus == 1)){	
+            var ucCRID = wishCookie.toUpperCase();
+            $.ajax({
+                url: "BANGCart.dll?Action=WishListAdd&ID="+wishCookie,			// adds title to wishlist
+                context: document.body
+            }).done(function() { 
+                	$("#hazWishlist").append(ucCRID);
+                // Notification code
+                var notice = '<div class="notice-wl-contain">'
+                + '<div class="notice-wl">'
+                + '<div class="notice-body-wl" tabindex="0" aria-describedby="wishlistDesc">'
+                + '<div id="wishlistDesc" class="skip">You have added '+wishTitle+' to your Wish List. Focus will be returned to the previous link.</div>' 
+                + '<h3>'+wishTitle+'</h3>'
+                + '<p>This title has been added to your <a href="BANGAuthenticate.dll?Action=AuthCheck&amp;ForceLoginFlag=0&URL=MyCompleteWishList.htm?PerPage=20&StartRecord=1">Wish List</a>.</p>'
+                + '</div>'
+                + '<div class="notice-bottom-wl">'
+                + '</div>'
+                + '</div>'
+                + '</div>';
+                $(notice).purr(
+                {
+                    usingTransparentPNG: true,
+                    isSticky: false,
+                    removeTimer: 5000,
+                    fadeOutSpeed: 500
+                });
+                $(".notice-body-wl").focus();
+                    setTimeout(function(){
+                        focusedElementBeforeModal.focus();
+                }, 5000);
+                return false;
+            });
+            scrollToAnchor('r'+wishCookie);
+            $(".wishlist-link").find("#"+wishCookie).removeClass("inactive-wl").addClass("active-wl").attr("alt","Click here to remove '"+wishTitle+"' from your Wish List").attr("title","Click here to remove '"+wishTitle+"' from your Wish List");
+            $("#tcc"+wishCookie).addClass("active-wl-1");
+            $(this).find('span.i-hide').html('Remove from Wish List');
+            $(".wishlist-link").find("#"+wishCookie).attr("data-wishlist","1");
+            $(".wishlist-link").find("#"+wishCookie).next().attr("data-blrwlspan","1");
+            $('a[value="'+wishCookie+'"]').find('span').html('Remove from Wish List');
+                  //SetCookie('wishCookie',null);
+		$.removeCookie('wishCookie', { path: '/' });
+		//SetCookie('wishTitle',null);
+		$.removeCookie('wishTitle', { path: '/' });
+        }
+    });
+</script>	
+<!--[if lt IE 10]><script type="text/javascript">$("#chromeTout").show();</script><![endif]-->
+<script type="text/javascript">
+var hazVariableLending = 1;
+if(hazVariableLending == 0){
+  $('#borrowingPeriod').remove();
+};
+
+</script>
+<noscript>
+	<style type="text/css">
+		#mainNav{display:block}
+		#navMenu{display:none}
+	</style>
+</noscript>
+<script>
+$(document).ready(function(){
+var resultsViewCookie = GetCookie('resultsViewCookie');
+var srSearchFormAction1 = $('#headerSearch1').attr('action');
+var srSearchFormAction2 = $('#headerSearch2').attr('action');
+var srAdvSearchAction = $('#asSearchform').attr('action');
+$('a[href*="BANGSearch.dll"]').each(function(){
+  var parentClass = $(this).parents().attr('class');
+  var isCurated = $(this).attr('data-curated');
+  if (resultsViewCookie == 'cover'){
+            var srHref = $(this).attr('href');
+            if((parentClass != 'results-cover-view' && parentClass != 'results-list-view') && isCurated != 1){
+                    $(this).attr('href',srHref + '&URL=SearchResults.htm');
+            };
+			if((parentClass != 'results-cover-view' && parentClass != 'results-list-view') && isCurated == 1){
+                    $(this).attr('href',srHref + '&View=Cover');
+            };
+            $('#headerSearch1').attr('action',srSearchFormAction1 + '&URL=SearchResults.htm');
+            $('#headerSearch2').attr('action',srSearchFormAction2 + '&URL=SearchResults.htm');
+            $('#asSearchform').attr('action',srAdvSearchAction + '?URL=SearchResults.htm');
+            //$('.results-cover-view a').attr('href','javascript:void(0)');
+            }
+else if (resultsViewCookie == 'list'){
+            var srHref = $(this).attr('href');
+            if((parentClass != 'results-cover-view' && parentClass != 'results-list-view') && isCurated != 1){
+                    $(this).attr('href',srHref + '&URL=SearchResultsList.htm');
+            };
+			if((parentClass != 'results-cover-view' && parentClass != 'results-list-view') && isCurated == 1){
+                    $(this).attr('href',srHref + '&View=List');
+            };
+            $('#headerSearch1').attr('action',srSearchFormAction1 + '&URL=SearchResultsList.htm');
+            $('#headerSearch2').attr('action',srSearchFormAction2 + '&URL=SearchResultsList.htm');
+            $('#asSearchform').attr('action',srAdvSearchAction + '?URL=SearchResultsList.htm');
+            //$('.results-list-view a').attr('href','javascript:void(0)');
+            }
+});
+
+$('#readButtonDetails').each(function () {
+        var itsInThere = $(this).find('a').attr('data-checkedout') == 1; //is this title checked out?
+		if (itsInThere == true){
+		  $('#readButtonDetails').html('<a href="BANGAuthenticate.dll?Action=AuthCheck&amp;URL=MyAccount.htm&amp;ForceLoginFlag=0" class="radius large button details-title-button" data-checkedout="@@IS_CHECKED_OUT@@" alt="Go to Checkouts">Go to Checkouts</a>').removeAttr('data-track');
+		  $("div#readButtonDetails a:first").css("display","block");
+		};
+    }); 
+});
+
+</script><div id="noHazChexOut" class="reveal-modal" style="top:10px;">
+  <p class="lead">You've reached your checkout limit.</p>
+  <p id="manageCheckoutLimit"><a href="BANGAuthenticate.dll?Action=AuthCheck&amp;ForceLoginFlag=0&amp;URL=MyAccount.htm?PerPage=40#myAccount1">Visit your <strong>Checkouts</strong> page to manage your titles.</a></p>
+  <a class="close-reveal-modal" style="border:0px"><img src="//libraryreserve.cdn.overdrive.com/418/50/1.41/purrClose000.png" border="0" alt=""></a>
+</div>
+
+<div id="questionNoCheckout" class="reveal-modal">
+  <h4>You already have this title checked out.</h4>
+  <p class="lead"><a href="BANGAuthenticate.dll?Action=AuthCheck&amp;URL=MyAccount.htm?PerPage=40&amp;ForceLoginFlag=0" class="close-on-confirm">Want to go to your <strong>Checkouts</strong>?</a></p>
+  <a class="close-reveal-modal" style="border:0px"><img src="//libraryreserve.cdn.overdrive.com/418/50/1.41/purrClose000.png" border="0" alt=""></a>
+</div>
+
+<div id="recommendLimitReached" class="reveal-modal">
+  <p class="lead">Recommendation Limit Reached.</p>
+  <p>You have reached the maximum number of titles you are permitted to recommend at this time.</p>
+  <a class="close-reveal-modal" style="border:0px"><img src="//libraryreserve.cdn.overdrive.com/418/50/1.41/purrClose000.png" border="0" alt=""></a>
+</div>
+
+<div id="recommendSignIn" class="reveal-modal">
+  <p class="lead" id="detailsBorrowRedirect"><a href="BANGAuthenticate.dll?Action=AuthCheck&amp;ForceLoginFlag=0&amp;URL=ContentDetails.htm%3fid%3d365E31DF-D292-44D6-98B6-20ACD2542A28" class="close-on-confirm">Sign in to recommend this title.</a></p>
+  <p>Recommend your library consider adding this title to the Digital Collection.</p>
+  <a class="close-reveal-modal" style="border:0px"><img src="//libraryreserve.cdn.overdrive.com/418/50/1.41/purrClose000.png" border="0" alt=""></a>
+</div>
+
+<div id="enhancedTitleLimit" class="reveal-modal">
+<div class="row">
+	<div class="twelve mobile-four columns">
+<p class="lead">Enhanced Details</p>
+<div id="enhancedSnippet"></div>
+</div>
+</div>
+  <a class="close-reveal-modal" style="border:0px"><img src="//libraryreserve.cdn.overdrive.com/418/50/1.41/purrClose000.png" border="0" alt=""></a>
+</div>
+
+<div id="prereleaseTitle" class="reveal-modal">
+<div class="row">
+	<div class="twelve mobile-four columns">
+<div id="PreReleaseSnippet"></div>
+</div>
+</div>
+  <a class="close-reveal-modal" style="border:0px"><img src="//libraryreserve.cdn.overdrive.com/418/50/1.41/purrClose000.png" border="0" alt=""></a>
+</div>
+
+<div id="permission" class="reveal-modal">
+
+   <div class="row">
+	<div class="twelve mobile-four columns">
+		<p class="lead">Limited availability</p>
+
+		<p id="cpc1">Availability can change throughout the month based on the library's budget.</p>
+		<p id="cpc2"><strong><span class="cpcTitle"></span></strong> is available for <span class="cpcLendPer"></span> days.</p>
+		<p id="cpc3">Once playback starts, you have <span class="cpcExpHrs"></span> hours to view the title.</p>
+
+	</div>
+</div>
+  <a class="close-reveal-modal" style="border:0px"><img src="//libraryreserve.cdn.overdrive.com/418/50/1.41/purrClose000.png" border="0" alt=""></a>
+</div>
+
+
+<div id="drmPerm" class="reveal-modal">
+<div class="row">
+	<div class="twelve mobile-four columns">
+<p class="lead">Permissions</p>
+<div id="drmSnippet"></div>
+</div>
+</div>
+  <a class="close-reveal-modal" style="border:0px"><img src="//libraryreserve.cdn.overdrive.com/418/50/1.41/purrClose000.png" border="0" alt=""></a>
+</div>
+
+<div id="narratedEbook" class="reveal-modal">
+  <p>The OverDrive Read format of this eBook has professional narration that plays while you read in your browser. <a href="http://help.overdrive.com/customer/portal/articles/1749249?Sup=http://llc.lib.overdrive.com/Support.htm&amp;nextgen=true" target="_blank">Learn more here</a>.</p>
+  <a class="close-reveal-modal" style="border:0px"><img src="//libraryreserve.cdn.overdrive.com/418/50/1.41/purrClose000.png" border="0" alt=""></a>
+</div>
+
+<div id="holdsRatioHelpTitle" class="reveal-modal">
+<div class="row">
+	<div class="twelve mobile-four columns">
+<style>
+	#holdsRatioHelp p {margin-bottom: 5px;}
+	#holdsRatioHelp h4 {margin-bottom: 10px; margin-top: 0;}
+	#holdsRatioHelp hr {margin: 12px 0 11px;}
+</style>
+	<h4>Holds</h4>
+	
+	<p>Total holds:  <span class="holdNumWaiting"></span></p>
+	<p class="holdCopyPos"></p>
+	<hr>
+	<p class="holdMsg"></p>
+</div>
+</div>
+  <a class="close-reveal-modal" style="border:0px"><img src="//libraryreserve.cdn.overdrive.com/418/50/1.41/purrClose000.png" border="0" alt=""></a>
+</div>
+<div id="tooManyBooks" class="reveal-modal">
+  <p>You've reached your library's checkout limit for digital titles.</p>
+  <p>To make room for more checkouts, you may be able to return titles from your <a href="BANGAuthenticate.dll?Action=AuthCheck&amp;URL=MyAccount.htm&amp;ForceLoginFlag=0">Checkouts</a> page.</p>
+  <a class="close-reveal-modal" style="border:0px"><img src="//libraryreserve.cdn.overdrive.com/418/50/1.41/purrClose000.png" border="0" alt=""></a>
+</div>
+
+<div id="excessiveCheckout" class="reveal-modal">
+  <p>Excessive Checkout Limit Reached.</p>
+  <p>There have been too many titles checked out and returned by your account within a short period of time.</p>
+  <p>Try again in several days. If you are still not able to check out titles after 7 days, please contact Support.</p>
+  <a class="close-reveal-modal" style="border:0px"><img src="//libraryreserve.cdn.overdrive.com/418/50/1.41/purrClose000.png" border="0" alt=""></a>
+</div>
+
+<div id="alreadyCheckedOut" class="reveal-modal">
+  <p>You have already checked out this title. To access it, return to your <a href="BANGAuthenticate.dll?Action=AuthCheck&amp;URL=MyAccount.htm?PerPage=40&amp;ForceLoginFlag=0">Checkouts</a> page.</p>
+  <a class="close-reveal-modal" style="border:0px"><img src="//libraryreserve.cdn.overdrive.com/418/50/1.41/purrClose000.png" border="0" alt=""></a>
+</div>
+
+<div id="onestepRestricted" class="reveal-modal">
+  <p>This title is not available for your card type. If you think this is an error <a href="support.htm">contact support.</a></p>
+  <a class="close-reveal-modal" style="border:0px"><img src="//libraryreserve.cdn.overdrive.com/418/50/1.41/purrClose000.png" border="0" alt=""></a>
+</div>
+
+<div id="onestepErrorDefault" class="reveal-modal">
+  <p>An unexpected error has occurred.</p>
+  <p>If this problem persists, <a href="support.htm">please contact support</a>.</p>
+  <a class="close-reveal-modal" style="border:0px"><img src="//libraryreserve.cdn.overdrive.com/418/50/1.41/purrClose000.png" border="0" alt=""></a>
+</div>
+<div id="kindlePenguinRestricted" class="reveal-modal">
+  <p class="">
+<script>
+document.write("<strong>" + szTitle + "</strong> is not supported on the following Kindle&reg; devices/readers:");
+document.write("<ul>");
+if(DrmInfo420 != null){
+var kin_array = DrmInfo420.split(', ');
+
+for(var i = 0; i < kin_array.length; i++)
+{
+   // Trim the excess whitespace.
+   kin_array[i] = kin_array[i].replace(/^\s*/, "").replace(/\s*$/, "");
+   // Add additional code here, such as:
+   document.write("<li style=\"width:150px; float:left;\">" + kin_array[i] + "</li>");
+}
+}
+document.write("</ul>");
+</script>
+</p>
+<noscript>This title may not be supported on all Kindle devices/readers.</noscript>
+  <a class="close-reveal-modal" style="border:0px"><img src="//libraryreserve.cdn.overdrive.com/418/50/1.41/purrClose000.png" border="0" alt=""></a>
+</div>
+<style>
+#NookApps {padding-right: 5px; width: 54% !important;}
+#NookDevices {width: 45% !important;}
+</style>
+<div id="NookSupportedDevices" class="reveal-modal">
+  <p class="">
+<script>
+document.write("<strong>" + szTitle + "</strong> is compatible with the following:");
+</script>
+</p>
+<noscript>This title may not be supported on all devices/readers.</noscript>
+<ul id="NookApps">
+	<li><strong><nobr>NOOK®</nobr> Apps:</strong></li>
+	<li>NOOK for iPad</li>
+	<li>NOOK for iPhone</li>
+	<li>NOOK for Android tablets</li>
+	<li>NOOK for Android phones</li>
+	<li>NOOK for Windows 8 tablets</li>
+	<li>NOOK for Windows 8 computers</li>
+</ul>
+<ul id="NookDevices">
+	<li><strong><nobr>NOOK®</nobr> Devices:</strong></li>
+	<li>Samsung Galaxy Tab 4 NOOK 10.1</li>
+	<li>Samsung Galaxy Tab 4 NOOK 7.0</li>
+          <li>NOOK HD+</li>
+	<li>NOOK HD</li>
+	<li>NOOK Tablet</li>
+	<li>NOOK Color</li>
+</ul>
+<p style="clear: left; padding-top: 10px"><strong>NOTE:</strong> Barnes and <nobr>Noble®</nobr> may change this list of devices at any time.</p>
+
+
+  <a class="close-reveal-modal" style="border:0px"><img src="//libraryreserve.cdn.overdrive.com/418/50/1.41/purrClose000.png" border="0" alt=""></a>
+</div>
+<div id="winAffiliateModal" class="reveal-modal">
+<div class="fancy_overlayHeader"><div class="head">Buy it now<br><span class="head_sub">and help our library WIN!</span>
+</div></div>
+
+<div class="row"><div class="twelve mobile-four columns">
+
+<div class="row" id="recommendFullTitleInfo">
+<div class="four mobile-two columns" id="recommendBookCover">
+<div class="book_cover"><img border="0" src="//images.contentreserve.com/ImageType-150/0111-1/365/E31/DF/%7B365E31DF-D292-44D6-98B6-20ACD2542A28%7DImg150.jpg" data-crid="365E31DF-D292-44D6-98B6-20ACD2542A28" alt="The Grownup"></div>
+</div>
+<div class="eight mobile-two columns" id="recommendTitleCreator">
+<div class="book_title">
+<div class="titleName">The Grownup</div>
+		<div class="titleAuth-subtitle">A Story by the Author of Gone Girl</div>
+		<div class="titleAuth-creator">Gillian Flynn</div>
+		
+</div>
+
+</div>
+
+</div>
+<div class="chooseAffil" style="padding-bottom:10px">
+<strong>Choose a retail partner below to buy this title for yourself.</strong><br>A portion of this purchase goes to support your library.</div>
+</div></div>
+
+<div class="affil_links">
+  <br>
+  <div style="width:100%; margin:0 auto;">
+    <h3 align="center">Sorry, no retailers are currently available to purchase this title.  Please check back later.</h3>
+  </div>
+</div>
+<a class="close-reveal-modal" style="border:0px"><img src="//libraryreserve.cdn.overdrive.com/418/50/1.41/purrClose000.png" border="0" alt=""></a>
+</div>
+<script language="JavaScript" type="text/javascript">
+var szSiteURL = window.location.pathname;
+var tmpIndex = szSiteURL.lastIndexOf("/")+1;			//finds where the last slash is located, numerically and adds 1
+var szFilename = szSiteURL.substr(tmpIndex);			//grabs the filename (whatever.htm) but not whats after the ?
+var szFilename = szFilename.toLowerCase();			//converts filename to lowercase
+
+if(szFilename=="shareonfacebook.htm"){  location.replace(facebookURL); }
+if(szFilename=="shareonpinterest.htm"){  location.replace(pinterestURL); }
+if(szFilename=="shareontwitter.htm"){  location.replace("http://twitter.com/intent/tweet?source=webclient&text=" + encodeURIComponent(tweet)); }
+</script>
+
+<!-- Begin comScore Tag -->
+<script>
+var _comscore = _comscore || [];
+_comscore.push({ c1: "2", c2: "13101028" });
+(function(w, d, s) {
+  function go(){
+    var js, fjs = d.getElementsByTagName(s)[0], load = function(url, id) {
+	  if (d.getElementById(id)) {return;}
+	  js = d.createElement(s); js.src = url; js.id = id;
+	  fjs.parentNode.insertBefore(js, fjs);
+	};
+	load((document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js", 'beacon');
+  }
+  if (w.addEventListener) { w.addEventListener("load", go, false); }
+  else if (w.attachEvent) { w.attachEvent("onload",go); }
+}(window, document, 'script'));
+</script>
+<noscript>
+<img alt="comScore Tag" src="http://b.scorecardresearch.com/p?c1=2&amp;c2=13101028&amp;cv=2.0&amp;cj=1">
+</noscript>
+<!-- End comScore Tag -->
+<div id="titleShareModal" class="reveal-modal">
+    <div class="title-share-copy"></div>
+    <ul>
+        <li class="title-share-fb">
+            <a href="javascript:void(0);" target="_blank" title="This link takes you to Facebook"><i class="icon-facebook3"></i><span> Facebook</span></a>
+        </li>
+        <li class="title-share-tw">
+            <a href="javascript:void(0);" target="_blank" title="This link takes you to Twitter"><i class="icon-twitter3"></i><span> Twitter</span></a>
+        </li>
+        <li class="title-share-pin">
+            <a href="javascript:void(0);" target="_blank" title="This link takes you to Pinterest"><i class="icon-pinterest"></i><span> Pinterest</span></a>
+        </li>
+        <li class="title-share-em">
+            <a href="#" title="Email a friend about this title" class="recommendEmail"><i class="icon-mail4"></i><span> Email</span></a>
+        </li>
+    </ul>
+    <a class="close-reveal-modal" style="border:0px"><img src="//libraryreserve.cdn.overdrive.com/418/50/1.41/purrClose000.png" border="0" alt=""></a>
+</div>
+<div id="nookNA" class="reveal-modal">
+  <p id="nookNAModal">There are no copies of this issue left to borrow. Please try to borrow this title again when a new issue is released.</p>
+  <a class="close-reveal-modal" style="border:0px"><img src="//libraryreserve.cdn.overdrive.com/418/50/1.41/purrClose000.png" border="0" alt=""></a>
+</div>	
+
+<div id="FirstPeriodical" class="reveal-modal">
+	<div style="display: block; padding-bottom: 5px;">
+		<img src="//libraryreserve.cdn.overdrive.com/418/50/1.41/BNSignIn.png" alt="Barnes &amp; Noble Sign In" id="BNSignInImg">  <nobr><span id="BNSignIn">|   Sign In</span></nobr>
+	</div>
+	<p class="loggedOutNOOK">You will be prompted to sign into your library account on the next page. </p>
+	<p class="loggedOutNOOK">If this is your first time selecting “Send to NOOK,” you will then be taken to a Barnes &amp; Noble page to sign into (or create) your NOOK account. You should only have to sign into your NOOK account once to link it to your library account. After this one-time step, periodicals will be automatically sent to your NOOK account when you select "Send to NOOK."</p>
+    <p class="loggedInNOOK">The first time you select “Send to NOOK,” you will be taken to a Barnes &amp; Noble page to sign into (or create) your NOOK account. You should only have to sign into your NOOK account once to link it to your library account. After this one-time step, periodicals will be automatically sent to your NOOK account when you select "Send to NOOK."</p>
+	<p>You can read periodicals on any NOOK tablet or in the free NOOK reading app for <a href="https://itunes.apple.com/us/app/NOOK/id373582546" target="_blank">iOS</a>, <a href="https://play.google.com/store/apps/details?id=bn.ereader&amp;hl=en" target="_blank">Android</a> or <a href="http://apps.microsoft.com/windows/en-us/app/NOOK-books-magazines-newspapers/05dbbb07-cd42-4a5f-9cd3-a329d52bd372" target="_blank">Windows 8</a>.</p>
+    <div class="myaccount-early-return">
+<a href="#" id="FirstPeriodicalLink" class="button"><span>Accept to Continue</span></a><a class="close-reveal-modal closeModalNo" id="FirstPeriodicalNo"><span>Cancel</span></a>
+</div>
+	<p style="clear: left;"></p>
+<div style="float:left; padding-top: 3px;"><input type="checkbox" name="PeriodicalMsg" id="PeriodicalMsg"></div>
+<div><label for="PeriodicalMsg" style="font-size: 1em;">Don't show this message again.</label></div>
+</div>
+
+<script>
+/*Nook Modal Cookie Function*/
+$("#PeriodicalMsg").click(function(){
+	var checkIt = $(this).attr("checked");
+	
+	if(checkIt == "checked"){
+		SetCookie('418-nookyCooky', 'true');
+	}else{
+		SetCookie('418-nookyCooky', 'false');
+	}
+});
+</script><script>
+var szSiteURL = window.location.pathname;
+var tmpIndex = szSiteURL.lastIndexOf("/")+1;//finds where the last slash is located, numerically and adds 1
+var szFilename = szSiteURL.substr(tmpIndex);//grabs the filename (whatever.htm) but not whats after the ?
+var szFilename = szFilename.toLowerCase();//converts filename to lowercase
+
+if(affiliateNameDisplay.length > 0){
+var affilString = affiliateNameDisplay.join(';');
+}
+
+dataLayer = [{
+	'user': {
+		'uniqueUserID' : ""				//The user id based on OverDrive's system e.g. "56789"
+	},
+	'session': {
+		'status': "not logged in",		//The user status e.g. "logged in"
+		'checkedout': "",				//how many books does the user currently have checked out
+		'holds': ""						//how many holds does the user currently have
+	},
+	'page': {
+		'platform': {
+			'version': ""				//The version of that platform. e.g. "10.6"
+		},
+		'library': {
+			'id': "418",				//The "machine" name for the library e.g. "123456"
+			'name': "London Libraries Consortium eLibrary",		//The "human" name for the library
+                           'property': "UA-34791607-20",    //The property value for the library
+                           'view': "104663509"         //The view value for the library 
+		}
+	},
+	'content': {
+		'searchCaption': szCaption,		//Page caption of Search Results page
+		'searchTerm': szQsearch,		//Search terms used
+		'affiliate': affilString,		//Affiliate names available for this title
+		'language': "en"				//Site display language
+	}
+}];
+
+
+/* Begin Cover Tracking */
+var GA_item_array = [];
+
+if(szFilename == "contentdetails.htm") {
+	GA_item_array.push(szReserveID);
+}
+else if(szFilename == "default.htm" || szFilename == "browsecollections.htm") {
+	GA_item_array = $("img")
+		.filter(function() { return parseInt($(this).data("item")) <= CoversShown-1; })
+		.map(function() {
+			var crid = $(this).data('crid');
+			
+			if($.inArray(crid, cache) === -1) {
+				cache.push(crid);
+				return crid;
+			}
+			else return undefined; 
+		})
+		.filter(function(i, elm) { return elm !== undefined; })
+		.get();
+}
+else {
+	GA_item_array = $("img")
+		.map(function() {
+			var crid = $(this).data('crid');
+			
+			if($.inArray(crid, cache) === -1) {
+				cache.push(crid);
+				return crid;
+			}
+			else return undefined;
+		})
+		.filter(function(i, elm) { return elm !== undefined; })
+		.get();
+}
+
+// Itemize ReserveID's as individual tokens in the GA DataLayer variable
+for(var i = 0; i < GA_item_array.length; i++) {
+	dataLayer.push({'content':{'reserveID':GA_item_array[i]}});
+}
+
+/* End Cover Tracking */
+</script>
+<script></script>
+<!-- Google Tag Manager DLR -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PD3WL3" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PD3WL3');</script>
+<!-- End Google Tag Manager -->
+<script></script>
+</body>
+</html>
+
+    
+</body>
